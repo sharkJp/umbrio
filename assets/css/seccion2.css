@@ -1,0 +1,162 @@
+/* Caja del slider */
+.contenedor-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    position: relative;
+    width: 50%;
+    height: 60%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.slide {
+    display: none;
+    width: 80%;
+    height: 80%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Botones */
+.prev,
+.next {
+    cursor: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background: rgba(106, 104, 104, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.text-box {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0b0a0a;
+    font-family: 'Amarante', serif;
+    font-weight: bold;
+    background-image: url('../multimedia/img/papiro1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    overflow: hidden;
+    
+}
+
+.text-box::after {
+    content: "";
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0;
+    left: 7%;
+    width: 50%;
+    height: 60%;
+     text-align: justify;
+}
+
+.text-box h1 {
+    font-size: 1.8rem;
+    color: #5c3317;
+    text-align: center;
+}
+
+.text-box p {
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #222;
+   margin: 0 12% 0 12%;
+}
+
+
+.contenedor-slider {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
+#textBox {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  
+    .contenedor-slider {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .slider{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .slide{
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        width: 100%;
+        height: 100%;
+    }
+    .text-box {
+        display: flex;
+          width: 100%;
+        height: 80%;
+       background-image:url('../multimedia/img/FondoPergamino.png');
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: contain;
+       object-fit: contain;
+       overflow: hidden;
+    }
+    .text-box{
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+      
+    }
+}

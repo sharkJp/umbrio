@@ -1,0 +1,154 @@
+:root {
+    --primer-color: #9430bf;
+    /*fondo*/
+    --secundo-color: #05f2f2;
+    --tercero-color: #0596a6;
+    --cuarto-color: #f2a007;
+    --quinto-color: #021400;
+    --footer-color: #633405;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+      width: 100%;
+    height: 100%;
+    background-image: url('../multimedia/img/fondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+     background-color: #021400;
+      /* cursor:url('../multimedia/img/mano.png'),32 32, auto; */
+      cursor:none;
+}
+#cursor-img {
+  position: fixed;
+  width: 80px; 
+  height: auto;
+  pointer-events: none; 
+  transform: translate(-80%, -10%); 
+  z-index:1000;
+}
+.seccion1,
+.seccion2,
+.seccion3 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion1 {
+    flex-direction: column;
+    
+}
+
+.seccion2 {
+ 
+}
+
+.seccion3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--footer-color);
+    width: 100%;
+    height: 40vh;
+}
+
+/* Imagen lenguaje de señas */
+.flotante {
+  position: fixed;
+
+ top: 20%;
+ left: 5%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.img-flotante{
+  top: 15%;
+right: 3%;
+ position: fixed; 
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.img-flotante img {
+  max-width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.img-flotante .cerrar-boton:hover {
+  cursor: none;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+ background-color: #f1f3ef;
+ border-radius: 50%;
+}
+.flotante img {
+  max-width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cerrar-boton {
+  position: absolute;
+  top: -13%;
+  right: -10%;
+  cursor: pointer;
+  width: 20%;
+  height: 20%;
+  border: none;
+  background-color: #f6f6f7;
+  border-radius: 50%;
+}
+.cerrar-boton:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+ background-color: #616164;
+}
+/* ...............................................................Botón flotante Calavera */
+.flotante-calavera {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1;
+  display: none;
+}
+
+.flotante-calavera img {
+  width: 80px;
+  height: auto;
+  cursor: none;
+  margin-right: 0;
+  transition: transform 0.3s ease;
+}
+
+.flotante-calavera img:hover {
+  transform: scale(1.05);
+  transform: translateY(-50%) scale(1.1) rotate(10deg);
+}
+@media (max-width: 768px) {
+    .flotante-calavera {
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+    display: none;
+    }
+    #cursor-img {
+      display: none;
+    
+    }
+}
