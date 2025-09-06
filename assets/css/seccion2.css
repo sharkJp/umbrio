@@ -17,6 +17,22 @@
     z-index: 0;
 }
 
+/* slider de la seccion dos, imagen como marco */
+.slider {
+    position: relative;
+    width: 50%;
+    height: 60%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    background-image: url('../multimedia/img/papiro1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .slide {
     display: none;
     width: 80%;
@@ -65,7 +81,7 @@
     color: #0b0a0a;
     font-family: 'Amarante', serif;
     font-weight: bold;
-    background-image: url('../multimedia/img/papiro1.png');
+    background-image: url('../multimedia/img/papiro.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,7 +109,7 @@
 
 .text-box p {
     text-align: justify;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     line-height: 1.6;
     color: #222;
    margin: 0 12% 0 12%;
@@ -116,6 +132,80 @@
   text-align: center;
 }
 
+.seccion2 {
+    position: relative;
+}
+
+/* Mano animada caminando */
+.seccion2 .mano-animada {
+    position: absolute;
+    bottom: 40px;
+    left: -150px;
+    width: 120px;
+    height: 120px;
+    background-image: url("../multimedia/img/manoCamina.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2000;
+    animation: caminar 12s linear infinite;
+}
+
+/* Movimiento lateral + saltitos */
+@keyframes caminar {
+    0% {
+        transform: translate(0, 0) scaleX(1);
+    }
+
+    10% {
+        transform: translate(10vw, -12px) scaleX(1);
+    }
+
+    20% {
+        transform: translate(20vw, 0) scaleX(1);
+    }
+
+    30% {
+        transform: translate(30vw, -12px) scaleX(1);
+    }
+
+    40% {
+        transform: translate(40vw, 0) scaleX(1);
+    }
+
+    49% {
+        transform: translate(calc(100vw + 150px), 0) scaleX(1);
+    }
+
+    50% {
+        transform: translate(calc(100vw + 150px), 0) scaleX(-1);
+    }
+
+    /* Movimiento lateral + saltitos de regreso */
+    60% {
+        transform: translate(70vw, -12px) scaleX(-1);
+    }
+
+    70% {
+        transform: translate(60vw, 0) scaleX(-1);
+    }
+
+    80% {
+        transform: translate(40vw, -12px) scaleX(-1);
+    }
+
+    90% {
+        transform: translate(20vw, 0) scaleX(-1);
+    }
+
+    99% {
+        transform: translate(0, -12px) scaleX(-1);
+    }
+
+    100% {
+        transform: translate(0, 0) scaleX(1);
+    }
+}
 
 @media (max-width: 768px) {
   

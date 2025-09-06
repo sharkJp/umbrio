@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Umbrío 2025</title>
+    <link rel="icon" type="image/png" href="assets/multimedia/img/Logo_icon.jpg">
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/modal.css">
@@ -31,7 +32,6 @@
                             <button type="button" class="btn-cerrar" data-bs-dismiss="modal" aria-label="Cerrar">
                                 ❌
                             </button>
-
                         </div>
                         <video width="100%" autoplay muted>
                             <source src="./assets/multimedia/video/mi_video.mp4" type="video/mp4">
@@ -45,19 +45,16 @@
                 <div class="contenedor">
                     <nav>
                         <div class="llama-menu">
-                            <img src="./assets/multimedia/img/fire.gif" alt="Menu Toggle" class="vela" />
+                            <img src="./assets/multimedia/img/blue-blueflame.gif" alt="Menu Toggle" class="vela" />
                         </div>
                         <div class="menu">
                             <ul id="mainMenu" class="mainmenu hidden">
-                                <li><a href="#secc1">Sección 1</a></li>
-                                <li><a href="#secc2">Sección 2</a></li>
-                                <li><a href="#secc3">Sección 3</a></li>
-                                <li><a href="#secc4">Sección 4</a></li>
-                                <li><a href="#secc5">Sección 5</a></li>
+                                <li><a href="#secc1">Inicio</a></li>
+                                <li><a href="#locaciones">Locaciones</a></li>
+                                <li><a href="#personajes">Personajes</a></li>
+                                <li><a href="page2.html">Más</a></li>
                             </ul>
                         </div>
-
-
                     </nav>
             </header>
             <div class="contenedor-principal">
@@ -65,41 +62,45 @@
             </div>
             <!-- Botón flotante Persona interprete -->
             <div id="imagen-flotante" class="flotante">
-                <img src="./assets/multimedia/img/Avatar.png" alt="lengua de señas" />
-
+                <video src="./assets/multimedia/video/inicio.mp4" controls autoplay muted></video>
                 <button onclick="cerrarImagen()" class="cerrar-boton"><samp>❌</samp></button>
             </div>
         </section>
 
-        <section id="secc2" class="seccion2">
+        <section id="locaciones" class="seccion2">
 
-<div class="contenedor-slider">
-<img src="../multimedia/img/mano.png" id="cursor-img" alt="">
-    <!-- Slider -->
-  
-    <div class="slider">
-        
-      <div class="slide">
-        <img src="./assets/multimedia/img/Catedral.png" alt="Imagen 1"></div>
-      <div class="slide">
-        <img src="./assets/multimedia/img/SimonBolivar.jpg" alt="Imagen 2"></div>
-      <div class="slide">
-        <img src="./assets/multimedia/img/PozoDeDonato.png" alt="Imagen 3"></div>
+            <!-- Mano animada caminando -->
+            <div class="mano-animada">
+                
+            </div>
+            <div class="contenedor-slider">
+                <img src="../multimedia/img/mano.png" id="cursor-img" alt="">
+                <!-- Slider -->
+                <div class="slider">
+                    <div class="slide">
+                        <img src="./assets/multimedia/img/Catedral.png" alt="Imagen 1">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/multimedia/img/PlazaSimonBolivar.webp" alt="Imagen 2">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/multimedia/img/PozoDeDonato.png" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/multimedia/img/San_Agustin.webp" alt="Imagen 4">
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
 
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
-    </div>
-
-    <!-- Caja de texto -->
-    <div class="text-box" id="textBox">
-        
-      <p></p>
-    </div>
-</div>
-
+                <!-- Caja de texto -->
+                <div class="text-box" id="textBox">
+                    <p></p>
+                </div>
+            </div>
         </section>
 
-        <section id="secc3" class="seccion3">
+        <section id="personajes" class="seccion3">
 
 
             <div class="contenedor-carrusel ">
@@ -109,32 +110,38 @@
                     <div class="carrusel-track">
                         <div class="carrusel-item">
                             <article>
-                                <img src="./assets/multimedia/img/craneo4.jpg" alt="">
-                                <img src="./assets/multimedia/img/craneo3.png" alt="">
+                                <img src="./assets/multimedia/img/Noah.png" alt="">
+                                <img src="./assets/multimedia/img/Noah.png" alt="">
                             </article>
                         </div>
                         <div class="carrusel-item">
                             <article>
-                                <img src="./assets/multimedia/img/craneo4.jpg" alt="">
-                                <img src="./assets/multimedia/img/craneo3.png" alt="">
+                                <img src="./assets/multimedia/img/Simon.png" alt="">
+                                <img src="./assets/multimedia/img/Simon.png" alt="">
                             </article>
                         </div>
                         <div class="carrusel-item">
                             <article>
-                                <img src="./assets/multimedia/img/craneo4.jpg" alt="">
-                                <img src="./assets/multimedia/img/craneo3.png" alt="">
+                                <img src="./assets/multimedia/img/Sombreron.png" alt="">
+                                <img src="./assets/multimedia/img/Sombreron.png" alt="">
                             </article>
                         </div>
                         <div class="carrusel-item">
                             <article>
-                                <img src="./assets/multimedia/img/craneo4.jpg" alt="">
-                                <img src="./assets/multimedia/img/craneo3.png" alt="">
+                                <img src="./assets/multimedia/img/Perro_de_San_Francisco.png" alt="">
+                                <img src="./assets/multimedia/img/Perro_de_San_Francisco.png" alt="">
                             </article>
                         </div>
                         <div class="carrusel-item">
                             <article>
-                                <img src="./assets/multimedia/img/craneo4.jpg" alt="">
-                                <img src="./assets/multimedia/img/craneo3.png" alt="">
+                                <img src="./assets/multimedia/img/Espanto_Del_Panóptico.png" alt="">
+                                <img src="./assets/multimedia/img/Espanto_Del_Panóptico.png" alt="">
+                            </article>
+                        </div>
+                        <div class="carrusel-item">
+                            <article>
+                                <img src="./assets/multimedia/img/Mano_Peluda2.png" alt="">
+                                <img src="./assets/multimedia/img/Mano_Peluda2.png" alt="">
                             </article>
                         </div>
                     </div>
@@ -238,12 +245,6 @@
             cursor.style.left = touch.clientX + "px";
             cursor.style.top = touch.clientY + "px";
         });
-
-
-
     </script>
-
-
 </body>
-
 </html>

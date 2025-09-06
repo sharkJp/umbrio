@@ -56,40 +56,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Código del Slider de la Sección 2
     const slides = document.querySelectorAll(".slide");
-const prevBtnSlider = document.querySelector(".contenedor-slider .prev");
-const nextBtnSlider = document.querySelector(".contenedor-slider .next");
-const textBox = document.getElementById("textBox").querySelector("p");
+    const prevBtnSlider = document.querySelector(".contenedor-slider .prev");
+    const nextBtnSlider = document.querySelector(".contenedor-slider .next");
+    const textBox = document.getElementById("textBox").querySelector("p");
+    
+    const textos = [
+        `<h1>Catedral</h1> <p>La Catedral Basílica Metropolitana Santiago de Tunja, ubicada en la Plaza de Bolívar, es una de las catedrales más antiguas de Latinoamérica y una de las más antiguas de Colombia, construida a finales del siglo XVI. Su construcción se inició en 1562 y se completó en 1607</p>`,
+        `<h1>Simón Bolívar</h1> <p>La plaza, que es la segunda más grande de Colombia después de la de Villa de Leyva, está rodeada por importantes edificios coloniales, incluyendo la Catedral Basílica Metropolitana Santiago de Tunja, la Casa del Fundador Gonzalo Suárez Rendón, la Alcaldía Municipal y la Gobernación</p>`,
+        `<h1>El Pozo de Donato</h1> <p>El Pozo de Donato, también conocido como Pozo de Hunzahúa, es un lugar de gran importancia histórica y cultural en la ciudad de Tunja, Colombia. Según la leyenda, este pozo se formó cuando la madre de Hunzahúa, el primer Zaque de Tunja, y su hermana Noncetá, rompió una vasija llena de chicha, derramando el líquido y creando así el pozo.</p>`,
+        `<h1>San Agustín</h1> <p>Este edificio de gran envergadura, con arquitectura renacentista, barroca y mudéjar, ha cumplido múltiples funciones a lo largo de la historia: fue convento e iglesia, colegio, universidad, hospital y, desde 1862 hasta 1966, la prisión conocida como Panóptico de Tunja. Actualmente, el claustro alberga el Centro Cultural del Banco de la República, la Biblioteca Alfonso Patiño Rosselli, el Archivo Regional de Boyacá y la sede de San Agustín del Colegio de Boyacá.</p>`
+    ];
 
-const textos = [
-  `<h1>Catedral</h1> <p>La Catedral Basílica Metropolitana Santiago de Tunja, ubicada en la Plaza de Bolívar, es una de las catedrales más antiguas de Latinoamérica y de Colombia. Su construcción inició en 1562 y finalizó en 1607.</p>`,
-  `<h1>Estatua de Simón Bolívar</h1> <p>La historia de la estatua de Simón Bolívar en la Plaza de Bolívar de Tunja es rica y variada. La primera estatua pedestre del libertador fue instalada el 20 de julio de 1884...</p>`,
-  `<h1>El Pozo de Donato</h1> <p>El Pozo de Donato, también conocido como Pozo de Hunzahúa, es un lugar histórico cargado de leyendas...</p>`
-];
+    let currentIndex = 0;
 
-let currentIndex = 0;
+    // Función para mostrar slide y texto
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? "block" : "none";
+        });
+        textBox.innerHTML = textos[index]; 
+    }
 
-// Función para mostrar slide y texto
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.style.display = (i === index) ? "block" : "none";
-  });
-  textBox.innerHTML = textos[index]; 
-}
+    // Botones
+        prevBtnSlider.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    });
 
-// Botones
-prevBtnSlider.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide(currentIndex);
-});
+    nextBtnSlider.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    });
 
-nextBtnSlider.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
-});
-
-// Mostrar el primero al cargar
-showSlide(currentIndex);
-
+    // Mostrar el primero al cargar
+    showSlide(currentIndex);
 
     // Código del Carrusel de la Sección 3 
     const track = document.querySelector(".carrusel-track");
