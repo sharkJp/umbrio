@@ -1,5 +1,3 @@
-
-
 .contenedor-carrusel {
   width: 100%;
   height: 90vh;
@@ -7,8 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
 
 .carrusel {
@@ -33,7 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('./multimedia/img/pergamino.png');
+  background-image: url('../multimedia/img/FondoPergamino1.jpg');
   background-size: cover;
 }
 
@@ -46,83 +42,86 @@
 
 .btnBrujula {
   position: relative;
-      
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        left: -45%;
-     
-      }
-      .btnBrujula img {
-        width: 4vw;
-        height: 4vw;
-        display: flex;
-       margin-left: 3%;
-        cursor: none;
-      }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -45%;   
+}
+
+.btnBrujula img {
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+  margin-left: 3%;
+  cursor: none;
+}
+
 /* Modal */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(9, 9, 9, 0.668);
-      }
- body.modal-open {
-    overflow: hidden;
- }
-      /* Contenido del modal */
-      .modal-contenido {
-        margin: 4% 0 0 10%;
-       background-color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        height: 80%;
-      }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 9, 9, 0.668);
+}
+ 
+body.modal-open {
+  overflow: hidden;
+}
       
-      /* Botón cerrar */
-      .modal-contenido div:first-child {
-        width: 100%;
-   
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        top: 10%;
-       
-      }
-      .modal-contenido div:last-child {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-      }
-      .modal-contenido div:last-child img{
-        width: 90%;
-        height: 90%;
-        object-fit: cover;  
-      }
-      .btn-Close {
-     background: #f7f7f7;
-     border-radius: 50%;
-     width: 3vw;
-     height: 3vw;
-     display: flex;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-        font-size: 2vw;
-        cursor: pointer;
-        font-weight: bold;
-        z-index: 5;
-      }
+/* Contenido del modal */
+.modal-contenido {
+  margin: 4% 0 0 10%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+}
+      
+/* Botón cerrar */
+.modal-contenido div:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 10%;     
+}
+      
+.modal-contenido div:last-child {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;       
+}
+      
+.modal-contenido div:last-child img{
+  width: 90%;
+  height: 90%;
+  object-fit: cover;  
+}
+      
+.btn-Close {
+  background: #f7f7f7;
+  border-radius: 50%;
+  width: 3vw;
+  height: 3vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2vw;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 5;
+}
+
 @media (max-width: 1024px) {
   .carrusel-item {
     flex: 0 0 calc((100% - 15px) / 2);
@@ -195,14 +194,13 @@ article.active img:last-child {
   opacity: 1;
   transform: translateY(-20%) translateZ(80px) scale(1.5);
 }
+
 @media (max-width: 768px) {
   .btnBrujula {
-        left: -43%;
-     
-      }
+    left: -43%;     
+  }
   .btnBrujula img {
     width: 8vw;
     height: 8vw;
-  
   }
 }

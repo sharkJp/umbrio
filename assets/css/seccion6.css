@@ -1,0 +1,113 @@
+/* Contenedor de tarjetas en slider */
+#seccion6 .row {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Oculta scrollbar en Firefox */
+}
+
+#seccion6 .row::-webkit-scrollbar {
+  display: none; /* Oculta scrollbar en Chrome */
+}
+
+/* ==== TARJETAS DE EQUIPO (FLIP) ==== */
+.flip-card {
+  background: transparent;
+  perspective: 1000px;
+  width: 100%;
+  height: 400px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Frontal */
+.flip-card-front {
+  background: #c5aebd;
+  color: black;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Trasera */
+.flip-card-back {
+  background: #f4a009;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+.flip-card-back h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.flip-card-back p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+/* Redes sociales */
+.flip-card-back a {
+  font-size: 20px;
+  margin: 0 10px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.flip-card-back a:hover {
+  color: #ff9800;
+}
+
+/* ==== SLIDER BOTONES ==== */
+.container {
+  position: relative;
+}
+
+button.prev, button.next {
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+button.prev:hover, button.next:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+button.prev { left: -30px; }
+button.next { right: -30px; }
