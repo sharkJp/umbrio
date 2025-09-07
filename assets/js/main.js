@@ -68,28 +68,69 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     let currentIndex = 0;
+    
+    // Mostrar el primer slide y texto directamente
+    slides[currentIndex].classList.add('active');
+    textBox.innerHTML = textos[currentIndex];
+    
+    //funcion para mostrar imagenes y texto
+    function showSlide(index, direction = 'next') {
+        if (index === currentIndex) return;
 
-    // Función para mostrar slide y texto
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = (i === index) ? "block" : "none";
-        });
-        textBox.innerHTML = textos[index]; 
+        const current = slides[currentIndex];
+        const next = slides[index];
+        const murcielago = document.getElementById('murcielago');
+
+        if (!murcielago || !current || !next) return;
+
+        // Limpia clases del murciélago
+        murcielago.classList.remove('fly', 'fly-back');
+
+        // Paso 1:Selecciona animación según dirección
+        //  Murciélago empieza a volar
+        if (direction === 'next') {
+            murcielago.classList.add('fly');
+        } else {
+            murcielago.classList.add('fly-back');
+        }
+        // Paso 2: Detener vuelo del murciélago
+        setTimeout(() => {
+            murcielago.classList.remove('fly', 'fly-back');
+            // Paso 3: Animar salida de la imagen actual
+            current.classList.add('out');
+
+            setTimeout(() => {
+                // Paso 4: Quitar clases de todas las slides (después de la salida)
+                slides.forEach(slide => {
+                    slide.classList.remove('active', 'out', 'fade-in');
+                });
+                // Paso 5: Activar la nueva imagen con animación
+                next.classList.add('active', 'fade-in');
+                // Paso 6: Actualizar el texto
+                textBox.innerHTML = textos[index];
+                // Paso 7: Actualizar el índice   
+                currentIndex = index;
+
+                // Limpia fade-in al terminar animación
+                next.addEventListener('animationend', () => {
+                    next.classList.remove('fade-in');
+                }, { once: true });
+
+            }, 500);// Tiempo entre salida y entrada
+
+        }, 2000);// Tiempo de vuelo del murciélago
     }
 
-    // Botones
-        prevBtnSlider.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
+    // Botones 
+    prevBtnSlider.addEventListener("click", () => {
+        const nextIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(nextIndex, 'prev');
     });
 
     nextBtnSlider.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
+        const nextIndex = (currentIndex + 1) % slides.length;
+        showSlide(nextIndex, 'next');
     });
-
-    // Mostrar el primero al cargar
-    showSlide(currentIndex);
 
     // Código del Carrusel de la Sección 3 
     const track = document.querySelector(".carrusel-track");

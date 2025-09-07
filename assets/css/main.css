@@ -27,7 +27,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #f6e9c7;
+  background-color: #021400;
   /* cursor:url('../multimedia/img/mano.png'),32 32, auto; */
   cursor:none;
 }
@@ -75,7 +75,7 @@ body {
 
 /* Imagen lenguaje de señas */
 .flotante {
-  position: fixed;
+  position: absolute;
   top: 20%;
   left: 5%;
   transform: translateY(-50%);
