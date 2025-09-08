@@ -1,31 +1,37 @@
 :root {
-    --primer-color: #9430bf;
-    /*fondo*/
-    --secundo-color: #05f2f2;
-    --tercero-color: #0596a6;
-    --cuarto-color: #f2a007;
-    --quinto-color: #021400;
-    --footer-color: #633405;
+  --primer-color: #9431c0;
+  /*fondo*/
+  --secundo-color: #07f3f3;
+  --tercero-color: #0697a8;
+  --cuarto-color: #f4a009;
+  --quinto-color: #011740;
+  --sesis-color: #302d5a;
+  --Siete-color: #c5aebd;
+  --Ocho-color: #8b6cb8;
+  --Nueve-color: #f6e9c7;
+  --Diez-Color: #8c9eb1;
+  --footer-color: #633405;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-      width: 100%;
-    height: 100%;
-    background-image: url('../multimedia/img/fondo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-     background-color: #021400;
-      /* cursor:url('../multimedia/img/mano.png'),32 32, auto; */
-      cursor:none;
+  width: 100%;
+  height: 100%;
+  background-image: url('../multimedia/img/fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #021400;
+  /* cursor:url('../multimedia/img/mano.png'),32 32, auto; */
+  cursor:none;
 }
+
 #cursor-img {
   position: fixed;
   width: 80px; 
@@ -37,16 +43,15 @@ body {
 .seccion1,
 .seccion2,
 .seccion3 {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .seccion1 {
-    flex-direction: column;
-    
+  flex-direction: column;  
 }
 
 .seccion2 {
@@ -59,45 +64,44 @@ body {
 }
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--footer-color);
-    width: 100%;
-    height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--footer-color);
+  width: 100%;
+  height: 40vh;
 }
 
 /* Imagen lenguaje de señas */
 .flotante {
-  position: fixed;
-
- top: 20%;
- left: 5%;
+  position: absolute;
+  top: 20%;
+  left: 5%;
   transform: translateY(-50%);
   z-index: 1;
 }
-.img-flotante{
+.video-flotante{
   top: 15%;
-right: 3%;
- position: fixed; 
+  right: 3%;
+  position: fixed; 
   transform: translateY(-50%);
   z-index: 1;
 }
-.img-flotante img {
+.video-flotante video {
   max-width: 150px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.img-flotante .cerrar-boton:hover {
+.video-flotante .cerrar-boton:hover {
   cursor: none;
   transform: scale(1.1);
   transition: transform 0.3s ease;
- background-color: #f1f3ef;
- border-radius: 50%;
+  background-color: #f1f3ef;
+  border-radius: 50%;
 }
-.flotante img {
-  max-width: 150px;
+.flotante video {
+  max-width: 250px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -117,8 +121,9 @@ right: 3%;
   cursor: pointer;
   transform: scale(1.1);
   transition: transform 0.3s ease;
- background-color: #616164;
+  background-color: #616164;
 }
+
 /* ...............................................................Botón flotante Calavera */
 .flotante-calavera {
   position: fixed;
@@ -141,14 +146,13 @@ right: 3%;
   transform: translateY(-50%) scale(1.1) rotate(10deg);
 }
 @media (max-width: 768px) {
-    .flotante-calavera {
+  .flotante-calavera {
     bottom: 10px;
     right: 10px;
     z-index: 999;
     display: none;
-    }
-    #cursor-img {
-      display: none;
-    
-    }
+  }
+  #cursor-img {
+    display: none;
+  }
 }

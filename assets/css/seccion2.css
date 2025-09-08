@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
 }
-
+/* slider de la seccion dos, imagen como marco */
 .slider {
     position: relative;
     width: 50%;
@@ -14,13 +14,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 0;
+    background-image: url('../multimedia/img/papiro1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .slide {
-    display: none;
+    position: absolute;
     width: 80%;
     height: 80%;
+    opacity: 0;
+    transition: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; 
 }
 
 .slide img {
@@ -28,6 +37,116 @@
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+.fade-in {
+    animation: fadeInSlide 2s ease-in-out forwards;
+}
+/* Slide saliente */
+.slide.out {
+    animation: mysteriousOut 2s ease-in-out forwards;
+    z-index: 2;
+    filter: brightness(1);
+}
+
+/* Murciélago */
+.murcielago {
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    width: 100px;
+    height: auto;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 10; /* Por encima de las imágenes */
+}
+
+.murcielago img {
+    width: 100%;
+    height: auto;
+}
+
+.murcielago.fly {
+    animation: flyAcross 2s linear forwards;
+    opacity: 1;
+}
+
+/* Animaciones */
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes mysteriousOut {
+    0% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1) blur(0);
+    }
+    30% {
+        transform: scale(1.02) rotate(2deg);
+        filter: brightness(0.8) blur(1px);
+    }
+    60% {
+        transform: scale(0.98) rotate(-2deg);
+        filter: brightness(0.5) blur(2px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.1) rotate(5deg);
+        filter: brightness(0.2) blur(4px);
+    }
+}
+
+@keyframes flyAcross {
+    0% {
+        left: -20%;
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        top: 10%;
+        transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+        left: 120%;
+        transform: scale(1) rotate(-5deg);
+        opacity: 0;
+    }
+}
+
+.murcielago.fly-back {
+    animation: flyBack 2s linear forwards;
+    opacity: 1;
+}
+
+@keyframes flyBack {
+    0% {
+        left: 120%;
+        top: 30%;
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        top: 10%;
+        transform: scale(1.2) rotate(-10deg);
+    }
+    100% {
+        left: -20%;
+        transform: scale(1) rotate(5deg);
+        opacity: 0;
+    }
 }
 
 /* Botones */
@@ -65,7 +184,7 @@
     color: #0b0a0a;
     font-family: 'Amarante', serif;
     font-weight: bold;
-    background-image: url('../multimedia/img/papiro1.png');
+    background-image: url('../multimedia/img/papiro.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,7 +212,7 @@
 
 .text-box p {
     text-align: justify;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     line-height: 1.6;
     color: #222;
    margin: 0 12% 0 12%;
@@ -116,6 +235,80 @@
   text-align: center;
 }
 
+.seccion2 {
+    position: relative;
+}
+
+/* Mano animada caminando */
+.seccion2 .mano-animada {
+    position: absolute;
+    bottom: 40px;
+    left: -150px;
+    width: 120px;
+    height: 120px;
+    background-image: url("../multimedia/img/manoCamina.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2000;
+    animation: caminar 12s linear infinite;
+}
+
+/* Movimiento lateral + saltitos */
+@keyframes caminar {
+    0% {
+        transform: translate(0, 0) scaleX(1);
+    }
+
+    10% {
+        transform: translate(10vw, -12px) scaleX(1);
+    }
+
+    20% {
+        transform: translate(20vw, 0) scaleX(1);
+    }
+
+    30% {
+        transform: translate(30vw, -12px) scaleX(1);
+    }
+
+    40% {
+        transform: translate(40vw, 0) scaleX(1);
+    }
+
+    49% {
+        transform: translate(calc(100vw + 150px), 0) scaleX(1);
+    }
+
+    50% {
+        transform: translate(calc(100vw + 150px), 0) scaleX(-1);
+    }
+
+    /* Movimiento lateral + saltitos de regreso */
+    60% {
+        transform: translate(70vw, -12px) scaleX(-1);
+    }
+
+    70% {
+        transform: translate(60vw, 0) scaleX(-1);
+    }
+
+    80% {
+        transform: translate(40vw, -12px) scaleX(-1);
+    }
+
+    90% {
+        transform: translate(20vw, 0) scaleX(-1);
+    }
+
+    99% {
+        transform: translate(0, -12px) scaleX(-1);
+    }
+
+    100% {
+        transform: translate(0, 0) scaleX(1);
+    }
+}
 
 @media (max-width: 768px) {
   
