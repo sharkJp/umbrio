@@ -170,12 +170,22 @@
     left: -150px;
     width: 120px;
     height: 120px;
-    background-image: url("../multimedia/img/manoCamina.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     z-index: 2000;
     animation: caminar 12s linear infinite;
+
+}
+
+.mano-animada .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    display: none;
+}
+
+.mano-animada .frame.active {
+    display: block;
 }
 
 /* Movimiento lateral + saltitos */
