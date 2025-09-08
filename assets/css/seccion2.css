@@ -4,8 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+    height: 100vh;
 }
 
+/* Slider de imágenes */
 .slider {
     position: relative;
     width: 50%;
@@ -39,7 +44,7 @@
     transform: translateY(-50%);
     padding: 10px;
     background: rgba(106, 104, 104, 0.5);
-    color: white;
+    color: rgb(44, 38, 54);
     border: none;
     font-size: 2rem;
     border-radius: 50%;
@@ -54,109 +59,208 @@
     right: 10px;
 }
 
-.text-box {
+/* .........................................................pergamino con texto */
+.papiro-container {
     position: relative;
-    width: 50%;
-    height: 50%;
-    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 900px;
+    width: 80%;
+    height: 60%;
+    margin: 40px auto;
+    overflow: visible;
+}
+
+/* Parte central */
+.papiro-centro {
+    flex: 0 1 auto;
+    width: 90%;
+    height: 60%;
+    background: url('../multimedia/img/papiro-centro.png') repeat-x center center;
+    background-size: auto 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+/* Extremos */
+.papiro-extremo {
+    position: absolute;
+    top: 40px;
+    height: 100%;
+    width: 82px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+    transition: transform 0.6s ease-in-out;
+    /* transición para animación */
+}
+
+/* Texto */
+.papiro-contenido {
     color: #0b0a0a;
     font-family: 'Amarante', serif;
     font-weight: bold;
-    background-image: url('../multimedia/img/papiro1.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    overflow: hidden;
-    
-}
-
-.text-box::after {
-    content: "";
-    opacity: 0.7;
-    position: absolute;
-    bottom: 0;
-    left: 7%;
-    width: 50%;
-    height: 60%;
-     text-align: justify;
-}
-
-.text-box h1 {
-    font-size: 1.8rem;
-    color: #5c3317;
-    text-align: center;
-}
-
-.text-box p {
     text-align: justify;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #222;
-   margin: 0 12% 0 12%;
+    max-width: 80%;
+    font-size: 1.2rem;
+}
+
+.papiro-izquierdo {
+    left: 0;
+    background-image: url('../multimedia/img/papiro_izq.png');
+    transform-origin: right center;
+}
+
+.papiro-derecho {
+    right: 0;
+    background-image: url('../multimedia/img/papiro_der.png');
+    transform-origin: left center;
+}
+
+/* Estado cerrado: extremos casi tocándose al centro */
+.papiro-container:not(.abierto) .papiro-izquierdo {
+    transform: translateX(70px);
+
+}
+
+.papiro-container:not(.abierto) .papiro-derecho {
+    transform: translateX(-70px);
+
+}
+
+.papiro-container.abierto .papiro-izquierdo {
+    transform: translateX(0);
+}
+
+.papiro-container.abierto .papiro-derecho {
+    transform: translateX(0);
+}
+
+/* Centro del pergamino */
+.papiro-container.abierto .papiro-centro {
+    transform: scaleX(1);
+}
+
+.papiro-container:not(.abierto) .papiro-centro {
+    transform: scaleX(0);
+}
+
+/* Transición sincronizada */
+.papiro-extremo,
+.papiro-centro {
+    transition: transform 0.6s ease-in-out;
 }
 
 
-.contenedor-slider {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 40px;
-}
-#textBox {
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  text-align: center;
+/* ...........................................................................Mano animada caminando */
+.seccion2 {
+    position: relative;
 }
 
+.seccion2 .mano-animada {
+    position: absolute;
+    bottom: 40px;
+    left: -150px;
+    width: 120px;
+    height: 120px;
+    z-index: 2000;
+    animation: caminar 12s linear infinite;
 
+}
+
+.mano-animada .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    display: none;
+}
+
+.mano-animada .frame.active {
+    display: block;
+}
+
+/* Movimiento lateral + saltitos */
+@keyframes caminar {
+    0% {
+        transform: translate(0, 0) scaleX(1);
+    }
+
+    10% {
+        transform: translate(10vw, -12px) scaleX(1);
+    }
+
+    20% {
+        transform: translate(20vw, 0) scaleX(1);
+    }
+
+    30% {
+        transform: translate(30vw, -12px) scaleX(1);
+    }
+
+    40% {
+        transform: translate(40vw, 0) scaleX(1);
+    }
+
+    49% {
+        transform: translate(calc(100vw + 150px), 0) scaleX(1);
+    }
+
+    50% {
+        transform: translate(calc(100vw + 150px), 0) scaleX(-1);
+    }
+
+    60% {
+        transform: translate(70vw, -12px) scaleX(-1);
+    }
+
+    70% {
+        transform: translate(60vw, 0) scaleX(-1);
+    }
+
+    80% {
+        transform: translate(40vw, -12px) scaleX(-1);
+    }
+
+    90% {
+        transform: translate(20vw, 0) scaleX(-1);
+    }
+
+    99% {
+        transform: translate(0, -12px) scaleX(-1);
+    }
+
+    100% {
+        transform: translate(0, 0) scaleX(1);
+    }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  
     .contenedor-slider {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
     }
-    .slider{
+
+    .slider {
         width: 100%;
         height: 50%;
-        display: flex;
-        flex-direction: column;
     }
-    .slide{
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
+
+    .slide {
         width: 100%;
         height: 100%;
     }
-    .text-box {
-        display: flex;
-          width: 100%;
-        height: 80%;
-       background-image:url('../multimedia/img/FondoPergamino.png');
-       background-position: center;
-       background-repeat: no-repeat;
-       background-size: contain;
-       object-fit: contain;
-       overflow: hidden;
-    }
-    .text-box{
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
-      
+
+    .papiro-container {
+        width: 95%;
+        height: 150px;
     }
 }
