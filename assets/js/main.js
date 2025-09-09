@@ -39,19 +39,38 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Código del Botón flotante Calavera
+  const calavera = document.querySelector("#btnCalavera img");
   const btnCalavera = document.getElementById("btnCalavera");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      btnCalavera.style.display = "block";
-    } else {
-      btnCalavera.style.display = "none";
-    }
-  });
+  const normalSrc = "assets/multimedia/img/calavera.png";
+  const fuegoSrc = "assets/multimedia/img/calavera2.png";
+  const seccion2 = document.querySelector(".seccion2");
+
+  // Al hacer click
   btnCalavera.addEventListener("click", () => {
+    calavera.classList.add("shake-horizontal");
+    calavera.src = fuegoSrc;
+
+    setTimeout(() => {
+      calavera.classList.remove("shake-horizontal");
+    }, 800);
+
+    // Subir al inicio
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
+  });
+
+  // Mostrar / ocultar según scroll
+  window.addEventListener("scroll", () => {
+    const seccion2Top = seccion2.offsetTop;
+
+    if (window.scrollY >= seccion2Top) {
+      btnCalavera.style.display = "block"; // aparece
+    } else {
+      btnCalavera.style.display = "none"; // se oculta
+      calavera.src = normalSrc; 
+    }
   });
   //.........................................................................................seccion 2
   // Código del Slider de la Sección 2 (con pergamino)

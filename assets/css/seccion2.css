@@ -172,7 +172,7 @@
     height: 120px;
     z-index: 2000;
     animation: caminar 12s linear infinite;
-
+    /* mantiene movimiento lateral */
 }
 
 .mano-animada .frame {
