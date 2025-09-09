@@ -121,34 +121,38 @@ right: 3%;
 }
 /* ...............................................................Botón flotante Calavera */
 .flotante-calavera {
+  display: none;   
   position: fixed;
-  bottom: 50px;
-  right: 50px;
-  z-index: 1;
-  display: none;
-}
-
-.flotante-calavera img {
-  width: 80px;
-  height: auto;
-  cursor: none;
-  margin-right: 0;
-  transition: transform 0.3s ease;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
 }
 
 .flotante-calavera img:hover {
   transform: scale(1.05);
   transform: translateY(-50%) scale(1.1) rotate(10deg);
 }
-@media (max-width: 768px) {
-    .flotante-calavera {
-    bottom: 10px;
-    right: 10px;
-    z-index: 999;
-    display: none;
-    }
-    #cursor-img {
-      display: none;
-    
-    }
+
+/* Calavera flotante base */
+#btnCalavera img {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
+
+/* Cuando vibra */
+#btnCalavera img.shake-horizontal {
+  animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+/* Animación de vibración */
+@keyframes shake-horizontal {
+  0%,100% { transform: translateX(0); }
+  10%,30%,50%,70% { transform: translateX(-10px); }
+  20%,40%,60% { transform: translateX(10px); }
+  80% { transform: translateX(8px); }
+  90% { transform: translateX(-8px); }
+}
+

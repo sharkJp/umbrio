@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
+    <link rel="stylesheet" href="./assets/css/seccion4.css">
+    <link rel="stylesheet" href="./assets/css/seccion5.css">
+    <link rel="stylesheet" href="./assets/css/seccion6.css">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+</head>
+<body>
+    <section id="secc1" class="seccion1">
+            <img src="./assets/multimedia/img/mano.png" id="cursor-img" alt="">
+            <header>
+                <!--menu principal-->
+                <div class="contenedor">
+                    <nav>
+                        <div class="llama-menu">
+                            <img src="./assets/multimedia/img/fire.gif" alt="Menu Toggle" class="vela" />
+                        </div>
+                        <div class="menu">
+                            <ul id="mainMenu" class="mainmenu hidden">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#" id="abrirModalUmbrio">Umbrío</a></li>
+                                <li><a href="#seccion4">Equipo</a></li>
+                                <li><a href="#seccion5">Making</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+            </header>
+            <div class="contenedor-principal">
+
+            </div>
+
+            <div id="umbrioModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close" id="cerrarModal2">&times;</span>
+                    <h2>Umbrío</h2>
+                    <video src="assets/multimedia/video/umbrio_video.mp4" controls autoplay muted></video>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Sección 4 Equipo -->
+        <section id="seccion4" class="seccion">
+            <h2>Nuestro Equipo</h2>
+            <div class="container position-relative">
+                <!-- Botones del slider -->
+                 <button class="prev">&#10094;</button>
+                 <div class="row flex-nowrap overflow-hidden">
+
+                    <!-- Miembro 1 -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?auto=format&fit=crop&w=750&q=80" alt="Director">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Leonardo Bernal</h5>
+                                        <p class="card-text">Director</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Leonardo Bernal</h2>
+                                    <p>Responsable de la dirección creativa y narrativa de *Umbrío*.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Miembro 2 -->
+                     <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://images.unsplash.com/photo-1473700216830-7e08d47f858e?auto=format&fit=crop&w=400&q=80" alt="Productora">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Ivonne Espindola</h5>
+                                        <p class="card-text">VFX y Animación</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Ivonne Espindola</h2>
+                                    <p>Encargada de la gestión de recursos, cronogramas y coordinación del equipo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Miembro 3 -->
+                     <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?auto=format&fit=crop&w=750&q=80" alt="Fotógrafo">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Carlos Ruiz</h5>
+                                        <p class="card-text">Diseño Grafica</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Carlos Ruiz</h2>
+                                    <p>Responsable de la dirección de fotografía y estilo visual del cortometraje.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Miembro 4 -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://images.unsplash.com/photo-1473700216830-7e08d47f858e?auto=format&fit=crop&w=400&q=80" alt="Sonido">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Katerin Saavedra</h5>
+                                        <p class="card-text">Desarrollo de Web</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Katerin Saavedra</h2>
+                                    <p>Diseñadora de sonido y encargada de la ambientación auditiva de la obra.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Miembro 5 -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?auto=format&fit=crop&w=750&q=80" alt="Editor">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Luis Martínez</h5>
+                                        <p class="card-text">Edición</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Luis Martínez</h2>
+                                    <p>Encargado de la edición, montaje y ritmo narrativo de la película.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Miembro 6 -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://images.unsplash.com/photo-1473700216830-7e08d47f858e?auto=format&fit=crop&w=400&q=80" alt="Arte">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Sofía Ramírez</h5>
+                                        <p class="card-text">Dirección de Arte</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Sofía Ramírez</h2>
+                                    <p>Diseña la estética visual y la ambientación artística de cada escena.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Miembro 7 -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?auto=format&fit=crop&w=750&q=80" alt="Guionista">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Diego López</h5>
+                                        <p class="card-text">Guionista</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Diego López</h2>
+                                    <p>Escribe la historia, diálogos y estructura narrativa de *Umbrío*.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Miembro 8 -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://images.unsplash.com/photo-1473700216830-7e08d47f858e?auto=format&fit=crop&w=400&q=80" alt="Música">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Valentina Herrera</h5>
+                                        <p class="card-text">Música</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Valentina Herrera</h2>
+                                    <p>Compositora de la banda sonora, creando la atmósfera sonora del cortometraje.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="next">&#10095;</button>
+            </div>
+
+        </section>
+        
+        <!-- Sección 5 Making Of -->
+        <section id="seccion5" class="seccion">
+            <h2>Making Of</h2>
+            <button id="btnModal">Ver Video</button>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="cerrar">&times;</span>
+                    <video controls>
+                        <source src="assets/video/makingof.mp4" type="video/mp4">
+                    </video>
+                    <a href="https://play.google.com/" target="_blank">Juego en Play Store</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botón flotante Calavera -->
+        <div id="btnCalavera" class="flotante-calavera">
+            <img src="./assets/multimedia/img/calavera.png" alt="Volver al inicio" />
+        </div>
+
+        <footer class="footer">
+        <div class="primer-contenedor">
+            <div class="redes-logos">
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/umbrio/" target="_blank"><img
+                            src="./assets/multimedia/icons/social-media/face.svg" alt="facebook"></a>
+                    <a href="https://www.instagram.com/umbrio/" target="_blank"><img
+                            src="./assets/multimedia/icons/social-media/instagram.svg" alt="instagram"></a>
+                    <a href="https://twitter.com/umbrio" target="_blank"><img
+                            src="./assets/multimedia/icons/social-media/x.svg" alt="twitter"></a>
+                    <a href="https://youtube.com/umbrio" target="_blank"><img
+                            src="./assets/multimedia/icons/social-media/youtube.svg" alt="youtube"></a>
+                    <a href="https://www.whatsapp.com/umbrio" target="_blank"><img
+                            src="./assets/multimedia/icons/social-media/whas.svg" alt="whatsapp"></a>
+                    <a href="https://tiktok.com/@umbrio" target="_blank"><img
+                            src="./assets/multimedia/icons/social-media/tictok.svg" alt="tiktok"></a>
+
+                </div>
+                <div class="logos">
+                    <img src="./assets/multimedia/img/logo-sena.webp" alt="sena">
+                    <img src="./assets/multimedia/img/logo.png" alt="logo">
+                </div>
+            </div>
+
+            <div class="enlaces">
+                <a href="https://comunicaciongraficasena.blogspot.com/" target="_blank">
+                    CENIGRAF
+                </a>
+                <a href="https://actividadfisicaycultura.blogspot.com/" target="_blank">
+                    CEFAFC
+                </a>
+                <a href="https://mercadoslogisticaytecnologia.blogspot.com/" target="_blank">
+                    CGMLTI
+                </a>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p>
+                Copyright &copy; 2025 Equipo Web-Umbrio | Todos los derechos
+                reservados .
+            </p>
+        </div>
+    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+        <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/seccion4.js"></script>
+        <script src="./assets/js/seccion5.js"></script>
+        <script src="./assets/js/seccion6.js"></script>
+        <script>
+            const cursor = document.getElementById("cursor-img");
+            function showSlide(index) {
+                slides.forEach(slide => slide.style.display = "none");
+                slides[index].style.display = "block";
+                textBox.innerHTML = `<p>${textos[index]}</p>`;
+            }
+            // Movimiento en PC
+            document.addEventListener("mousemove", (e) => {
+                cursor.style.left = e.clientX + "px";
+                cursor.style.top = e.clientY + "px";
+            });
+
+            // Movimiento en móviles (seguirá el dedo al tocar/pulsar)
+            document.addEventListener("touchmove", (e) => {
+                const touch = e.touches[0];
+                cursor.style.left = touch.clientX + "px";
+                cursor.style.top = touch.clientY + "px";
+            });
+        </script>
+</body>
+</html>
