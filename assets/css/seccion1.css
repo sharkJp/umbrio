@@ -7,6 +7,9 @@ header{
     justify-content:flex-end;
     margin-top: 0;
 }
+
+
+
 .contenedor-principal {
   width: 100%;
   height: 90vh;
@@ -21,44 +24,56 @@ nav {
   justify-content: flex-end;
   height: 10vh;
   position: relative;
-  z-index: 100;
+  z-index: 0;
 }
 
 .llama-menu {
-  width: 8vw;
-  height:10vw;
-  margin-right:2vw;
+  width: 10vw;
+  height:12vw;
+  position: relative;
+
+
 }
 
-.llama-menu img {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  z-index: 9999;
+.vela{
+  position: absolute;
+  width: 35%;
+  height: 45%;
+  cursor: none;
+  z-index:1111;
+  display: block;
+  top: 17%;
+  right: 38%;
 }
 
 .vela:hover {
   transform: scale(1.05);
 }
-
+.vela-menu{
+  width: 16vw;
+  height: 12vw;
+  cursor: none;
+   z-index:1111;
+   display: block;
+   position: absolute;
+   z-index: -1;
+   
+}
 .menu {
   position: absolute;
   list-style: none;
-  background-color: rgba(116, 114, 114, 0.273);
-  backdrop-filter: blur(10px);
-  border: 1px solid gba(116, 114, 114, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.252);
-  right: 2vw;
-  top:11vw;
+  top:5vw;
+  right: 18%;
   width: 8vw;
-  height: 12vw;
+  height: 18vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
-  cursor: pointer;
+  cursor: none;
+
 }
 
 .hidden {
@@ -67,30 +82,35 @@ nav {
 
 .menu ul {
   width: 100%;
+  height: 100%;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+z-index: 10;
 }
 
 li {
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+  position: relative;
+  top: 5%;
+  width: 80%;
+display: flex;
+justify-content: center;
+
 }
 
 li a {
-  font-size: 1.2vw !important;
+  font-size: 1vw !important;
   font-family: "Amarante", serif;
   font-weight: 400;
   font-style: normal;
-  padding: 3%;
-  color: rgb(237, 82, 201);
-  cursor: pointer;
+  padding: 0%;
+  color: var(--quinto-color);
+  cursor: none;
   text-decoration: none;
   text-align: center;
 }
@@ -100,10 +120,10 @@ li a {
 }
 
 .menu a:hover {
-  color: rgb(232, 211, 184);
-  cursor: pointer;
+  color: var(--cuarto-color);
+  cursor: none;
   text-decoration: underline;
-  width: 100%;
+ 
 }
 @media (max-width: 768px) {
 .llama-menu {
@@ -126,3 +146,71 @@ li a {
 }
 /*fin del navbar*/
 
+ .smoke-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+
+  }
+
+  .smoke-container video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+   opacity: 0.9;
+    pointer-events: none; 
+    transition: opacity 5s ease; 
+    z-index: 99999;
+  } 
+  
+  /* Video de niebla */
+  .niebla {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+     opacity: 0.3; 
+    pointer-events: none;
+    mix-blend-mode: screen; 
+     transition: opacity 2s ease;
+     z-index: 99999;
+  }
+
+  /* Capa que hará el efecto linterna */
+.linterna {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+ background: radial-gradient(circle 250px at var(--x, 50%) var(--y, 50%), transparent 0%, rgba(0,0,0,0.95) 100%);
+      transition: opacity 5s ease;
+
+}
+ /* Estado oculto */
+    .oculto {
+      opacity: 0;
+    }
+
+      #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 5s ease; /* transición suave */
+  }
+
+  #overlay.hidden {
+    opacity: 0;
+  }

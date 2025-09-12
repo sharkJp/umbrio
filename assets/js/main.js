@@ -39,44 +39,71 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Código del Botón flotante Calavera
-  const calavera = document.querySelector("#btnCalavera img");
-  const btnCalavera = document.getElementById("btnCalavera");
-  const normalSrc = "assets/multimedia/img/calavera.png";
-  const fuegoSrc = "assets/multimedia/img/calavera2.png";
-  const seccion2 = document.querySelector(".seccion2");
+const btnCalavera = document.getElementById("btnCalavera");
+const normalSrc = "assets/multimedia/img/calavera.png";
+const fuegoSrc = "assets/multimedia/img/calavera2.png";
 
-  // Al hacer click
-  btnCalavera.addEventListener("click", () => {
-    calavera.classList.add("shake-horizontal");
-    calavera.src = fuegoSrc;
+// Crear img dinámicamente
+const calavera = document.createElement("img");
+calavera.id = "imgCalavera";
+calavera.src = normalSrc;
+btnCalavera.appendChild(calavera);
 
-    setTimeout(() => {
-      calavera.classList.remove("shake-horizontal");
-    }, 800);
+// Detectar secciones
+const seccion2 = document.querySelector(".seccion2");
+const seccion3 = document.querySelector(".seccion3");
+const footer = document.querySelector("footer");
 
-    // Subir al inicio
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+// Al hacer click
+btnCalavera.addEventListener("click", () => {
+  calavera.classList.add("shake-horizontal");
+  calavera.src = fuegoSrc;
+
+  setTimeout(() => {
+    calavera.classList.remove("shake-horizontal");
+  }, 800);
+
+  // Subir al inicio
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
+});
 
-  // Mostrar / ocultar según scroll
-  window.addEventListener("scroll", () => {
-    const seccion2Top = seccion2.offsetTop;
+// Hover: cambiar a fuego + vibrar
+calavera.addEventListener("mouseenter", () => {
+  calavera.src = fuegoSrc;
+  calavera.classList.add("shake-horizontal");
+});
 
-    if (window.scrollY >= seccion2Top) {
-      btnCalavera.style.display = "block"; // aparece
-    } else {
-      btnCalavera.style.display = "none"; // se oculta
-      calavera.src = normalSrc; 
-    }
-  });
+calavera.addEventListener("mouseleave", () => {
+  calavera.src = normalSrc;
+  calavera.classList.remove("shake-horizontal");
+});
+
+// Mostrar / ocultar según scroll (secc2, secc3 y footer)
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  const seccion2Top = seccion2.offsetTop;
+  const seccion3Top = seccion3.offsetTop;
+  const footerTop = footer.offsetTop;
+
+  if (
+    (scrollY >= seccion2Top && scrollY < footerTop) || // secc2 y secc3
+    scrollY >= footerTop // footer
+  ) {
+    btnCalavera.style.display = "block";
+  } else {
+    btnCalavera.style.display = "none"; // oculta en secc1
+    calavera.src = normalSrc;
+  }
+});
+
   //.........................................................................................seccion 2
   // Código del Slider de la Sección 2 (con pergamino)
   const slides = document.querySelectorAll(".slide");
-  const prevBtnSlider = document.querySelector(".contenedor-slider .prev");
-  const nextBtnSlider = document.querySelector(".contenedor-slider .next");
+  const prevBtnSlider = document.querySelector(".contenedor-slider .prev-secc2");
+  const nextBtnSlider = document.querySelector(".contenedor-slider .next-secc2");
 
   const papiroContainer = document.querySelector(".papiro-container");
   const textoPapiro = document.getElementById("texto-papiro");
@@ -145,109 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Mostrar el primero al cargar
   showSlide(currentIndex);
 
-  //.........................................................................................seccion 3
-
-  // Código del Carrusel de la Sección 3
-  const track = document.querySelector(".carrusel-track");
-  const prevBtnCarrusel = document.querySelector(".contenedor-carrusel .prev");
-  const nextBtnCarrusel = document.querySelector(".contenedor-carrusel .next");
-  let items = Array.from(track.children);
-  let itemsPerView = getItemsPerView();
-  let itemWidth = items[0].getBoundingClientRect().width + 15;
-  items
-    .slice(-itemsPerView)
-    .forEach((item) =>
-      track.insertBefore(item.cloneNode(true), track.firstChild)
-    );
-  items
-    .slice(0, itemsPerView)
-    .forEach((item) => track.appendChild(item.cloneNode(true)));
-  items = Array.from(track.children);
-  let index = itemsPerView;
-  updatePosition(false);
-  function getItemsPerView() {
-    if (window.innerWidth <= 600) return 1;
-    if (window.innerWidth <= 1024) return 2;
-    return 3;
-  }
-  function updateWidth() {
-    itemsPerView = getItemsPerView();
-    itemWidth = items[0].getBoundingClientRect().width + 15;
-  }
-  function updatePosition(animate = true) {
-    track.style.transition = animate ? "transform 0.4s ease" : "none";
-    track.style.transform = `translateX(${-index * itemWidth}px)`;
-  }
-  nextBtnCarrusel.addEventListener("click", () => {
-    index++;
-    updatePosition();
-    if (index >= items.length - itemsPerView) {
-      setTimeout(() => {
-        index = itemsPerView;
-        updatePosition(false);
-      }, 400);
-    }
-  });
-  prevBtnCarrusel.addEventListener("click", () => {
-    index--;
-    updatePosition();
-    if (index < itemsPerView) {
-      setTimeout(() => {
-        index = items.length - itemsPerView * 2;
-        updatePosition(false);
-      }, 400);
-    }
-  });
-  let startX = 0;
-  let currentX = 0;
-  let isDragging = false;
-  track.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-    isDragging = true;
-  });
-  track.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    currentX = e.touches[0].clientX;
-  });
-  track.addEventListener("touchend", () => {
-    isDragging = false;
-    let diff = startX - currentX;
-    if (diff > 50) nextBtnCarrusel.click();
-    else if (diff < -50) prevBtnCarrusel.click();
-  });
-  window.addEventListener("resize", () => {
-    updateWidth();
-    updatePosition(false);
-  });
-  document.querySelectorAll("article").forEach((article) => {
-    article.addEventListener("click", function () {
-      document
-        .querySelectorAll("article")
-        .forEach((a) => a.classList.remove("active"));
-      this.classList.add("active");
-      setTimeout(() => this.classList.remove("active"), 2000);
-    });
-  });
-  updateWidth();
-
-  // Código del Modal de la Brújula
-  const btnBrujula = document.getElementById("btnBrujula");
-  const modalBrujula = document.getElementById("modalBrujula");
-  const spanClose = document.querySelector("#modalBrujula .btn-Close");
-
-  btnBrujula.addEventListener("click", function () {
-    modalBrujula.style.display = "block";
-  });
-
-  spanClose.addEventListener("click", function () {
-    modalBrujula.style.display = "none";
-  });
-
-  window.addEventListener("click", function (e) {
-    if (e.target === modalBrujula) {
-      modalBrujula.style.display = "none";
-    }
-  });
+ 
 });
 
 // Código del Cursor (debe estar fuera de DOMContentLoaded)

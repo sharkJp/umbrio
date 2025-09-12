@@ -72,14 +72,17 @@
 .enlaces a {
   text-decoration: none;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-family: 'amarante';
+
+  letter-spacing: 3px;
   margin: 1vw;
   cursor: none;
 }
 .enlaces a:hover {
   color: rgb(254, 235, 127);
-  font-size: 1.2rem;
-  margin: 1vw;
+
+
 }
 .copy {
   display: flex;
@@ -91,9 +94,10 @@
 }
 
 .copy p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
   text-align: center;
+  font-family: 'amarante';
 }
 @media (max-width: 768px) {
   .primer-contenedor {
