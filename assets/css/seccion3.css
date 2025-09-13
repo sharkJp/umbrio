@@ -3,7 +3,6 @@
     width: 75%;
     max-width: 1400px;
     height: 100%;
-  
 }
 
 .carrusel-secc3 {
@@ -12,20 +11,19 @@
     height: 100%;
     overflow: hidden;
     margin: auto;
-
 }
 
 /* Flechas */
 .prev-secc3,
 .next-secc3 {
     position: absolute;
-    top: 60%;
+    top: 50%;
     transition: transform 0.4s ease, color 0.4s ease;
     transform: perspective(500px) translateZ(0);
     display: inline-block;
     z-index: 20;
     background: none;
-    color: var(--cuarto-color);
+    color: var(--segundo-color);
     border: none;
     width: 48px;
     height: 48px;
@@ -67,7 +65,7 @@
     height: 80%;
 }
 
-/* item: calculado para 3 por vista */
+/* item 3 por vista */
 .carrusel-item-secc3 {
     flex: 0 0 calc((100% - 30px) / 3);
     display: flex;
@@ -100,8 +98,8 @@
 
 /* CARD (efecto 3D ya integrado) */
 .cards-secc3 {
-    width: 250px;
-    height: 380px;
+    width: 280px;
+    height: 500px;
     position: relative;
     perspective: 1000px;
 }
@@ -111,7 +109,13 @@
     height: 100%;
     border-radius: 12px;
     overflow: hidden;
-    background: #1b0d2a;
+    background: rgba(132, 28, 243, 0.207);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 5px solid rgba(154, 71, 244, 0.207);
+    border-bottom: none;
+    border-left: none;
+    box-shadow: 0px 10px 18px rgba(135, 210, 251, 0.144);
     transition: transform 0.5s ease, opacity 0.5s ease;
     position: relative;
 }
@@ -119,7 +123,7 @@
 .img-con-texto-secc3 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     transition: opacity 0.4s ease;
 }
@@ -129,13 +133,16 @@
     bottom: 0;
     width: 100%;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.55);
-    color: #fff;
+    background: rgba(147, 30, 231, 0.55);
+    color:var(--segundo-color);
     font-family: 'amarante';
     text-align: center;
     z-index: 2;
 }
-
+.texto-slider-secc3 h2{
+    font-size: 1.5rem;
+    font-family: 'amarante';
+}
 .segunda-img-secc3 {
     position: absolute;
     left: 0;
@@ -144,43 +151,23 @@
     margin: auto;
     width: 155px;
     bottom: 10px;
-    transform: translateY(20%) translateZ(-1000px);
+    transform: translateY(10%) translateZ(-1500px);
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
     z-index: 3;
     pointer-events: none;
     backface-visibility: hidden;
-}
 
-.segunda-img-secc3 {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+
 }
 
 .noah{
-    width: 60% !important;
-    
+    width: 70% !important;
 }
-
-.texto-secundario-secc3 {
-    width: 100%;
-    height: 20%;
-    background-color: var(--cuarto-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin-top: -52px;
-    opacity: 0.8;
-    color: white;
-    font-family: 'amarante';
-    font-size: 1.2rem;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+.espanto,.sombreron,.simon,.perro{
+    width: 105% !important;
 }
 
 /* Texto aparece solo en la segunda imagen */
