@@ -4,8 +4,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+    height: 100vh;
+    margin-top: 10%;
 }
-/* slider de la seccion dos, imagen como marco */
+
+/* Slider de imágenes */
 .slider {
     position: relative;
     width: 50%;
@@ -13,343 +19,314 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-image: url('../multimedia/img/papiro1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    justify-content: center; 
+    margin-top: 5%;
 }
 
 .slide {
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    opacity: 0;
-    transition: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1; 
+  display: none;
+  width: 90%;
+  height: 90%;
+  background-image: url('../multimedia/img/papiro-centro.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
+  width: 90%;
+  height: 85%;
+  object-fit: cover;
+  border-radius: 10px;
+  /*margin-top:5% !important;  
+  margin-left: 5% !important;
+  opacity: 1;*/
+  margin: 5% auto 0 auto;
+  display: block;
 }
 
-.slide.active {
-    opacity: 1;
-    z-index: 2;
-}
-.fade-in {
-    animation: fadeInSlide 2s ease-in-out forwards;
-}
-/* Slide saliente */
-.slide.out {
-    animation: mysteriousOut 2s ease-in-out forwards;
-    z-index: 2;
-    filter: brightness(1);
-}
-
-/* Murciélago */
-.murcielago {
-    position: absolute;
-    top: 30%;
-    left: -20%;
-    width: 100px;
-    height: auto;
-    pointer-events: none;
-    opacity: 0;
-    z-index: 10; /* Por encima de las imágenes */
-}
-
-.murcielago img {
-    width: 100%;
-    height: auto;
-}
-
-.murcielago.fly {
-    animation: flyAcross 2s linear forwards;
-    opacity: 1;
-}
-
-/* Animaciones */
+/* Animación de entrada difuminada más lenta */
 @keyframes fadeInSlide {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%);
-        filter: blur(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-        filter: blur(0);
-    }
-}
-
-@keyframes mysteriousOut {
-    0% {
-        opacity: 1;
-        transform: scale(1) rotate(0deg);
-        filter: brightness(1) blur(0);
-    }
-    30% {
-        transform: scale(1.02) rotate(2deg);
-        filter: brightness(0.8) blur(1px);
-    }
-    60% {
-        transform: scale(0.98) rotate(-2deg);
-        filter: brightness(0.5) blur(2px);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1.1) rotate(5deg);
-        filter: brightness(0.2) blur(4px);
-    }
-}
-
-@keyframes flyAcross {
-    0% {
-        left: -20%;
-        transform: scale(1) rotate(0deg);
-    }
-    50% {
-        top: 10%;
-        transform: scale(1.2) rotate(10deg);
-    }
-    100% {
-        left: 120%;
-        transform: scale(1) rotate(-5deg);
-        opacity: 0;
-    }
-}
-
-.murcielago.fly-back {
-    animation: flyBack 2s linear forwards;
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+    filter: blur(10px);
+  }
+  100% {
     opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
 }
 
-@keyframes flyBack {
-    0% {
-        left: 120%;
-        top: 30%;
-        transform: scale(1) rotate(0deg);
-        opacity: 1;
-    }
-    50% {
-        top: 10%;
-        transform: scale(1.2) rotate(-10deg);
-    }
-    100% {
-        left: -20%;
-        transform: scale(1) rotate(5deg);
-        opacity: 0;
-    }
+.fade-in {
+  animation: fadeInSlide 2s ease-in-out forwards; /* ← aquí controlas la velocidad */
 }
+
+/* Animación de salida tipo "wipe" */
+@keyframes wipeOut {
+  0% {
+    mask-position: 0% 0%;
+    -webkit-mask-position: 0% 0%;
+  }
+  100% {
+    mask-position: 100% 0%;
+    -webkit-mask-position: 100% 0%;
+  }
+}
+
+/* Slide saliente con efecto máscara */
+.out {
+  animation: wipeOut 1s ease-in-out forwards;
+  -webkit-mask-image: linear-gradient(to right, black 30%, transparent 70%);
+  mask-image: linear-gradient(to right, black 30%, transparent 70%);
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+  -webkit-mask-position: 0% 0%;
+  mask-position: 0% 0%;
+  z-index: 1;
+}
+
+/***animacion de difuminado**/
 
 /* Botones */
-.prev,
-.next {
-    cursor: none;
+.prev-secc2,
+.next-secc2 {
+    background: none !important;
+    cursor: none !important;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     padding: 10px;
-    background: rgba(106, 104, 104, 0.5);
-    color: white;
+    color: var(--cuarto-color) !important;
     border: none;
-    font-size: 2rem;
-    border-radius: 50%;
-    z-index: 1000;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.text-box {
-    position: relative;
-    width: 50%;
-    height: 50%;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #0b0a0a;
-    font-family: 'Amarante', serif;
+    font-size:38px !important;
     font-weight: bold;
-    background-image: url('../multimedia/img/papiro.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    overflow: hidden;
-    
+    z-index: 10;
+}
+.prev-secc2:hover,
+.next-secc2:hover {
+    color: #c5aebd !important;
+}
+/*.prev-secc2 {
+    left: -1% !important;
 }
 
-.text-box::after {
-    content: "";
-    opacity: 0.7;
-    position: absolute;
-    bottom: 0;
-    left: 7%;
-    width: 50%;
-    height: 60%;
-     text-align: justify;
+.next-secc2 {
+    right: -1% !important;
+}*/
+
+.prev-secc2 {
+  left: 20px;
+}
+.next-secc2 {
+  right: 20px;
 }
 
-.text-box h1 {
-    font-size: 1.8rem;
-    color: #5c3317;
-    text-align: center;
-}
-
-.text-box p {
-    text-align: justify;
-    font-size: 1.0rem;
-    line-height: 1.6;
-    color: #222;
-   margin: 0 12% 0 12%;
-}
-
-
-.contenedor-slider {
-    width: 100%;
-    height: 100vh;
+/* .........................................................pergamino con texto */
+.papiro-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    gap: 40px;
-}
-#textBox {
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  text-align: center;
+    max-width: 900px;
+    width: 40%;
+    height: 70%;
+    /* margin: 40px auto; */
+    overflow: visible;
 }
 
+/* Parte central */
+.papiro-centro {
+    flex: 0 1 auto;
+    width: 75%;
+    height: 65%;
+    background: url('../multimedia/img/papiro-centro.png') repeat-x center center;
+    background-size: auto 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.9s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    margin-top: 15%;
+    z-index: 500;
+}
+
+/* Extremos */
+.papiro-extremo {
+    position: absolute;
+    top: 40px;
+    height: 100%;
+    width: 82px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+    transition: transform 0.9s ease-in-out;
+}
+
+/* Texto */
+.papiro-contenido h1 {
+  color: var(--quinto-color);
+font-family: 'Amarante';
+  font-weight: bold;
+  text-align: center;
+  max-width: 80%;
+  font-size: 2rem;
+  margin-left: 10%;
+  opacity: 0.6;
+}
+
+
+.papiro-contenido p{
+  margin: 15px;
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: #302d5a;
+}
+
+.papiro-izquierdo {
+    left: 0;
+    background-image: url('../multimedia/img/papiro_izq.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    transform-origin: right center;
+}
+
+.papiro-derecho {
+    right: 0;
+    background-image: url('../multimedia/img/papiro_der.png');
+     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    transform-origin: right center;
+}
+
+/* Estado cerrado: extremos casi tocándose al centro */
+.papiro-container:not(.abierto) .papiro-izquierdo {
+    transform: translateX(70px);
+
+}
+
+.papiro-container:not(.abierto) .papiro-derecho {
+    transform: translateX(-70px);
+
+}
+
+.papiro-container.abierto .papiro-izquierdo {
+    transform: translateX(0);
+}
+
+.papiro-container.abierto .papiro-derecho {
+    transform: translateX(0);
+}
+
+/* Centro del pergamino */
+.papiro-container.abierto .papiro-centro {
+    transform: scaleX(1);
+}
+
+.papiro-container:not(.abierto) .papiro-centro {
+    transform: scaleX(0);
+}
+
+/* Transición sincronizada */
+.papiro-extremo,
+.papiro-centro {
+    transition: transform 0.6s ease-in-out;
+}
+
+
+/* ...........................................................................Mano animada caminando */
 .seccion2 {
     position: relative;
 }
 
-/* Mano animada caminando */
-.seccion2 .mano-animada {
-    position: absolute;
-    bottom: 40px;
-    left: -150px;
-    width: 120px;
-    height: 120px;
-    background-image: url("../multimedia/img/manoCamina.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2000;
-    animation: caminar 12s linear infinite;
+.mano-animada {
+  position: absolute;
+margin-top: 5%;
+  left: 0;
+  width: 100%;
+  height:20%;
+  z-index: 500;
+  overflow: hidden;
+  z-index: -1;
+
 }
 
-/* Movimiento lateral + saltitos */
+/* contenedor que sí se anima */
+.mano {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  opacity: 0;   
+  /* animation: caminar 12s linear infinite; */
+}
+
+/* frames */
+.mano .frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  display: none;
+}
+
+.mano .frame.active {
+  display: block;
+}
+
 @keyframes caminar {
-    0% {
-        transform: translate(0, 0) scaleX(1);
-    }
-
-    10% {
-        transform: translate(10vw, -12px) scaleX(1);
-    }
-
-    20% {
-        transform: translate(20vw, 0) scaleX(1);
-    }
-
-    30% {
-        transform: translate(30vw, -12px) scaleX(1);
-    }
-
-    40% {
-        transform: translate(40vw, 0) scaleX(1);
-    }
-
-    49% {
-        transform: translate(calc(100vw + 150px), 0) scaleX(1);
-    }
-
-    50% {
-        transform: translate(calc(100vw + 150px), 0) scaleX(-1);
-    }
-
-    /* Movimiento lateral + saltitos de regreso */
-    60% {
-        transform: translate(70vw, -12px) scaleX(-1);
-    }
-
-    70% {
-        transform: translate(60vw, 0) scaleX(-1);
-    }
-
-    80% {
-        transform: translate(40vw, -12px) scaleX(-1);
-    }
-
-    90% {
-        transform: translate(20vw, 0) scaleX(-1);
-    }
-
-    99% {
-        transform: translate(0, -12px) scaleX(-1);
-    }
-
-    100% {
-        transform: translate(0, 0) scaleX(1);
-    }
+  0%   { transform: translate(0, 0) scaleX(1); opacity: 1; }
+  10%  { transform: translate(10vw, -25px) scaleX(1); }
+  20%  { transform: translate(20vw, 0) scaleX(1); }
+  30%  { transform: translate(30vw, -25px) scaleX(1); }
+  40%  { transform: translate(40vw, 0) scaleX(1); }
+  49%  { transform: translate(calc(100vw + 150px), 0) scaleX(1); }
+  50%  { transform: translate(calc(100vw + 150px), 0) scaleX(-1); }
+  60%  { transform: translate(70vw, -25px) scaleX(-1); }
+  70%  { transform: translate(60vw, 0) scaleX(-1); }
+  80%  { transform: translate(40vw, -25px) scaleX(-1); }
+  90%  { transform: translate(20vw, 0) scaleX(-1); }
+  99%  { transform: translate(0, -25px) scaleX(-1); }
+  100% { transform: translate(0, 0) scaleX(1); opacity: 0; } /* se oculta al final */
 }
 
+
+/* Responsive */
 @media (max-width: 768px) {
-  
     .contenedor-slider {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
     }
-    .slider{
+
+    .slider {
         width: 100%;
         height: 50%;
-        display: flex;
-        flex-direction: column;
     }
-    .slide{
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
+
+    .slide {
         width: 100%;
         height: 100%;
     }
-    .text-box {
-        display: flex;
-          width: 100%;
-        height: 80%;
-       background-image:url('../multimedia/img/FondoPergamino.png');
-       background-position: center;
-       background-repeat: no-repeat;
-       background-size: contain;
-       object-fit: contain;
-       overflow: hidden;
-    }
-    .text-box{
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
-      
+
+    .papiro-container {
+        width: 95%;
+        height: 150px;
     }
 }
+
+#secc2 .flotante {
+  /* top: 5%;
+  left: 5%; */
+  /* display: none; */
+
+}
+

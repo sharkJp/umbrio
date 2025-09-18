@@ -29,15 +29,15 @@
 .redes-sociales img {
   width: 3vw;
   height: 3vw;
-  background: rgba(131, 127, 131, 0.178);
+  background: #837f832d;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  box-shadow: 0 60px 60px -60px rgba(132, 142, 233, 0.5);
+  box-shadow: 0 60px 60px -60px #8690ea80;
   border-radius: 10px;
   cursor: none;
 }
 .redes-sociales img:hover {
-  background-color: rgba(236, 223, 85, 0.441);
+  background-color: #f4a009;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   transform: scale(1.1);
@@ -71,16 +71,17 @@
 }
 .enlaces a {
   text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
+  color: #f6e9c7;
+  font-size: 1.4rem;
+  font-family: 'amarante';
+  letter-spacing: 3px;
   margin: 1vw;
   cursor: none;
 }
 .enlaces a:hover {
-  color: rgb(254, 235, 127);
-  font-size: 1.2rem;
-  margin: 1vw;
+  color: #f4a009;
 }
+
 .copy {
   display: flex;
   flex-direction: column;
@@ -91,10 +92,12 @@
 }
 
 .copy p {
-  font-size: 1.2rem;
-  color: white;
+  font-size: 1rem;
+  color: #f4a009;
   text-align: center;
+  font-family: 'amarante';
 }
+
 @media (max-width: 768px) {
   .primer-contenedor {
     flex-direction: column;

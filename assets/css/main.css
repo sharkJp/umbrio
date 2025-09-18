@@ -1,16 +1,12 @@
 :root {
-  --primer-color: #9431c0;
+  --primer-color: #8b6cb8;
   /*fondo*/
   --secundo-color: #07f3f3;
   --tercero-color: #0697a8;
   --cuarto-color: #f4a009;
   --quinto-color: #011740;
-  --sesis-color: #302d5a;
-  --Siete-color: #c5aebd;
-  --Ocho-color: #8b6cb8;
-  --Nueve-color: #f6e9c7;
-  --Diez-Color: #8c9eb1;
-  --footer-color: #633405;
+
+  --footer-color: #011740;
 }
 
 * {
@@ -27,19 +23,21 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #021400;
+  background-color: #302d5a;
   /* cursor:url('../multimedia/img/mano.png'),32 32, auto; */
-  cursor:none;
+  cursor: none;
+  font-family: 'Amarante';
 }
 
 #cursor-img {
   position: fixed;
-  width: 80px; 
+  width: 120px;
   height: auto;
-  pointer-events: none; 
-  transform: translate(-80%, -10%); 
-  z-index:1000;
+  pointer-events: none;
+  transform: translate(-80%, -10%);
+  z-index: 1000;
 }
+
 .seccion1,
 .seccion2,
 .seccion3 {
@@ -51,11 +49,7 @@ body {
 }
 
 .seccion1 {
-  flex-direction: column;  
-}
-
-.seccion2 {
- 
+  flex-direction: column;
 }
 
 .seccion3 {
@@ -73,86 +67,121 @@ body {
   height: 40vh;
 }
 
-/* Imagen lenguaje de señas */
+/* Contenedor flotante de video */
 .flotante {
-  position: absolute;
-  top: 20%;
-  left: 5%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.video-flotante{
-  top: 15%;
-  right: 3%;
-  position: fixed; 
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.video-flotante video {
-  max-width: 150px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* lado izquierdo */
+  max-width: 200px;
+  z-index: 1000;
+  border: 2px solid #07f3f3;
+  padding: 5px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.video-flotante .cerrar-boton:hover {
-  cursor: none;
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-  background-color: #f1f3ef;
-  border-radius: 50%;
-}
-.flotante video {
-  max-width: 250px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* oculto por defecto */
 }
 
+/* Video dentro del flotante */
+.flotante video {
+  width: 180px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Botón de cerrar */
 .cerrar-boton {
   position: absolute;
-  top: -13%;
-  right: -10%;
-  cursor: pointer;
-  width: 20%;
-  height: 20%;
+  top: 5px;
+  right: 5px;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
   border: none;
-  background-color: #f6f6f7;
-  border-radius: 50%;
-}
-.cerrar-boton:hover {
+  font-size: 16px;
   cursor: pointer;
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-  background-color: #616164;
+  border-radius: 50%;
+  padding: 2px 5px;
 }
 
+
+
 /* ...............................................................Botón flotante Calavera */
+
 .flotante-calavera {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
-  z-index: 1;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
   display: none;
+  /* oculto por defecto */
+  cursor: none;
 }
 
 .flotante-calavera img {
-  width: 80px;
+  width: 60px;
   height: auto;
-  cursor: none;
-  margin-right: 0;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
-.flotante-calavera img:hover {
-  transform: scale(1.05);
-  transform: translateY(-50%) scale(1.1) rotate(10deg);
-}
-@media (max-width: 768px) {
-  .flotante-calavera {
-    bottom: 10px;
-    right: 10px;
-    z-index: 999;
-    display: none;
+/* Vibración */
+@keyframes vibrar {
+  0% {
+    transform: translate(0);
   }
-  #cursor-img {
-    display: none;
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.shake-horizontal {
+  animation: vibrar 0.3s infinite;
+}
+
+
+
+.flotante-calavera.shake-horizontal {
+  animation: vibrar 0.8s;
+}
+
+/* animación de vibración */
+@keyframes vibrar {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0, 0);
   }
 }

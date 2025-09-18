@@ -2,252 +2,366 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Umbrío 2025</title>
-    <link rel="icon" type="image/png" href="assets/multimedia/img/Logo_icon.jpg">
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css">
-    <link rel="stylesheet" href="./assets/css/modal.css">
-    <link rel="stylesheet" href="./assets/css/seccion1.css">
-    <link rel="stylesheet" href="./assets/css/seccion2.css">
-    <link rel="stylesheet" href="./assets/css/seccion3.css">
-    <!--bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umbrío 2025</title>
+  <link rel="icon" type="image/png" href="assets/multimedia/img/calavera.png" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/footer.css" />
+  <link rel="stylesheet" href="./assets/css/modal.css" />
+  <link rel="stylesheet" href="./assets/css/seccion1.css" />
+  <link rel="stylesheet" href="./assets/css/seccion2.css" />
+  <link rel="stylesheet" href="./assets/css/seccion3.css" />
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
 
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+    <style>
+      
+ 
+    </style>
 </head>
 
 <body>
-    <main>
-        <section id="secc1" class="seccion1">
-            <img src="./assets/multimedia/img/mano.png" id="cursor-img" alt="">
-            <!--inicio del modal    -->
-            <div class="modal fade fullscreen-modal" id="modalFullscreen" tabindex="-1"
-                aria-labelledby="modalFullscreenLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
+  <main>
+    <!-- SECCIÓN 1 .......................................................................................................-->
+    <section id="secc1" class="seccion1">
+      <div class="smoke-container">
+        <video id="niebla"  src="./assets/multimedia/video/Vídeo sin título ‐ Hecho con Clipchamp.mp4.mp4" autoplay muted loop  playsinline></video>
+      </div>
 
-                        <div class="modal-header">
-                            <button type="button" class="btn-cerrar" data-bs-dismiss="modal" aria-label="Cerrar">
-                                ❌
-                            </button>
-                        </div>
-                        <video width="100%" autoplay muted>
-                            <source src="./assets/multimedia/video/mi_video.mp4" type="video/mp4">
-                            Tu navegador no soporta el tag de video.
-                        </video>
-                    </div>
-                </div>
+      <!-- Botón flotante Persona intérprete -->
+      <section id="seccion1">
+        <div id="video-flotante-1" class="flotante">
+          <video src="./assets/multimedia/video/inicio.mp4" controls muted></video>
+          <button class="cerrar-boton" data-target="video-flotante-1">❌</button>
+        </div>
+      </section>
+  
+      <!-- <img src="./assets/multimedia/img/mano.png" id="cursor-img" alt="" /> -->
+
+      <!-- Modal pantalla completa con video -->
+      <div class="modal fade fullscreen-modal" id="modalFullscreen" tabindex="-1" aria-labelledby="modalFullscreenLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-cerrar" data-bs-dismiss="modal" aria-label="Cerrar">
+                ❌
+              </button>
             </div>
-            <header>
-                <!--menu principal-->
-                <div class="contenedor">
-                    <nav>
-                        <div class="llama-menu">
-                            <img src="./assets/multimedia/img/blue-blueflame.gif" alt="Menu Toggle" class="vela" />
-                        </div>
-                        <div class="menu">
-                            <ul id="mainMenu" class="mainmenu hidden">
-                                <li><a href="#secc1">Inicio</a></li>
-                                <li><a href="#locaciones">Locaciones</a></li>
-                                <li><a href="#personajes">Personajes</a></li>
-                                <li><a href="page2.html">Más</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-            </header>
-            <div class="contenedor-principal">
+            <video width="100%" autoplay muted>
+              <source src="./assets/multimedia/video/mi_video.mp4" type="video/mp4" />
+              Tu navegador no soporta el tag de video.
+            </video>
+          </div>
+        </div>
+      </div>
 
+      <header>
+        <!--menu principal-->
+        <div class="contenedor">
+          <nav>
+            <!-- Botón del menú con animación de fuego -->
+            <div class="llama-menu">
+              <img src="./assets/multimedia/img/fire.gif" alt="Menu Toggle" class="vela" />
             </div>
-            <!-- Botón flotante Persona interprete -->
-            <div id="imagen-flotante" class="flotante">
-                <video src="./assets/multimedia/video/inicio.mp4" controls autoplay muted></video>
-                <button onclick="cerrarImagen()" class="cerrar-boton"><samp>❌</samp></button>
+            <div class="menu">
+              <!-- Opciones para la navegación -->
+              <ul id="mainMenu" class="mainmenu hidden">
+                <img src="./assets/multimedia/img/vela.png" class="vela-menu" alt="">
+                <li><a href="#secc1">Inicio</a></li>
+                <li><a href="#secc2">Locaciones</a></li>
+                <li><a href="#secc3">Personajes</a></li>
+                <li><a href="page2.html">Más</a></li>
+              </ul>
             </div>
-        </section>
+          </nav>
+        </div>
+      </header>
 
-        <section id="locaciones" class="seccion2">
+      <div class="contenedor-principal">
+        <!-- Aquí puedes agregar contenido principal de la sección -->
+      </div>
 
-            <!-- Mano animada caminando -->
-            <div class="mano-animada">
-                
-            </div>
-            <div class="contenedor-slider">
-                <img src="../multimedia/img/mano.png" id="cursor-img" alt="">
-                <!-- Slider -->
-                <div class="slider">
-                    <div class="murcielago" id="murcielago">
-                        <img src="./assets/multimedia/img/murcielago.webp" alt="Murcielago volando">
-                    </div>
-                    <div class="slide">
-                        <img src="./assets/multimedia/img/Catedral.png" alt="Imagen 1">
-                    </div>
-                    <div class="slide">
-                        <img src="./assets/multimedia/img/PlazaSimonBolivar.webp" alt="Imagen 2">
-                    </div>
-                    <div class="slide">
-                        <img src="./assets/multimedia/img/PozoDeDonato.png" alt="Imagen 3">
-                    </div>
-                    <div class="slide">
-                        <img src="./assets/multimedia/img/San_Agustin.webp" alt="Imagen 4">
-                    </div>
-                    <button class="prev">&#10094;</button>
-                    <button class="next">&#10095;</button>
-                </div>
+   
+      <div class="linterna" id="linterna"></div>
+    </section>
+      <img src="./assets/multimedia/img/linterna.png" id="cursor-img" alt="" >
+    <!-- SECCIÓN 2 ...........................................................................................................-->
 
-                <!-- Caja de texto -->
-                <div class="text-box" id="textBox">
-                    <p></p>
-                </div>
-            </div>
-        </section>
-
-        <section id="personajes" class="seccion3">
-
-
-            <div class="contenedor-carrusel ">
-
-                <div class="carrusel">
-                    <button class="prev">&#10094;</button>
-                    <div class="carrusel-track">
-                        <div class="carrusel-item">
-                            <article>
-                                <img src="./assets/multimedia/img/craneo4.jpg" alt="">
-                                <img src="./assets/multimedia/img/craneo3.png" alt="">
-                            </article>
-                        </div>
-                        <div class="carrusel-item">
-                            <article>
-                                <img src="./assets/multimedia/img/craneo4.jpg" alt="">
-                                <img src="./assets/multimedia/img/craneo3.png" alt="">
-                            </article>
-                        </div>
-                        <div class="carrusel-item">
-                            <article>
-                                <img src="./assets/multimedia/img/craneo4.jpg" alt="">
-                                <img src="./assets/multimedia/img/craneo3.png" alt="">
-                            </article>
-                        </div>
-                        <div class="carrusel-item">
-                            <article>
-                                <img src="./assets/multimedia/img/craneo4.jpg" alt="">
-                                <img src="./assets/multimedia/img/craneo3.png" alt="">
-                            </article>
-                        </div>
-                        <div class="carrusel-item">
-                            <article>
-                                <img src="./assets/multimedia/img/craneo4.jpg" alt="">
-                                <img src="./assets/multimedia/img/craneo3.png" alt="">
-                            </article>
-                        </div>
-                        <div class="carrusel-item">
-                            <article>
-                                <img src="./assets/multimedia/img/craneo4.jpg" alt="">
-                                <img src="./assets/multimedia/img/craneo3.png" alt="">
-                            </article>
-                        </div>
-                    </div>
-                    <button class="next">&#10095;</button>
-                </div>
-            </div>
-           
-
-                <!--brujula -->
-                <div class="btnBrujula">
-                    <img src="./assets/multimedia/img/brujula.gif" alt="Brújula" class="brujula" id="btnBrujula" />
-                </div>
-
-                <!--Modal mapa tunja  -->
-                <div id="modalBrujula" class="modal">
-                    <div class="modal-contenido">
-                        <div>
-                            <span class="btn-Close">❌</span>
-                        </div>
-                        <div class="mapa">
-                            <img src="./assets/multimedia/img/tunja.webp" alt="Mapa de Tunja" />
-
-                        </div>
-                    </div>
-                </div>
-            
-        </section>
-    </main>
-    <!-- Botón flotante Calavera -->
-    <div id="btnCalavera" class="flotante-calavera">
-        <img src="./assets/multimedia/img/calavera.png" alt="Volver al inicio" />
+    <!-- Mano animada caminando -->
+    <div class="mano-animada">
+      <div class="mano">
+        <img src="./assets/multimedia/img/manoCamina1.png" class="frame active" alt="Mano 1" />
+        <img src="./assets/multimedia/img/manoCamina2.png" class="frame" alt="Mano 2" />
+        <img src="./assets/multimedia/img/manoCamina3.png" class="frame" alt="Mano 3" />
+      </div>
     </div>
-    <footer class="footer">
-        <div class="primer-contenedor">
-            <div class="redes-logos">
-                <div class="redes-sociales">
-                    <a href="https://www.facebook.com/umbrio/" target="_blank"><img
-                            src="./assets/multimedia/icons/social-media/face.svg" alt="facebook"></a>
-                    <a href="https://www.instagram.com/umbrio/" target="_blank"><img
-                            src="./assets/multimedia/icons/social-media/instagram.svg" alt="instagram"></a>
-                    <a href="https://twitter.com/umbrio" target="_blank"><img
-                            src="./assets/multimedia/icons/social-media/x.svg" alt="twitter"></a>
-                    <a href="https://youtube.com/umbrio" target="_blank"><img
-                            src="./assets/multimedia/icons/social-media/youtube.svg" alt="youtube"></a>
-                    <a href="https://www.whatsapp.com/umbrio" target="_blank"><img
-                            src="./assets/multimedia/icons/social-media/whas.svg" alt="whatsapp"></a>
-                    <a href="https://tiktok.com/@umbrio" target="_blank"><img
-                            src="./assets/multimedia/icons/social-media/tictok.svg" alt="tiktok"></a>
+    <section id="secc2" class="seccion2">
+      <!-- Botón flotante Persona intérprete -->
+      <section id="seccion2">
+        <div id="video-flotante-2" class="flotante">
+          <video src="./assets/multimedia/video/Locaciones.mp4" controls muted></video>
+          <button class="cerrar-boton" data-target="video-flotante-2">❌</button>
+        </div>
+      </section>
 
-                </div>
-                <div class="logos">
-                    <img src="./assets/multimedia/img/logo-sena.webp" alt="sena">
-                    <img src="./assets/multimedia/img/logo.png" alt="logo">
+      <div class="contenedor-slider">
+        <!-- Slider para las imágenes -->
+        <div class="slider">
+          <div class="slide">
+            <img src="./assets/multimedia/img/Catedral.png" alt="Imagen 1" />
+          </div>
+          <div class="slide">
+            <img src="./assets/multimedia/img/SimonBolivar.webp" alt="Imagen 2" />
+          </div>
+          <div class="slide">
+            <img src="./assets/multimedia/img/PozoDeDonato.png" alt="Imagen 3" />
+          </div>
+          <div class="slide">
+            <img src="./assets/multimedia/img/SanAgustin.png" alt="Imagen 4" />
+          </div>
 
-
-                </div>
-            </div>
-
-            <div class="enlaces">
-                <a href="https://comunicaciongraficasena.blogspot.com/" target="_blank">
-                    CENIGRAF
-                </a>
-                <a href="https://actividadfisicaycultura.blogspot.com/" target="_blank">
-                    CEFAFC
-                </a>
-                <a href="https://mercadoslogisticaytecnologia.blogspot.com/" target="_blank">
-                    CGMLTI
-                </a>
-            </div>
+          <!-- Botones -->
+          <button class="prev-secc2">&#10094;</button>
+          <button class="next-secc2">&#10095;</button>
         </div>
 
-        <div class="copy">
-            <p>
-                Copyright &copy; 2025 Equipo Web-Umbrio | Todos los derechos
-                reservados .
-            </p>
+        <!-- Pergamino -->
+        <div class="papiro-container" id="papiro">
+          <div class="papiro-extremo papiro-izquierdo"></div>
+          <div class="papiro-centro">
+            <div class="papiro-contenido" id="texto-papiro">
+              <!-- El texto se insertará dinámicamente aquí -->
+            </div>
+          </div>
+          <div class="papiro-extremo papiro-derecho"></div>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/seccion2.js"></script>
-    <script src="./assets/js/seccion3.js"></script>
-    <script>
-        const cursor = document.getElementById("cursor-img");
-        function showSlide(index) {
-            slides.forEach(slide => slide.style.display = "none");
-            slides[index].style.display = "block";
-            textBox.innerHTML = `<p>${textos[index]}</p>`;
-        }
-        // Movimiento en PC
-        document.addEventListener("mousemove", (e) => {
-            cursor.style.left = e.clientX + "px";
-            cursor.style.top = e.clientY + "px";
-        });
+      </div>
 
-        // Movimiento en móviles (seguirá el dedo al tocar/pulsar)
-        document.addEventListener("touchmove", (e) => {
-            const touch = e.touches[0];
-            cursor.style.left = touch.clientX + "px";
-            cursor.style.top = touch.clientY + "px";
-        });
-    </script>
+    </section>
+    <!-- SECCIÓN 3 .......................................................................................................................................-->
+    <section id="secc3" class="seccion3">
+      <!-- Botón flotante Persona intérprete -->
+      <section id="seccion3">
+        <div id="video-flotante-3" class="flotante">
+          <video src="./assets/multimedia/video/Personajes.mp4" controls muted></video>
+          <button class="cerrar-boton" data-target="video-flotante-3">❌</button>
+        </div>
+      </section>
+
+      <div class="contenedor-carrusel-secc3">
+        <div class="carrusel-secc3">
+          <button class="prev-secc3">&#10094;</button>
+          <div class="carrusel-track-secc3">
+
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img src="./assets/multimedia/img/3-4(PC)/1_Noha_Entero.png" alt="principal">
+                  <div class="texto-slider-secc3">
+                    <h2>Noah</h2>           
+                  </div>
+                </div>
+                <img class="segunda-img-secc3" src="./assets/multimedia/img/3-4(PC)/R_Noah_1.png" alt="secundaria">
+              </div>
+            </div>
+
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img src="./assets/multimedia/img/3-4(PC)/1_espanto_entero.png" alt="principal">
+                  <div class="texto-slider-secc3">
+                    <h2>Espanto del Panóptico</h2>           
+                  </div>
+                </div>
+                <img class="segunda-img-secc3" src="./assets/multimedia/img/3-4(PC)/R_Espanto_1.png" alt="secundaria">
+              </div>
+            </div>
+
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img src="./assets/multimedia/img/3-4(PC)/1_sombreron_entero.png" alt="principal">
+                  <div class="texto-slider-secc3">
+                    <h2>Sombrerón</h2>           
+                  </div>
+                </div>
+                <img class="segunda-img-secc3" src="./assets/multimedia/img/3-4(PC)/R_Sombreron_1.png" alt="secundaria">
+              </div>
+            </div>
+
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img src="./assets/multimedia/img/3-4(PC)/1_simon_entero.png" alt="principal">
+                  <div class="texto-slider-secc3">
+                    <h2>Simón</h2>           
+                  </div>
+                </div>
+                <img class="segunda-img-secc3" src="./assets/multimedia/img/3-4(PC)/R_Simón_1.png" alt="secundaria">
+              </div>
+            </div>
+
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img src="./assets/multimedia/img/3-4(PC)/1_Perro_entero.png" alt="principal">
+                  <div class="texto-slider-secc3">
+                    <h2>Perro de San Francisco</h2>           
+                  </div>
+                </div>
+                <img class="segunda-img-secc3" src="./assets/multimedia/img/3-4(PC)/R_Perro_1.png" alt="secundaria">
+              </div>
+            </div>
+
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img src="./assets/multimedia/img/3-4(PC)/1_Mano.png" alt="principal">
+                  <div class="texto-slider-secc3">
+                    <h2>Mano peluda</h2>           
+                  </div>
+                </div>
+                <img class="segunda-img-secc3" src="./assets/multimedia/img/3-4(PC)/R_Mano_1.png" alt="secundaria">
+              </div>
+            </div>
+            <!-- termina items -->
+          </div>
+          <button class="next-secc3">&#10095;</button>
+        </div>
+      </div>
+      
+      <!-- Botón que abre modal -->
+      <div class="btn-brujula">
+        <label for="btn-modal">
+          <img src="./assets/multimedia/img/brujula.gif" alt="" class="brujula " id="btnBrujula" />
+         </label>
+        <input type="checkbox" id="btn-modal"> 
+        <div class="modal-secc3">
+          <div class="modal-contenido-secc3">
+             <label for="btn-modal" class="cerrar-secc3">&times;</label> <img
+              src="./assets/multimedia/img/tunja.webp" alt="Tunja"
+              style="width:100%; height:100%; object-fit:cover; border-radius:8px;"> </div>
+        </div>
+
+    </section>
+  </main>
+
+  <!-- Botón flotante Calavera -->
+  <div class="flotante-calavera" id="btnCalavera">
+    <!-- <img
+        id="imgCalavera"
+
+      /> -->
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="primer-contenedor">
+      <div class="redes-logos">
+        <div class="redes-sociales">
+          <a href="https://www.facebook.com/umbrio/" target="_blank"><img
+              src="./assets/multimedia/icons/social-media/face.svg" alt="facebook" /></a>
+          <a href="https://www.instagram.com/umbrio/" target="_blank"><img
+              src="./assets/multimedia/icons/social-media/instagram.svg" alt="instagram" /></a>
+          <a href="https://twitter.com/umbrio" target="_blank"><img src="./assets/multimedia/icons/social-media/x.svg"
+              alt="twitter" /></a>
+          <a href="https://youtube.com/umbrio" target="_blank"><img
+              src="./assets/multimedia/icons/social-media/youtube.svg" alt="youtube" /></a>
+          <a href="https://www.whatsapp.com/umbrio" target="_blank"><img
+              src="./assets/multimedia/icons/social-media/whas.svg" alt="whatsapp" /></a>
+          <a href="https://tiktok.com/@umbrio" target="_blank"><img
+              src="./assets/multimedia/icons/social-media/tictok.svg" alt="tiktok" /></a>
+        </div>
+        <div class="logos">
+          <img src="./assets/multimedia/img/logo-sena.webp" alt="sena" />
+          <img src="./assets/multimedia/img/logo.png" alt="logo" />
+        </div>
+      </div>
+
+      <div class="enlaces">
+        <a href="https://comunicaciongraficasena.blogspot.com/" target="_blank">
+          CENIGRAF
+        </a>
+        <a href="https://actividadfisicaycultura.blogspot.com/" target="_blank">
+          CEFAFC
+        </a>
+      </div>
+    </div>
+
+    <div class="copy">
+      <p>
+        Copyright &copy; 2025 Equipo Web-Umbrio | Todos los derechos
+        reservados .
+      </p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/seccion1.js"></script>
+  <script src="./assets/js/seccion2.js"></script>
+  <script src="./assets/js/seccion3.js"></script>
+  <script src="./assets/js/fade-enhancer.js"></script>
+  <script>
+
+const linterna = document.getElementById('linterna');
+  const niebla = document.getElementById('niebla');
+  // 🚫 Bloquear scroll al cargar
+  document.body.style.overflow = "hidden";
+  // Efecto de linterna siguiendo el mouse
+  document.addEventListener('mousemove', (e) => {
+    linterna.style.setProperty('--x', e.clientX + 'px');
+    linterna.style.setProperty('--y', e.clientY + 'px');
+  });
+
+  // Después de 7 segundos: linterna y niebla se desvanecen
+  setTimeout(() => {
+    niebla.classList.add('oculto');
+    linterna.classList.add('oculto');
+
+    // Después de 5 segundos más: ocultar completamente el video de niebla
+    setTimeout(() => {
+      niebla.style.display = 'none';
+      cursor.src = "./assets/multimedia/img/mano.png";      // 👈 cambiar cursor
+    cursor.style.width = "80px";
+        // ✅ Habilitar scroll cuando la animación termina
+      document.body.style.overflow = "auto";
+    }, 5000);
+
+  }, 7000); 
+
+  </script>
+  
+  
+  <script>
+    const cursor = document.getElementById("cursor-img");
+    function showSlide(index) {
+      slides.forEach((slide) => (slide.style.display = "none"));
+      slides[index].style.display = "block";
+      textBox.innerHTML = `<p>${textos[index]}</p>`;
+    }
+    // Movimiento en PC
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+
+    // Movimiento en móviles (seguirá el dedo al tocar/pulsar)
+    document.addEventListener("touchmove", (e) => {
+      const touch = e.touches[0];
+      cursor.style.left = touch.clientX + "px";
+      cursor.style.top = touch.clientY + "px";
+    });
+  </script>
 </body>
+
 </html>
