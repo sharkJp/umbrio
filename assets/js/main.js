@@ -1,112 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const flotantes = document.querySelectorAll(".flotante");
 
-  // Ocultar todos al inicio
-  flotantes.forEach(f => f.style.display = "none");
-
-  // Detectar sección más visible
-  const observer = new IntersectionObserver(entries => {
-    // Buscar la sección con mayor visibilidad
-    const visible = entries
-      .filter(entry => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-    if (visible) {
-      const flotante = visible.target.querySelector(".flotante");
-      const video = flotante?.querySelector("video");
-
-      if (flotante) {
-        // Ocultar todos y pausar
-        flotantes.forEach(f => {
-          f.style.display = "none";
-          const v = f.querySelector("video");
-          if (v) v.pause();
-        });
-
-        // Mostrar solo el más visible
-        flotante.style.display = "block";
-        if (video) {
-          video.currentTime = 0; // reinicia al entrar
-          video.play();
-        }
-      }
-    }
-  }, { threshold: [0.25, 0.5, 0.75, 1] });
-
-  // Observar todas las secciones
-  document.querySelectorAll("section").forEach(sec => observer.observe(sec));
-
-  // Botones de cerrar
-  const botonesCerrar = document.querySelectorAll(".cerrar-boton");
-  botonesCerrar.forEach(boton => {
-    boton.addEventListener("click", () => {
-      const targetId = boton.getAttribute("data-target");
-      const contenedor = document.getElementById(targetId);
-      const video = contenedor?.querySelector("video");
-
-      if (contenedor) {
-        contenedor.style.display = "none";
-        if (video) {
-          video.pause();
-          video.currentTime = 0; // reinicia al cerrarlo
-        }
-      }
-    });
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Código del Modal de Video (modalFullscreen)
-  const modalElement = document.getElementById("modalFullscreen");
-  if (modalElement) {
-    const miModal = new bootstrap.Modal(modalElement);
-    miModal.show();
-    let tiempoRestante = 6;
-    const intervalo = setInterval(() => {
-      tiempoRestante--;
-      console.log(`Cerrando en ${tiempoRestante} segundos...`);
-      if (tiempoRestante <= 0) {
-        miModal.hide();
-        clearInterval(intervalo);
-      }
-    }, 1000);
-  }
-
-  // Código del Menú
-  const velaImage = document.querySelector(".vela");
-  const menuList = document.querySelector(".menu");
-  velaImage.addEventListener("click", function () {
-    menuList.classList.toggle("hidden");
-  });
-  document.addEventListener("click", function (event) {
-    if (!velaImage.contains(event.target) && !menuList.contains(event.target)) {
-      if (!menuList.classList.contains("hidden")) {
-        menuList.classList.add("hidden");
-      }
-    }
-  });
-
-  // Código del Botón flotante Calavera
-  const btnCalavera = document.getElementById("btnCalavera");
-  const normalSrc = "assets/multimedia/img/calavera.png";
-  const fuegoSrc = "assets/multimedia/img/calavera2.png";
-
-  // Crear img dinámicamente
-  const calavera = document.createElement("img");
-  calavera.id = "imgCalavera";
-  calavera.src = normalSrc;
-  btnCalavera.appendChild(calavera);
-
-  // Detectar secciones
-  const seccion2 = document.querySelector(".seccion2");
-  const seccion3 = document.querySelector(".seccion3");
-  const footer = document.querySelector("footer");
-  
-  // Al hacer click
-  btnCalavera.addEventListener("click", () => {
-    calavera.classList.add("shake-horizontal");
-    calavera.src = fuegoSrc;
 
   setTimeout(() => {
     calavera.classList.remove("shake-horizontal");
@@ -159,10 +51,10 @@ window.addEventListener("scroll", () => {
 
   const textos = [
     `<h1>Catedral</h1> <p>La Catedral Basílica Metropolitana Santiago de Tunja, ubicada en la Plaza de Bolívar, es una de las catedrales más antiguas de Latinoamérica y de Colombia. Su construcción inició en 1562 y finalizó en 1607.</p>`,
-    `<h1>Simón Bolívar</h1> <p>La plaza, que es la segunda más grande de Colombia después de la de Villa de Leyva, está rodeada por importantes edificios coloniales, incluyendo la Catedral Basílica Metropolitana Santiago de Tunja, la Casa del Fundador Gonzalo Suárez Rendón, la Alcaldía Municipal y la Gobernación</p>`,
+
+    `<h1>Estatua de Simón Bolívar</h1> <p>La historia de la estatua de Simón Bolívar en la Plaza de Bolívar de Tunja es rica y variada. La primera estatua pedestre del libertador fue instalada el 20 de julio de 1884...</p>`,
     `<h1>El Pozo de Donato</h1> <p>El Pozo de Donato, también conocido como Pozo de Hunzahúa, es un lugar histórico cargado de leyendas...</p>`,
-    `<h1>San Agustín</h1> <p>Este edificio, ha cumplido múltiples funciones a lo largo de la historia: fue convento e iglesia, colegio, universidad, hospital prisión conocida como Panóptico de Tunja. Actualmente, el Centro Cultural del Banco de la República, la Biblioteca Alfonso Patiño Rosselli, el Archivo Regional de Boyacá y la sede de San Agustín del Colegio de Boyacá.</p>`
-  
+
   ];
 
   let currentIndex = 0;
@@ -186,49 +78,20 @@ window.addEventListener("scroll", () => {
   }
 
   function showSlide(index) {
-    if (index < 0) index = slides.length - 1;
-    if (index >= slides.length) index = 0;
+    slides.forEach(
+      (slide, i) => (slide.style.display = i === index ? "block" : "none")
+    );
 
-    const currentSlide = slides[currentIndex];
-    const nextSlide = slides[index];
-
-    if (currentSlide === nextSlide) return;
-
-    // Obtener las imágenes
-    const currentImg = currentSlide.querySelector("img");
-    const nextImg = nextSlide.querySelector("img");
 
     // Cerrar pergamino
     abrirCerrarPapiro(false);
 
-    // Animación de salida solo en la imagen actual
-    currentImg.classList.remove("fade-in");
-    currentImg.classList.add("out");
-
     setTimeout(() => {
-      // Ocultar slide completo
-      currentSlide.style.display = "none";
-      currentImg.classList.remove("out");
-
-      // Mostrar siguiente slide
-      nextSlide.style.display = "block";
-      nextImg.classList.add("fade-in");
-
-      // Actualizar pergamino
-      textoPapiro.innerHTML = textos[index];
-      abrirCerrarPapiro(true);
-
-      // Actualizar índice
-      currentIndex = index;
-    },
-    1000);
+      textoPapiro.innerHTML = textos[index]; // cambia contenido
+      abrirCerrarPapiro(true); // abrir pergamino y volver extremos a borde
+    }, 600);
   }
 
-  // Mostrar el primer slide con texto y animación
-  slides[currentIndex].style.display = "block";
-  slides[currentIndex].classList.add("fade-in");
-  textoPapiro.innerHTML = textos[currentIndex];
-  abrirCerrarPapiro(true);
 
   // Animación de la mano (frames)
   const manoFrames = document.querySelectorAll(".mano-animada .frame");
@@ -242,14 +105,20 @@ window.addEventListener("scroll", () => {
 
   // Botones
   prevBtnSlider.addEventListener("click", () => {
-   showSlide(currentIndex -1);
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
   });
 
   nextBtnSlider.addEventListener("click", () => {
-    showSlide(currentIndex +1);
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
   });
 
-  
+  // Mostrar el primero al cargar
+  showSlide(currentIndex);
+
+ 
+
 });
 
 // Código del Cursor (debe estar fuera de DOMContentLoaded)

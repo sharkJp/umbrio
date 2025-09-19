@@ -23,77 +23,28 @@ function cerrarModalUmbrio() {
   video2.currentTime = 0;
 }
 
-
-// =====================
-// 5. NUESTRO EQUIPO
-// =====================
 document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector("#seccion4 .carousel-track");
-  const slides = Array.from(track.children);
-  const prevButton = document.querySelector("#seccion4 .prev");
-  const nextButton = document.querySelector("#seccion4 .next");
+  const row = document.querySelector("#seccion4 .row"); // contenedor de tarjetas
+  const prevBtn = document.querySelector("#seccion4 .prev");
+  const nextBtn = document.querySelector("#seccion4 .next");
 
-  let index = 0;
-  let autoplay;
+  // Definir cuánto se mueve el scroll (una tarjeta aprox.)
+  const cardWidth = row.querySelector(".col-xl-3").offsetWidth + 16; // tarjeta + margen
 
-  function slidesPerView() {
-    if (window.innerWidth <= 480) return 1; // móvil
-    if (window.innerWidth <= 768) return 2; // tablet
-    return 4; // escritorio
-  }
-
-  function updateCarousel() {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-  }
-
-  function nextSlide() {
-    if (index < slides.length - slidesPerView()) {
-      index++;
-    } else {
-      index = 0; // reinicia al inicio
-    }
-    updateCarousel();
-  }
-
-  function prevSlide() {
-    if (index > 0) {
-      index--;
-    } else {
-      index = slides.length - slidesPerView();
-    }
-    updateCarousel();
-  }
-
-  nextButton.addEventListener("click", () => {
-    nextSlide();
-    restartAutoplay();
+  // Botón anterior
+  prevBtn.addEventListener("click", () => {
+    row.scrollBy({
+      left: -cardWidth,
+      behavior: "smooth"
+    });
   });
 
-  prevButton.addEventListener("click", () => {
-    prevSlide();
-    restartAutoplay();
-  });
-
-  // autoplay cada 3s
-  function startAutoplay() {
-    autoplay = setInterval(nextSlide, 3000);
-  }
-
-  function stopAutoplay() {
-    clearInterval(autoplay);
-  }
-
-  function restartAutoplay() {
-    stopAutoplay();
-    startAutoplay();
-  }
-
-  startAutoplay();
-
-  // reinicia cuando cambia el tamaño
-  window.addEventListener("resize", () => {
-    index = 0;
-    updateCarousel();
+  // Botón siguiente
+  nextBtn.addEventListener("click", () => {
+    row.scrollBy({
+      left: cardWidth,
+      behavior: "smooth"
+    });
   });
 });
+

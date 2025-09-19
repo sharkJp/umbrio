@@ -29,17 +29,19 @@
 .redes-sociales img {
   width: 3vw;
   height: 3vw;
-  background: #837f832d;
+
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  box-shadow: 0 60px 60px -60px #8690ea80;
+  box-shadow: 0 60px 60px -60px rgba(165, 171, 233, 0.5);
+
   border-radius: 10px;
   cursor: none;
+  opacity: 0.8;
 }
 .redes-sociales img:hover {
-  background-color: #f4a009;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+
+  background-color: #fa9ae85c;
+
   transform: scale(1.1);
 }
 .logos {
@@ -68,10 +70,13 @@
   justify-content: center;
   width: 50%;
   height: 100%;
+  left: 10%;
 }
 .enlaces a {
   text-decoration: none;
-  color: #f6e9c7;
+
+  color: var(--sexto-color);
+
   font-size: 1.4rem;
   font-family: 'amarante';
   letter-spacing: 3px;
@@ -79,7 +84,10 @@
   cursor: none;
 }
 .enlaces a:hover {
-  color: #f4a009;
+  color: var(--segundo-color);
+
+
+
 }
 
 .copy {
@@ -92,8 +100,11 @@
 }
 
 .copy p {
-  font-size: 1rem;
-  color: #f4a009;
+
+  font-size: 0.9rem;
+  color: var(--sexto-color);
+  opacity: 0.6;
+
   text-align: center;
   font-family: 'amarante';
 }

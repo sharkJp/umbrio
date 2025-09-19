@@ -1,0 +1,21 @@
+# Configuración de VSCode
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos temporales o de backup
+*.tmp
+*.swp
+*.bak
+
+#Notas personales
+doc.txt
+
+# Node.js (por si en algún momento agregas npm/yarn)
+node_modules/
+dist/

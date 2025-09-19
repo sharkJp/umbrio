@@ -52,10 +52,13 @@ nav {
   width: 16vw;
   height: 12vw;
   cursor: none;
-  z-index:1111;
-  display: block;
-  position: absolute;
-  z-index: -1; 
+
+   z-index:1111;
+   display: block;
+   position: absolute;
+   z-index: -1;
+   
+
 }
 .menu {
   position: absolute;
@@ -144,40 +147,42 @@ li a {
 }
 /*fin del navbar*/
 
-.smoke-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 0;
-}
+ .smoke-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
 
-.smoke-container video {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  opacity: 0.9;
-  pointer-events: none; 
-  transition: opacity 5s ease; 
-  z-index: 99999;
-} 
+  }
+
+  .smoke-container video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+   opacity: 0.9;
+    pointer-events: none; 
+    transition: opacity 5s ease; 
+    z-index: 99999;
+  } 
   
-/* Video de niebla */
-.niebla {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3; 
-  pointer-events: none;
-  mix-blend-mode: screen; 
-  transition: opacity 2s ease;
-  z-index: 99999;
-}
+  /* Video de niebla */
+  .niebla {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+     opacity: 0.3; 
+    pointer-events: none;
+    mix-blend-mode: screen; 
+     transition: opacity 2s ease;
+     z-index: 99999;
+  }
 
-/* Capa que hará el efecto linterna */
+  /* Capa que hará el efecto linterna */
+
 .linterna {
   position: absolute;
   top: 0;
@@ -185,30 +190,30 @@ li a {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background: radial-gradient(circle 250px at var(--x, 50%) var(--y, 50%), transparent 0%, rgba(0,0,0,0.95) 100%);
-  transition: opacity 5s ease;
+ background: radial-gradient(circle 250px at var(--x, 50%) var(--y, 50%), transparent 0%, rgba(0,0,0,0.95) 100%);
+      transition: opacity 5s ease;
 
 }
+ /* Estado oculto */
+    .oculto {
+      opacity: 0;
+    }
 
-/* Estado oculto */
-.oculto {
-  opacity: 0;
-}
+      #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(59, 22, 56);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 5s ease; /* transición suave */
+  }
 
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  transition: opacity 5s ease; /* transición suave */
-}
+  #overlay.hidden {
+    opacity: 0;
+  }
 
-#overlay.hidden {
-  opacity: 0;
-}

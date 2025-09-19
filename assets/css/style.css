@@ -11,7 +11,8 @@
   --Nueve-color: #f6e9c7;
   --Diez-Color: #8c9eb1;
 
-  --footer-color: #011740;;
+  --footer-color: #633405;
+
 }
 
 * {
@@ -28,10 +29,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #302d5a;
+
+  background-color: #f6e9c7;
   /* cursor:url('../multimedia/img/mano.png'),32 32, auto; */
   cursor: none;
-  font-family: 'Amarante';
+
 }
 
 #cursor-img {
@@ -43,12 +45,6 @@ body {
   z-index: 1000;
 }
 
-.seccion {
-  padding: 50px;
-  text-align: center;
-  min-height: 100vh;
-  color: #000000;
-}
 
 .seccion4,
 .seccion5,
@@ -60,9 +56,13 @@ body {
   justify-content: center;
 }
 
-.seccion5 {
+
+.seccion4 {
   flex-direction: column;
 }
+
+.seccion5 {}
+
 
 .seccion6 {
   display: flex;
@@ -79,42 +79,6 @@ body {
   height: 40vh;
 }
 
-/* Contenedor flotante de video */
-.flotante {
-  position: fixed;
-  bottom: 20px;
-  left: 20px; /* lado izquierdo */
-  max-width: 200px;
-  z-index: 1000;
-  border: 2px solid #07f3f3;
-  padding: 5px;
-  border-radius: 8px;
-  display: none; /* oculto por defecto */
-}
-
-/* Video dentro del flotante */
-.flotante video {
-  width: 180px;
-  height: auto;
-  border-radius: 6px;
-}
-
-/* Botón de cerrar */
-.cerrar-boton {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  z-index: 2000;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 50%;
-  padding: 2px 5px;
-}
-
-
 .menu {
   list-style: none;
   display: flex;
@@ -122,35 +86,60 @@ body {
   gap: 30px;
 }
 
-/* ===========================
-  BOTÓN FLOTANTE (Calavera)
-=========================== */
+.seccion {
+  padding: 50px;
+  text-align: center;
+  min-height: 100vh;
+  color: #000000;
+}
+
+/* .............................................Botón flotante Calavera */
 .flotante-calavera {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  cursor: pointer;
-  z-index: 1500;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1;
+  display: none;
 }
 
 .flotante-calavera img {
-  width: 60px;
-  transition: transform 0.3s;
+  width: 80px;
+  height: auto;
+  cursor: none;
+  margin-right: 0;
+  transition: transform 0.3s ease;
 }
 
 .flotante-calavera img:hover {
-  transform: rotate(15deg) scale(1.1);
+  transform: scale(1.05);
+  transform: translateY(-50%) scale(1.1) rotate(10deg);
+}
+
+@media (max-width: 768px) {
+  .flotante-calavera {
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+    display: none;
+  }
+
+  #cursor-img {
+    display: none;
+
+  }
 }
 
 /*navbar*/
-header{
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content:flex-end;
-    margin-top: 0;
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 0;
 }
+
+
 .contenedor-principal {
   width: 100%;
   height: 90vh;
@@ -159,57 +148,53 @@ header{
   justify-content: center;
 
 }
+
 nav {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   height: 10vh;
   position: relative;
-  z-index: 0;
+  z-index: 100;
 }
 
 .llama-menu {
-  width: 10vw;
-  height:12vw;
-  position: relative;
+  width: 8vw;
+  height: 10vw;
+  margin-right: 2vw;
 }
-.vela{
-  position: absolute;
-  width: 35%;
-  height: 45%;
-  cursor: none;
-  z-index:1111;
-  display: block;
-  top: 17%;
-  right: 38%;
+
+.llama-menu img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 9999;
+
 }
 
 .vela:hover {
   transform: scale(1.05);
 }
-.vela-menu{
-  width: 16vw;
-  height: 12vw;
-  cursor: none;
-  z-index:1111;
-  display: block;
-  position: absolute;
-  z-index: -1; 
-}
 .menu {
   position: absolute;
   list-style: none;
-  top:5vw;
-  right: 18%;
+  background-color: #c5aebd;
+  backdrop-filter: blur(10px);
+  border: 1px solid gba(116, 114, 114, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.252);
+  right: 2vw;
+  top: 11vw;
   width: 8vw;
-  height: 18vw;
+  height: 12vw;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
-  cursor: none;
+  cursor: pointer;
+
 }
 
 .hidden {
@@ -294,6 +279,7 @@ li a {
   /* equivale a top, left, right, bottom en 0 */
   background-color: rgba(0, 0, 0, 0.85);
   animation: fadeIn 0.5s ease forwards;
+
   /* centrado con flex */
   display: flex;
   align-items: center;
@@ -301,13 +287,14 @@ li a {
 }
 
 .modal-content {
-  background: #000000;
+  background: #111;
   /* para contraste */
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
   width: 90%;
-  max-width: 700px;
+  max-width: 800px;
+
   color: #F2A007;
   text-align: center;
 }
@@ -344,8 +331,10 @@ li a {
   position: absolute;
   top: 8px;
   right: 12px;
-  color: #0697a8;
-  background: #c5aebd;
+
+  color: #fff;
+  background: rgba(255, 0, 0, 0.7);
+
   border-radius: 50%;
   padding: 4px 10px;
   font-size: 22px;
@@ -354,6 +343,8 @@ li a {
 }
 
 .close:hover {
-  background: #011740;
-  color: #0697a8;
+
+  background: red;
+  color: #fff;
+
 }
