@@ -1,56 +1,54 @@
+
 :root {
-    --primer-color: #9430bf;
-    /*fondo*/
-    --secundo-color: #05f2f2;
-    --tercero-color: #0596a6;
-    --cuarto-color: #f2a007;
-    --quinto-color: #021400;
-    --footer-color: #633405;
+  --primer-color: #021740;
+  --segundo-color: #f2a007;
+  --tercer-color: #05f2f2;
+  --cuarto-color: #0596a6;
+  --quinto-color: #9430bf;
+  --sexto-color: white;
+  --footer-color: #30163d;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-      width: 100%;
-    height: 100%;
-    background-image: url('../multimedia/img/fondo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-     background-color: #021400;
-      /* cursor:url('../multimedia/img/mano.png'),32 32, auto; */
-      cursor:none;
+  width: 100%;
+  height: 100%;
+  background-image: url('../multimedia/img/fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #170719;
+  cursor: none;
+
 }
+
 #cursor-img {
   position: fixed;
-  width: 80px; 
+  width: 120px;
   height: auto;
-  pointer-events: none; 
-  transform: translate(-80%, -10%); 
-  z-index:1000;
+  pointer-events: none;
+  transform: translate(-80%, -10%);
+  z-index: 1000;
 }
+
 .seccion1,
 .seccion2,
 .seccion3 {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .seccion1 {
-    flex-direction: column;
-    
-}
-
-.seccion2 {
- 
+  flex-direction: column;
 }
 
 .seccion3 {
@@ -59,100 +57,159 @@ body {
 }
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--footer-color);
-    width: 100%;
-    height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--footer-color);
+  width: 100%;
+  height: 40vh;
 }
 
 /* Imagen lenguaje de señas */
-.flotante {
-  position: fixed;
-
- top: 20%;
- left: 5%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.img-flotante{
-  top: 15%;
-right: 3%;
- position: fixed; 
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.img-flotante img {
-  max-width: 150px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.img-flotante .cerrar-boton:hover {
-  cursor: none;
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
- background-color: #f1f3ef;
- border-radius: 50%;
-}
-.flotante img {
-  max-width: 150px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.cerrar-boton {
+.flotante,
+.flotante2,
+.flotante3 {
+  width: 15%;
+  height: 25%;
   position: absolute;
-  top: -13%;
-  right: -10%;
-  cursor: pointer;
-  width: 20%;
-  height: 20%;
+  /* position: fixed; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 5%;
+  left: 3%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.flotante3 {
+  top: 200% !important;
+}
+
+.flotante video,
+.flotante2 video,
+.flotante3 video {
+  width: 85%;
+  height: 85%;
+  object-fit: cover;
+  border-radius: 5px;
+  z-index: 0;
+}
+
+.cerrar-boton,
+.cerrar-boton2,
+.cerrar-boton3 {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: none !important;
+  width: 10%;
+  height: 10%;
   border: none;
-  background-color: #f6f6f7;
   border-radius: 50%;
+  z-index: 3;
 }
-.cerrar-boton:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
- background-color: #616164;
+
+.flotante .cerrar-boton:hover,
+.flotante2 .cerrar-boton:hover,
+.flotante3 .cerrar-boton:hover {
+  cursor: none;
 }
+
+.flotante .cerrar-boton,
+.flotante2 .cerrar-boton2,
+.flotante3 .cerrar-boton3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flotante .close-icon,
+.flotante2 .close-icon2,
+.flotante3 .close-icon3 {
+  font-size: 0.8rem;
+}
+
+
 /* ...............................................................Botón flotante Calavera */
+
 .flotante-calavera {
-  display: none;   
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 9999;
-  cursor: pointer;
+  z-index: 900;
+  display: none;
+  /* oculto por defecto */
+  cursor: none;
 }
 
-.flotante-calavera img:hover {
-  transform: scale(1.05);
-  transform: translateY(-50%) scale(1.1) rotate(10deg);
-}
-
-/* Calavera flotante base */
-#btnCalavera img {
-  width: 80px;
+.flotante-calavera img {
+  width: 60px;
   height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
-/* Cuando vibra */
-#btnCalavera img.shake-horizontal {
-  animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+/* Vibración */
+@keyframes vibrar {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }
 
-/* Animación de vibración */
-@keyframes shake-horizontal {
-  0%,100% { transform: translateX(0); }
-  10%,30%,50%,70% { transform: translateX(-10px); }
-  20%,40%,60% { transform: translateX(10px); }
-  80% { transform: translateX(8px); }
-  90% { transform: translateX(-8px); }
+.shake-horizontal {
+  animation: vibrar 0.3s infinite;
 }
 
+
+
+.flotante-calavera.shake-horizontal {
+  animation: vibrar 0.8s;
+}
+
+/* animación de vibración */
+@keyframes vibrar {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
