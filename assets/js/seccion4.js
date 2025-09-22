@@ -23,7 +23,6 @@ function cerrarModalUmbrio() {
   video2.currentTime = 0;
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const row = document.querySelector("#seccion4 .row"); // contenedor de tarjetas
   const prevBtn = document.querySelector("#seccion4 .prev");
@@ -48,3 +47,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+

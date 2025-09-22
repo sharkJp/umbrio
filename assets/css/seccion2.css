@@ -44,6 +44,7 @@
          opacity: 1;
 
 }
+
 /* Animación de entrada difuminada más lenta */
 @keyframes fadeInSlide {
   0% {
@@ -65,6 +66,32 @@
 
 
 
+/* Animación de salida tipo "wipe" */
+@keyframes wipeOut {
+  0% {
+    mask-position: 0% 0%;
+    -webkit-mask-position: 0% 0%;
+  }
+  100% {
+    mask-position: 100% 0%;
+    -webkit-mask-position: 100% 0%;
+  }
+}
+
+/* Slide saliente con efecto máscara */
+.out {
+  animation: wipeOut 1s ease-in-out forwards;
+  -webkit-mask-image: linear-gradient(to right, black 30%, transparent 70%);
+  mask-image: linear-gradient(to right, black 30%, transparent 70%);
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+  -webkit-mask-position: 0% 0%;
+  mask-position: 0% 0%;
+  z-index: 1;
+}
+
+/***animacion de difuminado**/
+
 /* Botones */
 .prev-secc2,
 .next-secc2 {
@@ -74,7 +101,9 @@
     top: 50%;
     transform: translateY(-50%);
     padding: 10px;
+
     color: var(--segundo-color) !important;
+
     border: none;
     font-size:38px !important;
     font-weight: bold;
@@ -82,14 +111,18 @@
 }
 .prev-secc2:hover,
 .next-secc2:hover {
+
     color: white !important;
 }
 .prev-secc2 {
+
     left: -1% !important;
 }
 
 .next-secc2 {
     right: -1% !important;
+
+
 }
 
 /* .........................................................pergamino con texto */
@@ -146,6 +179,7 @@
     font-size: 3rem;
     margin-left: 10%;
     opacity: 0.6;
+
 }
 
 
@@ -156,6 +190,7 @@
     font-family: 'Amarante';
     color: var(--footer-color);
     opacity: 0.7;
+
 
 }
 
@@ -271,6 +306,7 @@ margin-top: 5%;
   99%  { transform: translate(0, -25px) scaleX(-1); }
   100% { transform: translate(0, 0) scaleX(1); opacity: 0; } /* se oculta al final */
 }
+
 
 
 /* Responsive */
