@@ -37,7 +37,8 @@
   opacity: 0.8;
 }
 .redes-sociales img:hover {
-  background-color: #fa9ae85c;
+  background-color:var(--segundo-color);
+  /* color: var(--segundo-color); */
   transform: scale(1.1);
 }
 .logos {
