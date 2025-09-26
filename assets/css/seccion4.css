@@ -1,88 +1,48 @@
-/* === Sección 4 Equipo === */
-#seccion4 {
-  background: #011740;
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.seccion4 {
+  position: relative !important;
+  
 }
 
-.carousel h2 {
-  color: #f6e9c7;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-family: 'Amarante';
+
+/****modal video
+#miModal {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	border: none;
+	 max-width: none;
+    max-height: none;
+	background-color: #3a0646;
+	
+}
+    body.modal-open {
+    overflow: hidden; 
+}
+.contenedor-video{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.contenedor-video video{
+	position: absolute;
+	top: 10%;
+	border: #25052b solid 25px;
 }
 
-.carousel {
-  position: relative;
-  width: 250%;
-  height: 250%;
-  overflow: hidden;
-  border-radius: 10px;
+#cerrarModal {
+	position: absolute;
+	border: none;
+	background: none;
+	cursor: pointer;
+	font-size: 2vw;
+	top: 2%;
+	right: 2%;
 }
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  flex: 0 0 25%; /* 4 imágenes visibles en desktop */
-  position: relative;
-}
-
-.slide img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-  border-radius: 5px;
-}
-
-.caption {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.carousel button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #f6e9c7;
-  border: none;
-  color: #9431c0;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-}
-
-.carousel .prev {
-  left: 10px;
-}
-
-.carousel .next {
-  right: 10px;
-}
-
-/* 📱 Responsivo */
-@media (max-width: 768px) {
-  .slide {
-    flex: 0 0 50%; /* 2 imágenes en tablet */
-  }
-}
-
-@media (max-width: 480px) {
-  .slide {
-    flex: 0 0 100%; /* 1 imagen en móvil */
-  }
+.seccion4{
+	background-image: url('../multimedia/img/Fondo_1.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }

@@ -42,9 +42,13 @@
     margin-top:5% !important;  
     margin-left: 5% !important;
          opacity: 1;
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 886eeb0 (Cambia)
 
+}
 /* Animación de entrada difuminada más lenta */
 @keyframes fadeInSlide {
   0% {
@@ -62,6 +66,7 @@
 .fade-in {
   animation: fadeInSlide 2s ease-in-out forwards; /* ← aquí controlas la velocidad */
 }
+<<<<<<< HEAD
 /***animacion de difuminado**/
 
 
@@ -90,7 +95,11 @@
   z-index: 1;
 }
 
+=======
+>>>>>>> 886eeb0 (Cambia)
 /***animacion de difuminado**/
+
+
 
 /* Botones */
 .prev-secc2,
@@ -101,9 +110,13 @@
     top: 50%;
     transform: translateY(-50%);
     padding: 10px;
+<<<<<<< HEAD
 
     color: var(--segundo-color) !important;
 
+=======
+    color: var(--segundo-color) !important;
+>>>>>>> 886eeb0 (Cambia)
     border: none;
     font-size:38px !important;
     font-weight: bold;
@@ -111,18 +124,27 @@
 }
 .prev-secc2:hover,
 .next-secc2:hover {
+<<<<<<< HEAD
 
     color: white !important;
 }
 .prev-secc2 {
 
+=======
+    color: white !important;
+}
+.prev-secc2 {
+>>>>>>> 886eeb0 (Cambia)
     left: -1% !important;
 }
 
 .next-secc2 {
     right: -1% !important;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 886eeb0 (Cambia)
 }
 
 /* .........................................................pergamino con texto */
@@ -179,7 +201,10 @@
     font-size: 3rem;
     margin-left: 10%;
     opacity: 0.6;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 886eeb0 (Cambia)
 }
 
 
@@ -187,11 +212,18 @@
     margin: 15px;
   font-size: 1.2rem;
     font-weight: 600;
+<<<<<<< HEAD
     font-family: 'Amarante';
     color: var(--footer-color);
     opacity: 0.7;
 
 
+=======
+    font-family: 'amarante';
+    color: var(--footer-color);
+    opacity: 0.7;
+
+>>>>>>> 886eeb0 (Cambia)
 }
 
 .papiro-izquierdo {

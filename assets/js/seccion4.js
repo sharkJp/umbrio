@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return; 
     }
 
+<<<<<<< HEAD
 
     // Event listener para el botón de abrir
     abrirModalBtn.addEventListener('click', () => {
@@ -19,6 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     });
 
+=======
+    // Event listener para el botón de abrir
+    abrirModalBtn.addEventListener('click', () => {
+        miModal.showModal(); // Muestra el modal como modal
+        body.classList.add('modal-open'); // <-- AÑADE CLASE PARA BLOQUEAR SCROLL
+    });
+
+>>>>>>> 886eeb0 (Cambia)
     // Event listener para el botón de cerrar
     cerrarModalBtn.addEventListener('click', () => {
         miModal.close(); // Cierra el modal
@@ -95,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+<<<<<<< HEAD
   // Código del Menú
   const velaImage = document.querySelector(".vela");
   const menuList = document.querySelector(".menu");
@@ -110,10 +120,17 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+=======
+  
+>>>>>>> 886eeb0 (Cambia)
 
 
 });
 
 
+<<<<<<< HEAD
  
 
+=======
+ 
+>>>>>>> 886eeb0 (Cambia)

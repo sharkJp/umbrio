@@ -1,6 +1,9 @@
 
 :root {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 886eeb0 (Cambia)
   --primer-color: #021740;
   --segundo-color: #f2a007;
   --tercer-color: #05f2f2;
@@ -8,7 +11,10 @@
   --quinto-color: #9430bf;
   --sexto-color: rgb(238, 151, 230);
   --footer-color: #30163d;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 886eeb0 (Cambia)
 }
 
 * {
@@ -25,11 +31,17 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+<<<<<<< HEAD
 
   background-color: #170719;
   cursor: none;
 
 
+=======
+  background-color: #170719;
+  cursor: none;
+
+>>>>>>> 886eeb0 (Cambia)
 }
 
 #cursor-img {
@@ -40,6 +52,155 @@ body {
   transform: translate(-80%, -10%);
   z-index: 1000;
 }
+/**/
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/*navbar*/
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    margin-top: 0;
+}
+
+.contenedor-principal {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 10vh;
+  position: relative;
+  z-index: 0;
+}
+
+.llama-menu {
+  width: 10vw;
+  height:12vw;
+  position: relative;
+}
+
+.vela{
+  position: absolute;
+  width: 35%;
+  height: 45%;
+  cursor: none;
+  z-index:1111;
+  display: block;
+  top: 17%;
+  right: 38%;
+}
+
+.vela:hover {
+  transform: scale(1.05);
+}
+.vela-menu{
+  width: 16vw;
+  height: 12vw;
+  cursor: none;
+  z-index:1111;
+  display: block;
+  position: absolute;
+  z-index: -1; 
+}
+.menu {
+  position: absolute;
+  list-style: none;
+  top:5vw;
+  right: 18%;
+  width: 8vw;
+  height: 18vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: none;
+}
+.hidden {
+  display: none;
+}
+
+.menu ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+li {
+  position: relative;
+  top: 5%;
+  width: 80%;
+display: flex;
+justify-content: center;
+
+}
+
+li a {
+  font-size: 1vw !important;
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0%;
+  color: var(--quinto-color);
+  cursor: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu li:last-child {
+  border-bottom: none;
+}
+
+.menu a:hover {
+  color: var(--cuarto-color);
+  cursor: none;
+  text-decoration: underline;
+ 
+}
+@media (max-width: 768px) {
+.llama-menu {
+  width: 12vw;
+  height:14vw;
+  margin-top: 4vw;
+}
+.menu {
+  right: 4vw;
+  top:18vw;
+  width: 24vw;
+  height: 28vw;
+}
+
+li a {
+  font-size: 3vw !important;
+  color: rgb(254, 252, 255);
+  padding: 2%;
+
+}
+}
+/*fin del navbar*/
 
 .seccion1,
 .seccion2,
@@ -58,7 +219,52 @@ body {
 .seccion3 {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
+/*video interprete*/
+
+.interprete{
+  width: 15%;
+  height: 25%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 5%;
+  left: 3%;
+  overflow: hidden;
+  z-index: 10;
+}
+ .interprete video{
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 3px;
+ 
+ }
+ .cerrar-boton{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: none;
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ }
+
+ .interprete .cerrar-boton:hover{
+  cursor: none;
+ }
+
+ .interprete .close-icon{
+  font-size: 0.8rem;
+ }
+
 
 .footer {
   display: flex;
@@ -70,6 +276,7 @@ body {
   height: 40vh;
 }
 
+<<<<<<< HEAD
 /* Imagen lenguaje de señas */
 .flotante,
 .flotante2,
@@ -134,6 +341,9 @@ body {
 .flotante3 .close-icon3 {
   font-size: 0.8rem;
 }
+=======
+
+>>>>>>> 886eeb0 (Cambia)
 
 
 
@@ -143,9 +353,13 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
+<<<<<<< HEAD
 
   z-index: 900;
 
+=======
+  z-index: 900;
+>>>>>>> 886eeb0 (Cambia)
   display: none;
   /* oculto por defecto */
   cursor: none;
@@ -220,3 +434,4 @@ body {
     transform: translate(0, 0);
   }
 }
+

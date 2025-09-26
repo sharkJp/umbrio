@@ -18,7 +18,11 @@ body {
   cursor:none;
 }
 .seccion4{
+<<<<<<< HEAD
    background-image: url('../multimedia/img/Fondo_1.webp');
+=======
+   background-image: url('../multimedia/img/Fondo_1.png');
+>>>>>>> 886eeb0 (Cambia)
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
