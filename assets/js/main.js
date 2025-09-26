@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Código del Botón flotante Calavera
 const btnCalavera = document.getElementById("btnCalavera");
-const normalSrc = "assets/multimedia/img/calavera.png";
-const fuegoSrc = "assets/multimedia/img/calavera2.png";
+const normalSrc = "assets/multimedia/img/calavera.webp";
+const fuegoSrc = "assets/multimedia/img/calavera2.webp";
 
 // Crear img dinámicamente
 const calavera = document.createElement("img");
@@ -110,7 +110,7 @@ window.addEventListener("scroll", () => {
 
   const textos = [
     `<h1>Catedral</h1> <p>La Catedral Basílica Metropolitana Santiago de Tunja, ubicada en la Plaza de Bolívar, es una de las catedrales más antiguas de Latinoamérica y de Colombia. Su construcción inició en 1562 y finalizó en 1607.</p>`,
-    `<h1>Estatua de Simón Bolívar</h1> <p>La historia de la estatua de Simón Bolívar en la Plaza de Bolívar de Tunja es rica y variada. La primera estatua pedestre del libertador fue instalada el 20 de julio de 1884...</p>`,
+    `<h1>Plaza de Bolívar</h1> <p>La Plaza de Bolívar de Tunja es el centro histórico de la ciudad, rodeada de arquitectura colonial y de gran valor cultural...</p>`,
     `<h1>El Pozo de Donato</h1> <p>El Pozo de Donato, también conocido como Pozo de Hunzahúa, es un lugar histórico cargado de leyendas...</p>`,
   ];
 
