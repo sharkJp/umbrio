@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Código del Botón flotante Calavera
 const btnCalavera = document.getElementById("btnCalavera");
-const normalSrc = "assets/multimedia/img/calavera.png";
-const fuegoSrc = "assets/multimedia/img/calavera2.png";
+const normalSrc = "assets/multimedia/img/calavera.webp";
+const fuegoSrc = "assets/multimedia/img/calavera2.webp";
 
 // Crear img dinámicamente
 const calavera = document.createElement("img");
