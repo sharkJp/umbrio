@@ -1,5 +1,4 @@
-// Variable y función declaradas globalmente
-const imagenFlotante = document.getElementById("imagen-flotante");
+
 
 function cerrarImagen() {
   if (imagenFlotante) {
@@ -59,6 +58,7 @@ btnCalavera.addEventListener("click", () => {
   calavera.classList.add("shake-horizontal");
   calavera.src = fuegoSrc;
 
+
   setTimeout(() => {
     calavera.classList.remove("shake-horizontal");
   }, 800);
@@ -110,8 +110,11 @@ window.addEventListener("scroll", () => {
 
   const textos = [
     `<h1>Catedral</h1> <p>La Catedral Basílica Metropolitana Santiago de Tunja, ubicada en la Plaza de Bolívar, es una de las catedrales más antiguas de Latinoamérica y de Colombia. Su construcción inició en 1562 y finalizó en 1607.</p>`,
+
     `<h1>Plaza de Bolívar</h1> <p>La Plaza de Bolívar de Tunja es el centro histórico de la ciudad, rodeada de arquitectura colonial y de gran valor cultural...</p>`,
+
     `<h1>El Pozo de Donato</h1> <p>El Pozo de Donato, también conocido como Pozo de Hunzahúa, es un lugar histórico cargado de leyendas...</p>`,
+
   ];
 
   let currentIndex = 0;
@@ -139,6 +142,7 @@ window.addEventListener("scroll", () => {
       (slide, i) => (slide.style.display = i === index ? "block" : "none")
     );
 
+
     // Cerrar pergamino
     abrirCerrarPapiro(false);
 
@@ -147,6 +151,7 @@ window.addEventListener("scroll", () => {
       abrirCerrarPapiro(true); // abrir pergamino y volver extremos a borde
     }, 600);
   }
+
 
   // Animación de la mano (frames)
   const manoFrames = document.querySelectorAll(".mano-animada .frame");
@@ -173,6 +178,7 @@ window.addEventListener("scroll", () => {
   showSlide(currentIndex);
 
  
+
 });
 
 // Código del Cursor (debe estar fuera de DOMContentLoaded)

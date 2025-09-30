@@ -1,5 +1,6 @@
 
 :root {
+
   --primer-color: #021740;
   --segundo-color: #f2a007;
   --tercer-color: #05f2f2;
@@ -7,6 +8,7 @@
   --quinto-color: #9430bf;
   --sexto-color: rgb(238, 151, 230);
   --footer-color: #30163d;
+
 }
 
 * {
@@ -23,8 +25,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
   background-color: #170719;
   cursor: none;
+
 
 }
 
@@ -132,13 +136,16 @@ body {
 }
 
 
+
 /* ...............................................................Botón flotante Calavera */
 
 .flotante-calavera {
   position: fixed;
   bottom: 20px;
   right: 20px;
+
   z-index: 900;
+
   display: none;
   /* oculto por defecto */
   cursor: none;

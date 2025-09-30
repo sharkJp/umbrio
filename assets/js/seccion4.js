@@ -11,10 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return; 
     }
 
+
     // Event listener para el botón de abrir
     abrirModalBtn.addEventListener('click', () => {
         miModal.showModal(); // Muestra el modal como modal
         body.classList.add('modal-open'); // <-- AÑADE CLASE PARA BLOQUEAR SCROLL
+
     });
 
     // Event listener para el botón de cerrar
@@ -109,7 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
 });
 
 
  
+
