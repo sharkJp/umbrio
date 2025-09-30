@@ -17,17 +17,13 @@
 .prev-secc3,
 .next-secc3 {
     position: absolute;
-
     top: 50%;
-
     transition: transform 0.4s ease, color 0.4s ease;
     transform: perspective(500px) translateZ(0);
     display: inline-block;
     z-index: 20;
     background: none;
-
     color: var(--segundo-color);
-
     border: none;
     width: 48px;
     height: 48px;
@@ -44,12 +40,9 @@
 
 .prev-secc3:hover,
 .next-secc3:hover {
-
     color: white;
-
     transform: perspective(500px) translateZ(50px);
 }
-
 
 .prev-secc3 {
     left: 8px;
@@ -71,9 +64,7 @@
     height: 80%;
 }
 
-
 /* item 3 por vista */
-
 .carrusel-item-secc3 {
     flex: 0 0 calc((100% - 30px) / 3);
     display: flex;
@@ -106,18 +97,15 @@
 
 /* CARD (efecto 3D ya integrado) */
 .cards-secc3 {
-
     width: 280px;
     height: 500px;
     position: relative;
     perspective: 1000px;
-
 }
 
 .img-con-texto-secc3 {
     width: 100%;
     height: 100%;
-
     border-radius: 12px;
     overflow: hidden;
     background: rgba(132, 28, 243, 0.207);
@@ -127,7 +115,6 @@
     border-bottom: none;
     border-left: none;
     box-shadow: 0px 10px 18px rgba(135, 210, 251, 0.144);
-
     transition: transform 0.5s ease, opacity 0.5s ease;
     position: relative;
 }
@@ -135,9 +122,7 @@
 .img-con-texto-secc3 img {
     width: 100%;
     height: 100%;
-
     object-fit: contain;
-
     display: block;
     transition: opacity 0.4s ease;
 }
@@ -147,10 +132,8 @@
     bottom: 0;
     width: 100%;
     padding: 10px;
-
     background: rgba(147, 30, 231, 0.55);
     color:var(--segundo-color);
-
     font-family: 'amarante';
     text-align: center;
     z-index: 2;
@@ -169,9 +152,7 @@
     margin: auto;
     width: 155px;
     bottom: 10px;
-
     transform: translateY(10%) translateZ(-1500px);
-
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
     z-index: 3;
@@ -179,7 +160,6 @@
     backface-visibility: hidden;
     width: 100%;
     height: 100%;
-
 }
 
 .noah{
@@ -187,7 +167,6 @@
 }
 .espanto,.sombreron,.simon,.perro{
     width: 105% !important;
-
 }
 
 /* Texto aparece solo en la segunda imagen */
@@ -269,7 +248,6 @@
 .modal-contenido-secc3 {
     background: #fff;
     padding: 20px;
-
     border-radius: 10px;
     width: 80%;
     height: 80%;
@@ -292,4 +270,3 @@
     cursor: pointer;
     color: red;
 }
-
