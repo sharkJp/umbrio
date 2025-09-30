@@ -1,5 +1,64 @@
 
 
+function cerrarImagen() {
+  if (imagenFlotante) {
+    imagenFlotante.style.display = "none";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Código del Modal de Video (modalFullscreen)
+  const modalElement = document.getElementById("modalFullscreen");
+  if (modalElement) {
+    const miModal = new bootstrap.Modal(modalElement);
+    miModal.show();
+    let tiempoRestante = 6;
+    const intervalo = setInterval(() => {
+      tiempoRestante--;
+      console.log(`Cerrando en ${tiempoRestante} segundos...`);
+      if (tiempoRestante <= 0) {
+        miModal.hide();
+        clearInterval(intervalo);
+      }
+    }, 1000);
+  }
+
+  // Código del Menú
+  const velaImage = document.querySelector(".vela");
+  const menuList = document.querySelector(".menu");
+  velaImage.addEventListener("click", function () {
+    menuList.classList.toggle("hidden");
+  });
+  document.addEventListener("click", function (event) {
+    if (!velaImage.contains(event.target) && !menuList.contains(event.target)) {
+      if (!menuList.classList.contains("hidden")) {
+        menuList.classList.add("hidden");
+      }
+    }
+  });
+
+  // Código del Botón flotante Calavera
+const btnCalavera = document.getElementById("btnCalavera");
+const normalSrc = "assets/multimedia/img/calavera.webp";
+const fuegoSrc = "assets/multimedia/img/calavera2.webp";
+
+// Crear img dinámicamente
+const calavera = document.createElement("img");
+calavera.id = "imgCalavera";
+calavera.src = normalSrc;
+btnCalavera.appendChild(calavera);
+
+// Detectar secciones
+const seccion2 = document.querySelector(".seccion2");
+const seccion3 = document.querySelector(".seccion3");
+const footer = document.querySelector("footer");
+
+// Al hacer click
+btnCalavera.addEventListener("click", () => {
+  calavera.classList.add("shake-horizontal");
+  calavera.src = fuegoSrc;
+
+
   setTimeout(() => {
     calavera.classList.remove("shake-horizontal");
   }, 800);
@@ -52,7 +111,8 @@ window.addEventListener("scroll", () => {
   const textos = [
     `<h1>Catedral</h1> <p>La Catedral Basílica Metropolitana Santiago de Tunja, ubicada en la Plaza de Bolívar, es una de las catedrales más antiguas de Latinoamérica y de Colombia. Su construcción inició en 1562 y finalizó en 1607.</p>`,
 
-    `<h1>Estatua de Simón Bolívar</h1> <p>La historia de la estatua de Simón Bolívar en la Plaza de Bolívar de Tunja es rica y variada. La primera estatua pedestre del libertador fue instalada el 20 de julio de 1884...</p>`,
+    `<h1>Plaza de Bolívar</h1> <p>La Plaza de Bolívar de Tunja es el centro histórico de la ciudad, rodeada de arquitectura colonial y de gran valor cultural...</p>`,
+
     `<h1>El Pozo de Donato</h1> <p>El Pozo de Donato, también conocido como Pozo de Hunzahúa, es un lugar histórico cargado de leyendas...</p>`,
 
   ];
