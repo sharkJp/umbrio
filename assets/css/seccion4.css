@@ -1,48 +1,51 @@
+/* === Estilos exclusivos para la sección 4 de page2.html === */
+
 .seccion4 {
-  position: relative !important;
-  
+  background-image: url('../multimedia/img/Fondo_1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: block; /* corregimos el centrado del header */
 }
 
-
-/****modal video
+/* Estilos del modal cotometraje umbrío*/
 #miModal {
-	width: 100vw;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	border: none;
-	 max-width: none;
-    max-height: none;
-	background-color: #3a0646;
-	
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: none;
+  max-width: none;
+  max-height: none;
+  background-color: #3a0646;
 }
-    body.modal-open {
-    overflow: hidden; 
+
+body.modal-open {
+  overflow: hidden;
 }
-.contenedor-video{
-display: flex;
-justify-content: center;
-align-items: center;
+
+.contenedor-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.contenedor-video video{
-	position: absolute;
-	top: 10%;
-	border: #25052b solid 25px;
+
+.contenedor-video video {
+  position: absolute;
+  top: 10%;
+  border: #25052b solid 25px;
 }
 
 #cerrarModal {
-	position: absolute;
-	border: none;
-	background: none;
-	cursor: pointer;
-	font-size: 2vw;
-	top: 2%;
-	right: 2%;
+  position: absolute;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 2vw;
+  top: 2%;
+  right: 2%;
 }
 
-.seccion4{
-	background-image: url('../multimedia/img/Fondo_1.png');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}

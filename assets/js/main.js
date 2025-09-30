@@ -1,24 +1,10 @@
-<<<<<<< HEAD
 
-
-function cerrarImagen() {
-  if (imagenFlotante) {
-    imagenFlotante.style.display = "none";
-=======
 // Variable y función declaradas globalmente
-//const imagenFlotante = document.getElementById("imagen-flotante");
-
-//function cerrarImagen() {
- // if (imagenFlotante) {
-   //imagenFlotante.style.display = "none";
- // }
-//}
-
+//cierra cada uno de los videos interprete de cada sección
 function cerrarImagen(boton){
   const interprete = boton.closest('.interprete');
   if(interprete){
     interprete.style.display = "none";
->>>>>>> 886eeb0 (Cambia)
   }
 }
 
@@ -39,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
   }
 
-  // Código del Menú
+  /*Código del Menú de ambas paginas*/
   const velaImage = document.querySelector(".vela");
   const menuList = document.querySelector(".menu");
   velaImage.addEventListener("click", function () {
@@ -52,9 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-
-<<<<<<< HEAD
-  // Código del Botón flotante Calavera
+});
+// Código del Botón flotante Calavera
 const btnCalavera = document.getElementById("btnCalavera");
 const normalSrc = "assets/multimedia/img/calavera.webp";
 const fuegoSrc = "assets/multimedia/img/calavera2.webp";
@@ -75,11 +60,8 @@ btnCalavera.addEventListener("click", () => {
   calavera.classList.add("shake-horizontal");
   calavera.src = fuegoSrc;
 
-=======
-   // Código del Botón flotante Calavera
- 
+   // Código del Botón flotante Calavera para las dos paginas
   const btnCalavera = document.getElementById("btnCalavera");
-
 
   let basePath;
 
@@ -105,10 +87,10 @@ const fuegoSrc = basePath + "calavera2.png";
     // Página 1
     seccionA = document.querySelector(".seccion2");
     seccionB = document.querySelector(".seccion3");
-  } else if (document.querySelector(".seccion6") && document.querySelector(".seccion7")) {
+  } else if (document.querySelector(".seccion5") && document.querySelector(".seccion6")) {
     // Página 2
-    seccionA = document.querySelector(".seccion6");
-    seccionB = document.querySelector(".seccion7");
+    seccionA = document.querySelector(".seccion5");
+    seccionB = document.querySelector(".seccion6");
   }
 
   const footer = document.querySelector("footer");
@@ -117,7 +99,6 @@ const fuegoSrc = basePath + "calavera2.png";
   btnCalavera.addEventListener("click", () => {
     calavera.classList.add("shake-horizontal");
     calavera.src = fuegoSrc;
->>>>>>> 886eeb0 (Cambia)
 
     setTimeout(() => {
       calavera.classList.remove("shake-horizontal");
@@ -160,6 +141,7 @@ const fuegoSrc = basePath + "calavera2.png";
       calavera.src = normalSrc;
     }
   });
+
   //.........................................................................................seccion 2
   // Código del Slider de la Sección 2 (con pergamino)
   const slides = document.querySelectorAll(".slide");
@@ -171,16 +153,9 @@ const fuegoSrc = basePath + "calavera2.png";
 
   const textos = [
     `<h1>Catedral</h1> <p>La Catedral Basílica Metropolitana Santiago de Tunja, ubicada en la Plaza de Bolívar, es una de las catedrales más antiguas de Latinoamérica y de Colombia. Su construcción inició en 1562 y finalizó en 1607.</p>`,
-<<<<<<< HEAD
-
-    `<h1>Plaza de Bolívar</h1> <p>La Plaza de Bolívar de Tunja es el centro histórico de la ciudad, rodeada de arquitectura colonial y de gran valor cultural...</p>`,
-
-    `<h1>El Pozo de Donato</h1> <p>El Pozo de Donato, también conocido como Pozo de Hunzahúa, es un lugar histórico cargado de leyendas...</p>`,
-
-=======
     `<h1>Estatua de Simón Bolívar</h1> <p>La historia de la estatua de Simón Bolívar en la Plaza de Bolívar de Tunja es rica y variada. La primera estatua pedestre del libertador fue instalada el 20 de julio de 1884...</p>`,
     `<h1>El Pozo de Donato</h1> <p>El Pozo de Donato, también conocido como Pozo de Hunzahúa, es un lugar histórico cargado de leyendas...</p>`,
->>>>>>> 886eeb0 (Cambia)
+
   ];
 
   let currentIndex = 0;
@@ -207,11 +182,6 @@ const fuegoSrc = basePath + "calavera2.png";
     slides.forEach(
       (slide, i) => (slide.style.display = i === index ? "block" : "none")
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> 886eeb0 (Cambia)
-
     // Cerrar pergamino
     abrirCerrarPapiro(false);
 
@@ -221,10 +191,6 @@ const fuegoSrc = basePath + "calavera2.png";
     }, 600);
   }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 886eeb0 (Cambia)
   // Animación de la mano (frames)
   const manoFrames = document.querySelectorAll(".mano-animada .frame");
   let frameIndex = 0;
@@ -248,12 +214,6 @@ const fuegoSrc = basePath + "calavera2.png";
 
   // Mostrar el primero al cargar
   showSlide(currentIndex);
-
- 
-<<<<<<< HEAD
-
-=======
->>>>>>> 886eeb0 (Cambia)
 });
 
 // Código del Cursor (debe estar fuera de DOMContentLoaded)
