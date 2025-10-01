@@ -29,16 +29,29 @@
 .redes-sociales img {
   width: 3vw;
   height: 3vw;
+<<<<<<< HEAD
+
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 60px 60px -60px rgba(165, 171, 233, 0.5);
+
+=======
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 60px 60px -60px rgba(165, 171, 233, 0.5);
+>>>>>>> 886eeb0 (Cambia)
   border-radius: 10px;
   cursor: none;
   opacity: 0.8;
 }
 .redes-sociales img:hover {
+<<<<<<< HEAD
+
+  background-color:var(--segundo-color);
+=======
   background-color:var(--segundo-color);
   /* color: var(--segundo-color); */
+>>>>>>> 886eeb0 (Cambia)
   transform: scale(1.1);
 }
 .logos {
@@ -72,7 +85,13 @@
 .enlaces a {
   text-align: center;
   text-decoration: none;
+<<<<<<< HEAD
+
   color: var(--sexto-color);
+
+=======
+  color: var(--sexto-color);
+>>>>>>> 886eeb0 (Cambia)
   font-size: 1.6rem;
   font-family: 'amarante';
   letter-spacing: 3px;
@@ -81,6 +100,10 @@
 }
 .enlaces a:hover {
   color: var(--segundo-color);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 886eeb0 (Cambia)
 }
 
 .copy {
@@ -93,9 +116,18 @@
 }
 
 .copy p {
+<<<<<<< HEAD
+
+  font-size: 0.9rem;
+  color: var(--sexto-color);
+
+  opacity: 0.8;
+
+=======
   font-size: 0.9rem;
   color: var(--sexto-color);
   opacity: 0.8;
+>>>>>>> 886eeb0 (Cambia)
   text-align: center;
   font-family: 'amarante';
 }

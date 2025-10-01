@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-<link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/pag2.css" />
-
     <!-- <link rel="stylesheet" href="../css/secciopn5.css" /> -->
     <link rel="stylesheet" href="../css/seccion6.css" />
+    <link rel="stylesheet" href="../css/seccion5.css" />
+     <link rel="stylesheet" href="../css/seccion6.css" />
     <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,21 +20,57 @@
 
   <body>
     <main>
-      <section id="secc4" class="seccion4">
+      <section id="secc4" class="seccion4">  
+        <img src="../multimedia/img/mano.png" id="cursor-img" alt="Mano">
+        <header>
+          <div class="contenedor">
+            <nav>
+              <!-- Botón del menú con animación de fuego -->
+              <div class="llama-menu">
+                <img src="../multimedia/img/fire.gif" alt="Menu Toggle" class="vela"/>
+              </div>
+              <div class="menu">
+                <!-- Opciones para la navegación -->
+                <ul id="mainMenu" class="mainmenu hidden">
+                  <img src="../multimedia/img/vela.png" class="vela-menu" alt="Vela"/>
+                  <li><a href="../../index.html">Inicio</a></li>
+                  <li><a href="#" id="abrirModal" class="enlace-modal">Umbrío</a></li>
+                  <li><a href="#secc5">Equipo</a></li>
+                  <li><a href="#secc6">Making Off</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+        <!-- Resto del contenido -->
+        <div class="interprete">
+          <video src="../multimedia/video/Inicio2.mp4" muted controls></video>
+          <button onclick="cerrarImagen(this)" class="cerrar_boton">
+            <span class="close-icon">❌</span>
+          </button>
+        </div>
+
         <!-- Contenido del modal -->
+
+        <img src="../multimedia/img/mano.png" id="cursor-img" alt="Mano">
+        
+        <div class="contenedor-principal">
+          <!-- Aquí puedes agregar el contenido principal de esta sección -->
+        </div>
+
+        <!-- Contenido del modal cortometraje umbrío -->
         <dialog id="miModal">
           <div class="contendor-btn">
             <button id="cerrarModal">❌</button>
           </div>
-
           <div class="contenedor-video">
             <video width="80%" autoplay muted controls>
-              <source src="../multimedia/video/mi_video.mp4" type="video/mp4" />
-              Tu navegador no soporta el tag de video.
+              <source src="../multimedia/video/umbrio_video.mp4" type="video/mp4" />
+                Tu navegador no soporta el tag de video.
             </video>
           </div>
         </dialog>
-
         <!-- <button id="abrirModal">Abrir Modal</button> -->
 
         <header>
@@ -74,73 +109,23 @@
           </div>
         </header>
       </section>
-      <!--       
+
       <section id="secc5" class="seccion5">
-        <div class="titulo">
-          <h1 class="about-title">Equipo Web-Umbrío</h1>
+        <!-- Botón Persona intérprete -->
+        <div class="interprete">
+          <video src="../multimedia/video/Equipo.mp4" muted controls></video>
+          <button onclick="cerrarImagen(this)" class="cerrar_boton">
+            <span class="close-icon">❌</span>
+          </button>
         </div>
-        <div class="contendor-slider">
-          <div class="carousel-container">
-            <button class="nav-arrow left">&#10094;</button>
-            <div class="carousel-track">
-              <div class="card" data-index="0">
-                <img
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="JhonGe"
-                />
-              </div>
-              <div class="card jhonge" data-index="1">
-                <img
-                  src="../multimedia/img/teams/jhonge16.png"
-                  alt="Team Member 2"
-                />
-              </div>
-              <div class="card" data-index="2">
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww"
-                  alt="Team Member 3"
-                />
-              </div>
-              <div class="card" data-index="3">
-                <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww"
-                  alt="Team Member 4"
-                />
-              </div>
-              <div class="card" data-index="4">
-                <img
-                  src="https://images.unsplash.com/photo-1655249481446-25d575f1c054?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHByb2Zlc3Npb25hbCUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D"
-                  alt="Team Member 5"
-                />
-              </div>
-              <div class="card" data-index="5">
-                <img
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Team Member 6"
-                />
-              </div>
-            </div>
-            <button class="nav-arrow right">&#10095;</button>
-          </div>
-
-          <div class="contenedor-informacion">
-            <h2 class="member-name">David Kim</h2>
-            <p class="member-role">Founder</p>
-          </div>
-        </div>
-      </section> -->
-
-      
-
-      <section id="secc6" class="seccion6">
-        <h1 class="about-title">Equipo Web-Umbrío</h1>
+        <h1 class="about-title">Equipo Umbrío</h1>
 
         <div class="carousel-container">
           <button class="nav-arrow left">&#10094;</button>
           <div class="carousel-track">
             <div class="card" data-index="0">
               <img
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="JhonGe"
               />
             </div>
@@ -164,29 +149,11 @@
             </div>
             <div class="card" data-index="4">
               <img
-                src="https://images.unsplash.com/photo-1655249481446-25d575f1c054?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHByb2Zlc3Npb25hbCUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D"
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Team Member 5"
               />
             </div>
             <div class="card" data-index="5">
-              <img
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Team Member 6"
-              />
-            </div>
-              <div class="card" data-index="6">
-              <img
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Team Member 6"
-              />
-            </div>
-              <div class="card" data-index="7">
-              <img
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Team Member 6"
-              />
-            </div>
-              <div class="card" data-index="8">
               <img
                 src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Team Member 6"
@@ -203,10 +170,17 @@
         </div>
       </section>
 
-      <section id="secc7" class="seccion7">
+      <section id="secc6" class="seccion6">
+        <!-- Botón Persona intérprete -->
+        <div class="interprete">
+          <video src="../multimedia/video/Making.mp4" muted controls></video>
+          <button onclick="cerrarImagen(this)" class="cerrar_boton">
+            <span class="close-icon">❌</span>
+          </button>
+        </div>
         <h2>Making Off</h2>
         <div class="store-links">
-          <img src="../multimedia/img/play-.svg" alt="" />
+          <img src="../multimedia/img/play-.svg" alt="video" />
         </div>
         <iframe
           id="youtube-player"
@@ -221,7 +195,6 @@
         ></iframe>
       </section>
     </main>
-
   <!-- FOOTER -->
   <footer class="footer">
     <div class="primer-contenedor">
@@ -243,7 +216,7 @@
         </div>
         <div class="logos">
           <img src="../multimedia/img/logo-sena.webp" alt="sena" />
-          <img src="../multimedia/img/logo.webp" alt="logo" />
+          <img src="../multimedia/img/logo.png" alt="logo" />
         </div>
       </div>
 
@@ -264,15 +237,19 @@
       </p>
     </div>
   </footer>
+
+    <script src="../js/seccion5.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../js/seccion4.js"></script>
+
     <script>
       const teamMembers = [
-        { name: "Emily Kim", role: "Founder" },
+        { name: "Marco Fernandez", role: "Founder" },
         { name: "Jhon Gerardo", role: "Developer | Web & Software", portfolioURL: "https://sharkjp.github.io/portafolio/" },
-        { name: "Emma Rodriguez", role: "Lead Developer" },
-        { name: "Julia Gimmel", role: "UX Designer" },
-        { name: "Lisa Anderson", role: "Marketing Manager" },
-        { name: "James Wilson", role: "Product Manager" },
+        { name: "Dayanna Saavedra", role: "Lead Developer" },
+        { name: "Faizule Perez", role: "UX Designer" },
+        { name: "Jose Vanegas", role: "Marketing Manager" },
+        { name: "Cristian Perez", role: "Product Manager" },
          { name: "Julia Gimmel", role: "UX Designer" },
         { name: "Lisa Anderson", role: "Marketing Manager" },
         { name: "James Wilson", role: "Product Manager" },

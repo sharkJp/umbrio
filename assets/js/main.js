@@ -1,9 +1,10 @@
-// Variable y función declaradas globalmente
-const imagenFlotante = document.getElementById("imagen-flotante");
 
-function cerrarImagen() {
-  if (imagenFlotante) {
-    imagenFlotante.style.display = "none";
+// Variable y función declaradas globalmente
+//cierra cada uno de los videos interprete de cada sección
+function cerrarImagen(boton){
+  const interprete = boton.closest('.interprete');
+  if(interprete){
+    interprete.style.display = "none";
   }
 }
 
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
   }
 
-  // Código del Menú
+  /*Código del Menú de ambas paginas*/
   const velaImage = document.querySelector(".vela");
   const menuList = document.querySelector(".menu");
   velaImage.addEventListener("click", function () {
@@ -37,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-
-  // Código del Botón flotante Calavera
+});
+// Código del Botón flotante Calavera
 const btnCalavera = document.getElementById("btnCalavera");
 const normalSrc = "assets/multimedia/img/calavera.webp";
 const fuegoSrc = "assets/multimedia/img/calavera2.webp";
@@ -59,45 +60,87 @@ btnCalavera.addEventListener("click", () => {
   calavera.classList.add("shake-horizontal");
   calavera.src = fuegoSrc;
 
-  setTimeout(() => {
-    calavera.classList.remove("shake-horizontal");
-  }, 800);
+   // Código del Botón flotante Calavera para las dos paginas
+  const btnCalavera = document.getElementById("btnCalavera");
 
-  // Subir al inicio
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
+  let basePath;
 
-// Hover: cambiar a fuego + vibrar
-calavera.addEventListener("mouseenter", () => {
-  calavera.src = fuegoSrc;
-  calavera.classList.add("shake-horizontal");
-});
+if (window.location.pathname.includes("page2.html")) {
+  basePath = "../multimedia/img/";
+} else {
+  basePath = "assets/multimedia/img/";
+}
 
-calavera.addEventListener("mouseleave", () => {
+const normalSrc = basePath + "calavera.png";
+const fuegoSrc = basePath + "calavera2.png";
+
+
+  // Crear imagen dinámicamente
+  const calavera = document.createElement("img");
+  calavera.id = "imgCalavera";
   calavera.src = normalSrc;
-  calavera.classList.remove("shake-horizontal");
-});
+  btnCalavera.appendChild(calavera);
 
-// Mostrar / ocultar según scroll (secc2, secc3 y footer)
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-  const seccion2Top = seccion2.offsetTop;
-  const seccion3Top = seccion3.offsetTop;
-  const footerTop = footer.offsetTop;
-
-  if (
-    (scrollY >= seccion2Top && scrollY < footerTop) || // secc2 y secc3
-    scrollY >= footerTop // footer
-  ) {
-    btnCalavera.style.display = "block";
-  } else {
-    btnCalavera.style.display = "none"; // oculta en secc1
-    calavera.src = normalSrc;
+  // Detectar secciones según la página
+  let seccionA, seccionB;
+  if (document.querySelector(".seccion2") && document.querySelector(".seccion3")) {
+    // Página 1
+    seccionA = document.querySelector(".seccion2");
+    seccionB = document.querySelector(".seccion3");
+  } else if (document.querySelector(".seccion5") && document.querySelector(".seccion6")) {
+    // Página 2
+    seccionA = document.querySelector(".seccion5");
+    seccionB = document.querySelector(".seccion6");
   }
-});
+
+  const footer = document.querySelector("footer");
+
+  // Al hacer click
+  btnCalavera.addEventListener("click", () => {
+    calavera.classList.add("shake-horizontal");
+    calavera.src = fuegoSrc;
+
+    setTimeout(() => {
+      calavera.classList.remove("shake-horizontal");
+    }, 800);
+
+    // Subir al inicio
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  // Hover: cambiar a fuego + vibrar
+  calavera.addEventListener("mouseenter", () => {
+    calavera.src = fuegoSrc;
+    calavera.classList.add("shake-horizontal");
+  });
+
+  calavera.addEventListener("mouseleave", () => {
+    calavera.src = normalSrc;
+    calavera.classList.remove("shake-horizontal");
+  });
+
+  // Mostrar / ocultar según scroll (como en la primera página)
+  window.addEventListener("scroll", () => {
+    if (!seccionA || !seccionB || !footer) return;
+
+    const scrollY = window.scrollY;
+    const seccionATop = seccionA.offsetTop;
+    const seccionBTop = seccionB.offsetTop;
+    const footerTop = footer.offsetTop;
+
+    if (
+      (scrollY >= seccionATop && scrollY < footerTop) ||
+      scrollY >= footerTop
+    ) {
+      btnCalavera.style.display = "block";
+    } else {
+      btnCalavera.style.display = "none";
+      calavera.src = normalSrc;
+    }
+  });
 
   //.........................................................................................seccion 2
   // Código del Slider de la Sección 2 (con pergamino)
@@ -110,8 +153,9 @@ window.addEventListener("scroll", () => {
 
   const textos = [
     `<h1>Catedral</h1> <p>La Catedral Basílica Metropolitana Santiago de Tunja, ubicada en la Plaza de Bolívar, es una de las catedrales más antiguas de Latinoamérica y de Colombia. Su construcción inició en 1562 y finalizó en 1607.</p>`,
-    `<h1>Plaza de Bolívar</h1> <p>La Plaza de Bolívar de Tunja es el centro histórico de la ciudad, rodeada de arquitectura colonial y de gran valor cultural...</p>`,
+    `<h1>Estatua de Simón Bolívar</h1> <p>La historia de la estatua de Simón Bolívar en la Plaza de Bolívar de Tunja es rica y variada. La primera estatua pedestre del libertador fue instalada el 20 de julio de 1884...</p>`,
     `<h1>El Pozo de Donato</h1> <p>El Pozo de Donato, también conocido como Pozo de Hunzahúa, es un lugar histórico cargado de leyendas...</p>`,
+
   ];
 
   let currentIndex = 0;
@@ -138,7 +182,6 @@ window.addEventListener("scroll", () => {
     slides.forEach(
       (slide, i) => (slide.style.display = i === index ? "block" : "none")
     );
-
     // Cerrar pergamino
     abrirCerrarPapiro(false);
 
@@ -171,8 +214,6 @@ window.addEventListener("scroll", () => {
 
   // Mostrar el primero al cargar
   showSlide(currentIndex);
-
- 
 });
 
 // Código del Cursor (debe estar fuera de DOMContentLoaded)
