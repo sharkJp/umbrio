@@ -1,0 +1,141 @@
+@import url('main.css');
+
+.primer-contenedor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 85%;
+}
+.redes-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+.redes-sociales {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  gap: 1.5vw;
+}
+.redes-sociales a {
+  text-decoration: none;
+}
+.redes-sociales img {
+  width: 3vw;
+  height: 3vw;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 60px 60px -60px rgba(165, 171, 233, 0.5);
+  border-radius: 10px;
+  cursor: none;
+  opacity: 0.8;
+}
+.redes-sociales img:hover {
+  transform: scale(1.1);
+}
+.logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+.logos img:first-child {
+  width: 4vw;
+  height: auto;
+  margin: 1vw;
+  cursor: none;
+}
+.logos img:last-child {
+  width: 12vw;
+  height: auto;
+  margin: 1vw;
+}
+.enlaces {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  left: 10%;
+}
+.enlaces a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--septimo-color) !important;
+  font-size: 1.6rem;
+  font-family: 'amarante';
+  letter-spacing: 3px;
+  margin: 1vw;
+  cursor: none;
+}
+.enlaces a:hover {
+  color: var(--segundo-color);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+}
+
+.copy p {
+  font-size: 0.9rem;
+  color: var(--sexto-color);
+  opacity: 0.8;
+  text-align: center;
+  font-family: 'amarante';
+}
+@media (max-width: 768px) {
+  .primer-contenedor {
+    flex-direction: column;
+  }
+  footer {
+    width: 100%;
+    height: 60vh;
+  }
+  .redes-sociales {
+    gap: 15px;
+  }
+  .redes-sociales img {
+    display: flex;
+    width: 40px;
+    height: auto;
+  }
+  .logos {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .logos img:first-child {
+    margin-top: 18px;
+    width: 50px;
+    height: auto;
+  }
+  .logos img:last-child {
+    width: 120px;
+    height: auto;
+  }
+  .enlaces {
+    flex-direction: column;
+  }
+  .enlaces a {
+    font-size: 0.9rem;
+  }
+  .copy p {
+    font-size: 0.75rem;
+  }
+}

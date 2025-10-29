@@ -1,0 +1,657 @@
+/* === Estilos exclusivos para la sección 4 de page2.html === */
+html,
+body {
+  background-image: none;
+  background-color: none !important;
+}
+
+.seccion4 {
+  background-image: url('../multimedia/img/panelSombreon.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  width: 100%;
+  height: 100vh !important;
+  display: block;
+}
+
+.seccion4 h2 {
+  font-size: 7.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  position: relative;
+  top: 0px;
+  pointer-events: none;
+  white-space: nowrap;
+  text-align: center;
+  background: linear-gradient(to bottom,
+      rgba(49, 220, 243, 0.35) 30%,
+      rgba(224, 66, 242, 0) 76%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.seccion4 li {
+    top: -22%;
+    margin: 1px;
+}
+
+
+
+/* Estilos del modal cortometraje umbrío*/
+#miModal {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: none;
+  max-width: none;
+  max-height: none;
+  background-color: var(--footer-color);
+  cursor: pointer;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.contenedor-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-video video {
+  border-radius: 10px;
+  position: absolute;
+  top: 5%;
+  /* border: #25052b solid 25px; */
+}
+
+#cerrarModal {
+  position: absolute;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 2vw;
+  top: 2%;
+  right: 2%;
+}
+
+/** seccion 5 **/
+
+.seccion5 {
+  width: 100%;
+  height: 100vh !important;
+  flex-direction: column !important;
+  position: relative;
+  display: flex;
+}
+
+.about-title {
+  font-size: 7.5rem;
+  font-weight: 900;
+  font-family: "Amarante", serif;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  position: relative;
+  top: 0px;
+  pointer-events: none;
+  white-space: nowrap;
+  text-align: center;
+  background: linear-gradient(to bottom,
+      rgba(49, 220, 243, 0.35) 30%,
+      rgba(224, 66, 242, 0) 76%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s infinite linear;
+}
+
+/* --- Swiper --- */
+.swiper {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 75%;
+  height: 690px;
+  padding: 30px 0;
+}
+
+.swiper-wrapper {
+  position: relative;
+  /* width: 88% !important; */
+  height: 88% !important;
+  margin: 0 auto !important;
+}
+
+/* las cards*/
+.swiper-slide {
+  top: -2%;
+  position: relative;
+  /* width: 340px !important; */
+  height: 600px !important;
+  background-color: var(--footer-color);
+  box-shadow: 0 3px 7px rgba(255, 192, 203, 0.637);
+  border-radius: 65px 8px 35px 8px;
+  text-align: center;
+  padding: 25px 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.filtro-purple::before,
+.filtro-naranja::before,
+.filtro-azul::before,
+.filtro-violet::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+.filtro-purple::before {
+  background-color: var(--filtro-purple);
+}
+
+.filtro-naranja::before {
+  background-color: var(--filtro-naranja);
+}
+
+.filtro-azul::before {
+  background-color: var(--filtro-azul);
+}
+
+.filtro-violet::before {
+  background-color: var(--filtro-violet);
+}
+
+.swiper-slide:hover::before {
+  opacity: 0;
+}
+
+
+/* --- Efecto blanco y negro / color --- */
+.team-photo {
+  width: 300px !important;
+  height: 370px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 0%;
+  margin-bottom: 15px;
+  border: 3px solid var(--noveno-color);
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+
+}
+
+/* --- Hover sobre la card --- */
+.swiper-slide:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px var(--cuarto-color);
+}
+
+/* --- Cuando el mouse pasa sobre la imagen --- */
+.swiper-slide:hover .team-photo {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+  border-color: var(--tercer-color);
+  box-shadow: 0 0 25px var(--cuarto-color);
+}
+
+.member-name {
+  font-weight: 600;
+  font-size: 2.5rem;
+  font-family: "Amarante", serif;
+  margin-bottom: 5px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.member-role {
+  font-size: 1.3rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+/* Enlace con brillo */
+.member-portafolio a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  transition: color 0.4s ease;
+}
+
+.member-portafolio a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #070a0a, transparent);
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 0.4s ease;
+}
+
+.member-portafolio a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #5acaec;
+}
+
+.member-portafolio a:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* --- Cambio de color de texto al hover --- */
+.swiper-slide:hover .member-name {
+  color: var(--segundo-color);
+}
+
+.swiper-slide:hover .member-role {
+  color: #edaad6;
+}
+
+.member-portafolio {
+  position: relative;
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #31dcf3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: 500;
+  z-index: 10;
+  cursor: none;
+}
+
+/* Líneas decorativas */
+.member-portafolio::before,
+.member-portafolio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background-color: #31dcf3;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  cursor: none;
+}
+
+.member-portafolio::before {
+  left: -50px;
+  cursor: none;
+}
+
+.member-portafolio::after {
+  right: -50px;
+  cursor: none;
+}
+
+/* Efecto animado al hacer hover */
+.swiper-slide:hover .member-portafolio::before,
+.swiper-slide:hover .member-portafolio::after {
+  width: 60px;
+  opacity: 1;
+  cursor: none;
+}
+
+/* --- Swiper botones --- */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 60% !important;
+  color: #e8431a !important;
+  transition: 0.3s !important;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  cursor: none !important;
+}
+.swiper-button-next{
+  right: 8% !important;
+}
+.swiper-button-prev{
+  left: 8% !important;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #f4f1f5 !important;
+}
+
+
+/** seccion 6 **/
+.seccion6 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.seccion6 h2 {
+  font-size: 7.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  position: absolute;
+  top: 0px;
+  pointer-events: none;
+  white-space: nowrap;
+  text-align: center;
+  background: linear-gradient(to bottom,
+      rgba(49, 220, 243, 0.35) 30%,
+      rgba(224, 66, 242, 0) 76%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+iframe {
+  position: absolute;
+  top: 20%;
+  left: 18%;
+  width: 65%;
+  height: 70%;
+  z-index: 1;
+  object-fit: cover;
+  border-radius: 40px 10px 23px 80px;
+}
+
+.store-links {
+  position: fixed;
+  top: 45%;
+  right: 3%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  border-radius: 50%;
+  background-color: var(--tercer-color);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-links img {
+  width: 80%;
+}
+
+.store-links:hover {
+  background-color: var(--noveno-color);
+  transform: scale(1.1);
+}
+
+.modalSecc6 {
+  background-image: url("../multimedia/img/juego-web.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #30163df5;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenidoSecc6 {
+  background-image: url("../multimedia/img/juego-web2.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(235, 229, 229, 0.3);
+  width: 80%;
+  max-width: 1200px;
+  height: 85%;
+  position: relative;
+}
+
+.cerrarSecc6 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f10a0a;
+  float: right;
+  font-size: 3rem;
+  font-weight: bold;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.cerrarSecc6:hover,
+.cerrarSecc6:focus {
+  color: #da8f8f;
+  text-decoration: none;
+}
+
+.invitacion a {
+  position: absolute;
+  right: 15%;
+  top: 45%;
+  color: var(--segundo-color) !important;
+}
+
+.invitacion a:hover {
+  color: #fac461 !important;
+  transform: scale(1.1);
+}
+
+.abstracto {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 60%;
+  margin-top: 35%;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ef18cf, #f15305);
+  border-radius: 30% 50% 70% 30% / 30% 50% 50% 70%;
+  mask-size: cover;
+  overflow: visible;
+  box-shadow: 0 0 15px rgba(103, 229, 220, 0.7);
+}
+
+.abstracto::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(circle at 70% 30%,
+      rgba(255, 255, 255, 0.2),
+      transparent 60%);
+  transform: rotate(25deg);
+}
+
+.abstracto:hover {
+  animation: morph 4s infinite alternate;
+}
+
+@keyframes morph {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.abstracto h3 {
+  font-family: "Amarante", serif;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  z-index: 15;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.abstracto a {
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.invitacion a {
+  text-decoration: none;
+}
+
+/* phone modal video juego */
+#phone {
+  --c-frame: rgba(0, 0, 0, 0.548);
+  --c-interface: black;
+  --c-headline: black;
+  --c-screen: #e4e2e2;
+  --c-letter: #fff;
+  --c-date: black;
+  --c-subline: #898989;
+  --c-text: #A7A7A7;
+  --empty-mask: 100%;
+  --headline-y: 0;
+  position: absolute;
+  top: -10%;
+  left: 30%;
+  transform: translate(-70%, 5%) scale(0.9) rotate(-30deg);
+  width: 340px;
+  aspect-ratio: 9 / 19.5;
+  border: solid 8px #39063fe6;
+  border-radius: 13% / 5.7%;
+  color: var(--c-interface);
+  cursor: none;
+}
+
+#phone:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -0.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 27px;
+  width: 140px;
+  border-radius: 0 0 16px 16px;
+  background: var(--c-frame);
+}
+
+#phone .screen {
+  position: relative;
+  background-color: var(--phone5-color) !important;
+  width: 100%;
+  height: 100%;
+  background: var(--c-screen);
+  border-radius: 36px;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  background: none;
+}
+
+#phone .screen .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+
+#phone .time,
+#phone .battery,
+#phone .cellular,
+#phone .wifi {
+  position: absolute;
+  top: 17px;
+}
+
+
+#phone .time {
+  left: 21px;
+  top: 15px;
+  font-size: 100%;
+  font-weight: 600;
+}
+
+#phone .battery {
+  right: 15px;
+  width: 25px;
+  height: 12px;
+}
+
+#phone .cellular {
+  right: 64px;
+  width: 18px;
+  height: 12px;
+}
+
+#phone .wifi {
+  right: 44px;
+  width: 16px;
+  height: 12px;
+}
+
+#phone .screen {
+  position: relative;
+  width: 100%;
+}
+
+#phone .screen .content::-webkit-scrollbar {
+  display: none;
+}
+
+#phone .entries foreignObject {
+  x: 0;
+  y: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#video-game-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}

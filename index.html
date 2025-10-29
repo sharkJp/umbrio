@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umbrío </title>
+  <!--favicon-->
+  <link rel="icon" type="image/png" href="assets/multimedia/img/cráneo1.png" />
+
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <!--estilos-->
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+
+
+</head>
+
+<body>
+  <main>
+    <!--Sección 1 ...........................................................................-->
+    <section id="secc1" class="seccion1">
+
+      <div class="smoke-container">
+        <video id="niebla" src="./assets/multimedia/video/Vídeo sin título ‐ Hecho con Clipchamp.mp4.mp4" autoplay muted
+          loop playsinline></video>
+      </div>
+
+      <!-- Botón intérprete -->
+      <!-- Repetible en diferentes secciones -->
+      <div class="bloque-interprete">
+        <div class="interprete">
+          <video class="video-interprete" src="./assets/multimedia/video/inicio.mp4" muted controls></video>
+          <button class="cerrar-boton">
+            <span class="close-icon">❌</span>
+          </button>
+        </div>
+
+        <button class="mostrar-boton">👁️ LSC</button>
+      </div>
+      </div>
+
+
+      <!-- Modal pantalla completa con video -->
+      <div class="modal fade fullscreen-modal" id="modalFullscreen" tabindex="-1" aria-labelledby="modalFullscreenLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-cerrar" data-bs-dismiss="modal" aria-label="Cerrar">
+                <span class="close-icon">&times;</span>
+
+              </button>
+            </div>
+            <video id="video-bienvenida" width="100%" autoplay muted playsinline controls>
+              <source src="./assets/multimedia/video/mi_video.mp4" type="video/mp4" />
+              Tu navegador no soporta el tag de video.
+            </video>
+          </div>
+        </div>
+      </div>
+
+<header>
+ <nav class="navbar">
+ <div class="llama-menu">
+  <img src="../assets/multimedia/img/flamaMenú.gif" alt="Menu Toggle" class="fuego" />
+ </div>
+
+ <div class="menu">
+  <span class="close-btn"><h2>X</h2></span>
+
+      <img src="./assets/multimedia/img/vela.webp" class="vela-menu" alt="Vela" />
+  
+    <ul id="mainMenu" class="mainmenu hidden">
+    <li><a href="#secc1">Inicio</a></li>
+    <li><a href="#secc2">Locaciones</a></li>
+    <li><a href="#secc3">Personajes</a></li>
+    <li><a href="./assets/paginas/page2.html">Más</a></li>
+  </ul>
+ </div>
+</nav>
+</header>
+
+      <div class="contenedor-principal">
+
+        <!-- Aquí puedes agregar contenido principal de la sección -->
+      </div>
+
+      <div class="linterna" id="linterna"></div>
+    </section>
+    <img src="./assets/multimedia/img/linterna_1.webp" id="cursor-img" alt="Linterna">
+
+    <!-- Sección 2 ...........................................................................................................-->
+
+    <section id="secc2" class="seccion2">
+
+      <!-- Botón intérprete -->
+      <div class="bloque-interprete">
+        <div class="interprete">
+          <video class="video-interprete" src="./assets/multimedia/video/Locaciones.mp4" muted controls></video>
+          <button class="cerrar-boton">
+            <span class="close-icon">❌</span>
+          </button>
+        </div>
+
+        <button class="mostrar-boton">👁️ LSC</button>
+      </div>
+
+
+      <div class="contenedor-slider">
+        <!-- Slider para las imágenes -->
+        <div class="slider">
+          <!--Catedral-->
+          <div class="slide">
+            <img src="./assets/multimedia/img/img-tunja/Catedral antes.webp" alt="Catedral" />
+          </div>
+          <div class="slide">
+            <img src="./assets/multimedia/img/img-tunja/Catedral ahora.webp" alt="Catedral" />
+
+          </div>
+          <!--plaza San Francisco-->
+
+          <div class="slide">
+            <img src="./assets/multimedia/img/img-tunja/San Francisco antes.webp" alt="Plaza San Francisco" />
+          </div>
+          <div class="slide">
+            <img src="./assets/multimedia/img/img-tunja/San Francisco ahora.webp" alt="Plaza San Francisco" />
+          </div>
+
+
+
+          <!--pozo de donato-->
+          <div class="slide">
+
+            <img src="./assets/multimedia/img/img-tunja/Pozo Donato ahora.webp" alt="Pozo de donato" />
+          </div>
+          <!--biblioteca-->
+          <div class="slide">
+            <img src="./assets/multimedia/img/img-tunja/Biblioteca ahora.webp" alt="Pozo de donato" />
+          </div>
+
+          <!--san agustin-->
+          <div class="slide">
+            <img src="./assets/multimedia/img/img-tunja/San Agustìn antes1.webp" alt="San Agustin" />
+          </div>
+          <div class="slide">
+            <img src="./assets/multimedia/img/img-tunja/San Agustìn ahora.webp" alt="San Agustin" />
+          </div>
+
+          <!--cojines del zaque-->
+          <div class="slide">
+            <img src="./assets/multimedia/img/img-tunja/Cojines del Zaque antes.webp" alt="Cojines del zaque" />
+          </div>
+          <div class="slide">
+            <img src="./assets/multimedia/img/img-tunja/Cojines del Zaque ahora.webp" alt="Cojines del zaque" />
+          </div>
+
+          <!-- Botones -->
+          <button class="prev-secc2">&#10094;</button>
+          <button class="next-secc2">&#10095;</button>
+        </div>
+
+        <!-- Pergamino -->
+        <div class="papiro-container" id="papiro">
+          <div class="papiro-extremo papiro-izquierdo"></div>
+          <div class="papiro-centro">
+            <div class="papiro-contenido" id="texto-papiro">
+              <!-- El texto se insertará dinámicamente aquí -->
+            </div>
+          </div>
+          <div class="papiro-extremo papiro-derecho"></div>
+        </div>
+      </div>
+
+    </section>
+    <!-- Sección 3 .......................................................................................................................................-->
+    <section id="secc3" class="seccion3">
+
+      <!-- Botón Persona intérprete -->
+
+      <div class="bloque-interprete">
+        <div class="interprete">
+          <video class="video-interprete" src="./assets/multimedia/video/Personajes.mp4" muted controls></video>
+          <button class="cerrar-boton">
+            <span class="close-icon">❌</span>
+          </button>
+        </div>
+
+        <button class="mostrar-boton">👁️ LSC</button>
+      </div>
+
+      <div class="contenedor-carrusel-secc3">
+        <div class="carrusel-secc3">
+          <button class="prev-secc3">&#10094;</button>
+          <div class="carrusel-track-secc3">
+
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img src="./assets/multimedia/img/3-4(PC)/noah_1.png" alt="Noah">
+                  <div class="texto-slider-secc3">
+                    <h2>Noah</h2>
+                  </div>
+                </div>
+
+                <model-viewer class="segunda-img-secc3" src="./assets/multimedia/img/3d/per_noah.glb" alt="Noah 3d"
+                  shadow-intensity="1" camera-controls auto-rotate ar></model-viewer>
+
+              </div>
+            </div>
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img src="./assets/multimedia/img/3-4(PC)/espanto2d.webp" alt="Espanto del Panòptico">
+
+                  <div class="texto-slider-secc3">
+                    <h2>Espanto del Panòptico</h2>
+
+                  </div>
+                </div>
+                <model-viewer class="segunda-img-secc3" src="./assets/multimedia/img/3d/espanto.glb"
+                  alt="Espanto del Panòptico 3d" shadow-intensity="1" camera-controls auto-rotate ar></model-viewer>
+              </div>
+            </div>
+
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img src="./assets/multimedia/img/3-4(PC)/sombreron.png" alt="Sombrerón">
+                  <div class="texto-slider-secc3">
+                    <h2>Sombrerón</h2>
+                  </div>
+                </div>
+
+                <model-viewer class="segunda-img-secc3" src="./assets/multimedia/img/3d/Sombreon-v1.glb"
+                  alt="Sombrerón 3d" shadow-intensity="1" camera-controls auto-rotate ar></model-viewer>
+              </div>
+            </div>
+
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img class="simon" src="./assets/multimedia/img/3-4(PC)/simon_2d.png" alt="Simón">
+                  <div class="texto-slider-secc3">
+                    <h2>Simón</h2>
+                  </div>
+                </div>
+                <model-viewer class="segunda-img-secc3" src="./assets/multimedia/img/3d/per_simon.glb" alt="Simón 3d"
+                  shadow-intensity="1" camera-controls auto-rotate ar></model-viewer>
+              </div>
+            </div>
+
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img src="./assets/multimedia/img/3-4(PC)/perro_2d.png" alt="Perro de San Francisco">
+                  <div class="texto-slider-secc3">
+                    <h2>Perro de San Francisco</h2>
+                  </div>
+                </div>
+                <model-viewer class="segunda-img-secc3 perro3d" src="./assets/multimedia/img/3d/per_perro.glb"
+                  alt="Perro de San Francisco 3d" shadow-intensity="1" camera-controls auto-rotate ar></model-viewer>
+              </div>
+            </div>
+
+            <div class="carrusel-item-secc3">
+              <div class="cards-secc3">
+                <div class="img-con-texto-secc3">
+                  <img src="./assets/multimedia/img/3-4(PC)/mano_2d.png" alt="Mano peluda">
+                  <div class="texto-slider-secc3">
+                    <h2>Mano Peluda</h2>
+                  </div>
+                </div>
+                <model-viewer class="segunda-img-secc3 perro3d" src="./assets/multimedia/img/3d/mano.glb"
+                  alt="Mano peluda 3d" shadow-intensity="1" camera-controls auto-rotate ar></model-viewer>
+              </div>
+            </div>
+
+
+          </div>
+          <button class="next-secc3">&#10095;</button>
+        </div>
+      </div>
+
+      <!-- Botón que abre modal -->
+      <div class="btn-brujula">
+        <label for="btn-modal">
+          <img src="./assets/multimedia/img/Brújula.webp" alt="Brujula" class="brujula " id="btnBrujula" />
+        </label>
+        <input type="checkbox" id="btn-modal">
+        <div class="modal-secc3">
+          <div class="modal-contenido-secc3">
+            <label for="btn-modal" class="cerrar-secc3">&times;</label>
+
+            <!-- Contenedor que envuelve mapa e indicadores -->
+            <div class="mapa-wrapper">
+              <!-- <img class="marco" src="./assets/multimedia/img/mask.png" alt="marco"> -->
+
+              <img class="tunja" src="./assets/multimedia/img/MapaTunja_1.webp" alt="Mapa de Tunja" class="mapa-base">
+
+              <!-- Contenedor de pines interactivos -->
+              <!-- <div class="mapa-interactivo">
+                <div class="pin" style="top: 35%; left: 45%;">
+                
+                  <div class="tooltip">
+                    <img src="./assets/multimedia/img/img-tunja/Catedral ahora.webp" alt="Catedral de Tunja">
+                    <h4>Catedral de Tunja</h4>
+                  </div>
+                </div>
+
+                <div class="pin" style="top: 52%; left: 60%;">
+                  <div id="tooltip-cojines" class="tooltip ">
+                    <img class="cojines" src="./assets/multimedia/img/img-tunja/Cojines del Zaque ahora.webp"
+                      alt="Cojines del Zaque">
+                    <h4>Cojines del Zaque</h4>
+                  </div>
+                </div>
+
+                <div class="pin" style="top: 70%; left: 40%;">
+                  <div class="tooltip">
+                    <img src="./assets/multimedia/img/img-tunja/San Agustìn antes.webp" alt="San Agustín">
+                    <h4>San Agustín</h4>
+                  </div>
+                </div>
+
+                <div class="pin" style="top: 42%; left: 56%;">
+                  <div class="tooltip">
+                    <img src="./assets/multimedia/img/img-tunja/Biblioteca ahora.webp" alt="Biblioteca">
+                    <h4>Biblioteca</h4>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- Botón flotante Calavera -->
+  <div class="flotante-calavera" id="btnCalavera">
+
+  </div>
+    </section>
+  </main>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="primer-contenedor">
+      <div class="redes-logos">
+        <div class="redes-sociales">
+          <a href="https://www.facebook.com/umbrio/" target="_blank"><img
+              src="./assets/multimedia/icons/social-media/face.svg" alt="facebook" /></a>
+          <a href="https://www.instagram.com/umbrio/" target="_blank"><img
+              src="./assets/multimedia/icons/social-media/instagram.svg" alt="instagram" /></a>
+
+          <a href="https://youtube.com/umbrio" target="_blank"><img
+              src="./assets/multimedia/icons/social-media/youtube.svg" alt="youtube" /></a>
+          <a href="https://www.whatsapp.com/umbrio" target="_blank"><img
+              src="./assets/multimedia/icons/social-media/whas.svg" alt="whatsapp" /></a>
+          <a href="https://tiktok.com/@umbrio" target="_blank"><img
+              src="./assets/multimedia/icons/social-media/tictok.svg" alt="tiktok" /></a>
+        </div>
+        <div class="logos">
+          <img src="./assets/multimedia/img/logo-sena.webp" alt="sena" />
+          <img src="./assets/multimedia/img/logo.png" alt="logo" />
+        </div>
+      </div>
+
+      <div class="enlaces">
+        <a href="https://comunicaciongraficasena.blogspot.com/" target="_blank">
+          CENIGRAF
+        </a>
+        <a href="https://actividadfisicaycultura.blogspot.com/" target="_blank">
+          CEFAFC
+        </a>
+      </div>
+    </div>
+
+    <div class="copy">
+     <p>
+        Copyright &copy; 2025 Equipo Web-Umbrio | Todos los derechos
+        reservados .
+      </p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/header.js"></script>
+  <script src="./assets/js/seccion1.js"></script>
+  <script src="./assets/js/seccion2.js"></script>
+  <script src="./assets/js/seccion3.js"></script>
+  <script src="./assets/js/fade-enhancer.js"></script>
+
+</body>
+
+</html>

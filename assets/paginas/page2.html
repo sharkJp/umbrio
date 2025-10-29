@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!--favicon-->
+  <link rel="icon" type="image/png" href="../multimedia/img/fire.gif" />
+  <!--estilo-->
+  <!-- <link rel="stylesheet" href="../css/footer.css" /> -->
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/pagina_2.css" />
+  <link rel="stylesheet" href="../css/responsive.css">
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <main>
+
+    <section id="secc4" class="seccion4">
+      <header>
+        <nav class="navbar">
+          <div class="llama-menu">
+            <img src="../multimedia/img/flamamenú.gif" alt="Menu Toggle" class="fuego" />
+          </div>
+
+          <div class="menu">
+            <span class="close-btn hidden">X</span>
+            <img src="../multimedia/img/vela.webp" class="vela-menu" alt="Vela" />
+            
+            <ul id="mainMenu" class="mainmenu hidden">
+
+              <li><a href="../../index.html">Inicio</a></li>
+              <li>
+                <a href="#" id="abrirModal" class="enlace-modal">Umbrío</a>
+              </li>
+              <li><a href="#secc5">Equipo</a></li>
+              <li><a href="#secc6">Making Off</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Resto del contenido -->
+      <div class="bloque-interprete">
+        <div class="interprete">
+          <video class="video-interprete" src="../multimedia/video/Inicio2.mp4" muted controls></video>
+          <button class="cerrar-boton">
+            <span class="close-icon">❌</span>
+          </button>
+        </div>
+
+        <button class="mostrar-boton">👁️ LSC</button>
+      </div>
+
+      <img src="../multimedia/img/mano.png" id="cursor-img" alt="Mano" />
+
+      <div class="contenedor-principal">
+
+      </div>
+
+      <!-- Contenido del modal cortometraje umbrío -->
+      <dialog id="miModal">
+        <div class="contendor-btn">
+          <button id="cerrarModal">❌</button>
+        </div>
+        <div class="contenedor-video">
+          <video width="80%" autoplay muted controls>
+            <source src="../multimedia/video/umbrio_video.mp4" type="video/mp4" />
+            Tu navegador no soporta el tag de video.
+          </video>
+        </div>
+      </dialog>
+    </section>
+
+    <section id="secc5" class="seccion5">
+      <!-- Botón Persona intérprete -->
+      <div class="bloque-interprete">
+        <div class="interprete">
+          <video class="video-interprete" src="../multimedia/video/Equipo.mp4" muted controls></video>
+          <button class="cerrar-boton">
+            <span class="close-icon">❌</span>
+          </button>
+        </div>
+
+        <button class="mostrar-boton">👁️ LSC</button>
+      </div>
+
+      <h2 class="about-title">Equipo </h2>
+
+      <!-- Slider -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Miembro 1 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Ivonne Espíndola.webp" class="team-photo " alt="Miembro 0" />
+            <h3 class="member-name">Ivonne Espíndola</h3>
+            <p class="member-role">Project Lead / Instructor de Animación</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 2 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Leonardo.webp" class="team-photo" alt="Miembro 1" />
+            <h3 class="member-name">Leonardo Huertas</h3>
+            <p class="member-role">Instructor de Animación</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 3 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Eddy Camacho</h3>
+            <p class="member-role">Coordinator Académico</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 4 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/marquiño.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Marquiño</h3>
+            <p class="member-role">Full Stack</p>
+            <p class="member-portafolio">
+              <a href="https://marcofernandez.netlify.app/" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 5 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Faizule.webp" class="team-photo" alt="Miembro 3" />
+            <h3 class="member-name">Faizule</h3>
+            <p class="member-role">Web & Multimedia Developer</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 6 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/jose-alejandro.webp" class="team-photo" alt="Miembro 5" />
+            <h3 class="member-name">Jose Alejandro</h3>
+            <p class="member-role">Web & Multimedia Developer</p>
+            <p class="member-portafolio"><a href="">portafolio</a></p>
+          </div>
+          <!-- Miembro 7 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/jhonge16.webp" class="team-photo" alt="Miembro 6" />
+            <h3 class="member-name">JhonGe</h3>
+            <p class="member-role">Developer Full-Stack & Data-Driven</p>
+            <p class="member-portafolio">
+              <a href="https://sharkjp.github.io/portafolio/" target="_blank">
+                portafolio
+              </a>
+            </p>
+          </div>
+
+          <!-- Miembro 8 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/dayana.webp" class="team-photo" alt="Miembro 4" />
+            <h3 class="member-name">Dayana Katerin</h3>
+            <p class="member-role">Web & Multimedia Developer</p>
+            <p class="member-portafolio"><a href="">portafolio</a></p>
+          </div>
+          <!-- Miembro 9 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/Ana Janer.webp" class="team-photo" alt="Miembro 8" />
+            <h3 class="member-name">Ana María Janer</h3>
+            <p class="member-role">Animadora 3D</p>
+            <p class="member-portafolio">
+              <a href="https://cara.app/artipiagui" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 10 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Andrés Cardona.webp" class="team-photo" alt="Miembro 9" />
+            <h3 class="member-name">Andrés Cardona</h3>
+            <p class="member-role">Lorem Ipsum</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 11 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Adriana Acosta Medina.webp" class="team-photo" alt="Miembro 7" />
+            <h3 class="member-name">Adriana Acosta</h3>
+            <p class="member-role">Lorem Ipsum</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 12 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/Angie Murcia.webp" class="team-photo" alt="Miembro 11" />
+            <h3 class="member-name">Angie Alejandra</h3>
+            <p class="member-role">Artista Conceptual</p>
+            <p class="member-portafolio">
+              <a href="https://www.instagram.com/alighostly?igsh=MXJxMHFoMHV5cGdyaA==" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 13 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Carlos Gustavo Fernández.webp" class="team-photo" alt="Miembro 12" />
+            <h3 class="member-name">Carlos Gustavo</h3>
+            <p class="member-role">Lorem Ipsum</p>
+            <p class="member-portafolio">
+              <a href="https://linktr.ee/solarstudiosfilms" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 14 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Angela Saleg.webp" class="team-photo" alt="Miembro 10" />
+            <h3 class="member-name">Ángela Rocio</h3>
+            <p class="member-role">Animadora 3D</p>
+            <p class="member-portafolio">
+              <a href="https://acortar.link/e7ymy0" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 15 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/Cristian Charris.webp" class="team-photo" alt="Miembro 14" />
+            <h3 class="member-name">CrisFer</h3>
+            <p class="member-role">Desarrollador de Experiencias XR</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 16 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Dania Moncada.webp" class="team-photo" alt="Miembro 15" />
+            <h3 class="member-name">Dania Stefania</h3>
+            <p class="member-role">Animadora 3D</p>
+            <p class="member-portafolio">
+              <a href="#" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 17 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Carlos Mancera.webp" class="team-photo" alt="Miembro 13" />
+            <h3 class="member-name">CarMan</h3>
+            <p class="member-role">Desarrollador de Experiencias XR</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 18 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/Edi Sánchez.webp" class="team-photo" alt="Miembro 17" />
+            <h3 class="member-name">Edi Sánchez</h3>
+            <p class="member-role">Animador 3D</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 19 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Edwin Triviño.webp" class="team-photo" alt="Miembro 18" />
+            <h3 class="member-name">Edwin Triviño</h3>
+            <p class="member-role">Animador 3D</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 20 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Daniela Mediorreal.webp" class="team-photo" alt="Miembro 16" />
+            <h3 class="member-name">Laura Daniela </h3>
+            <p class="member-role">Ilustradora</p>
+            <p class="member-portafolio">
+              <a href="#" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 21 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/Felipe Franco.webp" class="team-photo" alt="Miembro 20" />
+            <h3 class="member-name">Felipe Franco</h3>
+            <p class="member-role">Lorem Ipsum</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 22 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Juliana Sánchez.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Juliana Sánchez</h3>
+            <p class="member-role">Lorem Ipsum</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 23 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Estefanía Melo.webp" class="team-photo" alt="Miembro 19" />
+            <h3 class="member-name">Estefanía Melo</h3>
+            <p class="member-role">Animadora 3D</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 24 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/Luis Cruz.webp" class="team-photo" alt="Miembro 4" />
+            <h3 class="member-name">Luis Cruz</h3>
+            <p class="member-role">Animador 3D & Aux. de Auditoría</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 25 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Luis Fernando Charris.webp" class="team-photo" alt="Miembro 5" />
+            <h3 class="member-name">LuiFer</h3>
+            <p class="member-role">Desarrollo Publicitario</p>
+            <p class="member-portafolio">
+              <a href="https://www.behance.net/luisfecharris1" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 26 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Karol Charry.webp" class="team-photo" alt="Miembro 3" />
+            <h3 class="member-name">karol Yuliana</h3>
+            <p class="member-role">Desarrollo Publicitario & Agroindustria Alimentaria</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 27 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/Mathias Pedraza.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Mathias Daniel</h3>
+            <p class="member-role">Contador Público & Animador Digital</p>
+            <p class="member-portafolio">
+              <a href="https://www.artstation.com/mattmax0206" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 28 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Matius Quintero.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Matiw Quintero</h3>
+            <p class="member-role">3D Artist</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 29 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/María José_web.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Majo</h3>
+            <p class="member-role">Web & Multimedia Developer</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+
+          <!-- Miembro 30 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/Royber Pacheco.webp" class="team-photo" alt="Miembro 1" />
+            <h3 class="member-name">Royber Pacheco</h3>
+            <p class="member-role">Lorem Ipsum</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 31 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Sally Fonseca.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Sally Fonseca</h3>
+            <p class="member-role">Lorem Ipsum</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 32 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Nicolás Rocha.webp" class="team-photo" alt="Miembro 1" />
+            <h3 class="member-name">Angel Nicolás </h3>
+            <p class="member-role">Animador 3D</p>
+            <p class="member-portafolio">
+              <a href="https://youtu.be/qxQfYWcr2cI" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 33 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/Sharyck.webp" class="team-photo" alt="Miembro 4" />
+            <h3 class="member-name">Sharyck Sofía</h3>
+            <p class="member-role">Web & Multimedia Developer</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 34 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Silvia Mora.webp" class="team-photo" alt="Miembro 5" />
+            <h3 class="member-name">Silvia Marcela</h3>
+            <p class="member-role">Ing. Multimedia & Animadora 3D</p>
+            <p class="member-portafolio">
+              <a href="#" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 35 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Sandra Elizabeth Ortiz.webp" class="team-photo" alt="Miembro 3" />
+            <h3 class="member-name">Sandra Elizabeth</h3>
+            <p class="member-role">Lorem Ipsum</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 36 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/Yaizel Melenje.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Yaizel Melenje</h3>
+            <p class="member-role">Lorem Ipsum</p>
+            <p class="member-portafolio">
+              <a href="https://cara.app/artipiagui" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 37 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Yeidy Montoya.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Yeidy Paola</h3>
+            <p class="member-role">Diseñadora Gráfica 6 Visual</p>
+            <p class="member-portafolio">
+              <a href="https://www.behance.net/yeidymontoya/projects?fbclid=PAZXh0bgNhZW0CMTEAAaf9SWxuHr3MPJGLNIli_KMxbEXrxMVX4LOfWYM2Pt9rJzUWzNreAB44mp6-jA_aem_5OHtI_tB7f6TmbdlsX1MAQ"
+                target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 38 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Valentina Ochoa.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Valentina Ochoa</h3>
+            <p class="member-role">Ilustradora</p>
+            <p class="member-portafolio">
+              <a href="https://www.instagram.com/von_eko/" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 39 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/cristian perez.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Cristian Perez</h3>
+            <p class="member-role">Web & Multimedia Developer</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 40 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Yeisson Agudelo.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Yeisson Agudelo</h3>
+            <p class="member-role">Lorem Ipsum</p>
+            <p class="member-portafolio">
+              <a href="" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 41 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/leonardo-vergel.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">leonardo Vergel</h3>
+            <p class="member-role">Animador 3D</p>
+            <p class="member-portafolio">
+              <a href="https://www.linkedin.com/in/leonardo-vergel-alvarez-bb6855124/" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+
+          <!-- Miembro 42 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Melissa Yepes</h3>
+            <p class="member-role">Psicóloga & Animadora Digital</p>
+            <p class="member-portafolio">
+              <a href="https://www.canva.com/design/DAGtFEPUrDg/XRTDZRLKl7CJXQfcOOPL4Q/edit?utm_content=DAGtFEPUrDg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 43 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/nicolas.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Nicolas Santiago</h3>
+            <p class="member-role">Lorem Ipsum</p>
+            <p class="member-portafolio">
+              <a href="#" target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 44 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Nicolas Felipe</h3>
+            <p class="member-role">Animador 3D</p>
+            <p class="member-portafolio">
+              <a href="https://www.canva.com/design/DAGYjN7Hv40/0Ds_C6pCw2DdxnHuBFNxiw/edit?utm_content=DAGYjN7Hv40&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 45 -->
+          <div class="swiper-slide filtro-purple">
+            <img src="../multimedia/img/teams/Yudi Fernanda.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Yudi Fernanda</h3>
+            <p class="member-role">Ing. Agroindustrial & Desarrollador Publicitario</p>
+            <p class="member-portafolio">
+              <a href="http://www.linkedin.com/in/fernanda-triana-mora-7832a0256" target="_blank">portafolio</a>
+            </p>
+          </div>
+
+          <!-- Miembro 46 -->
+          <div class="swiper-slide filtro-azul">
+            <img src="../multimedia/img/teams/Cristina jave.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Ana Cristina </h3>
+            <p class="member-role">Técnica en Secretariado & ADS</p>
+            <p class="member-portafolio">
+              <a href="https://www.linkedin.com/in/ana-cristina-jave-barrera-18783a347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank">portafolio</a>
+            </p>
+          </div>
+          <!-- Miembro 47 -->
+          <div class="swiper-slide filtro-naranja">
+            <img src="../multimedia/img/teams/yudis martinez.webp" class="team-photo" alt="Miembro 2" />
+            <h3 class="member-name">Yudis Sanchez </h3>
+            <p class="member-role">Web & Multimedia Developer</p>
+            <p class="member-portafolio">
+              <a href="https://www.linkedin.com/in/ana-cristina-jave-barrera-18783a347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank">portafolio</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Botones -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      </div>
+
+    </section>
+
+    <section id="secc6" class="seccion6">
+
+      <!-- Botón Persona intérprete -->
+      <div class="bloque-interprete">
+        <div class="interprete">
+          <video class="video-interprete" src="../multimedia/video/Making.mp4" muted controls></video>
+          <button class="cerrar-boton">
+            <span class="close-icon">❌</span>
+          </button>
+        </div>
+
+        <button class="mostrar-boton">👁️ LSC</button>
+      </div>
+
+      <h2 class="about-title">Making Off</h2>
+      <div class="store-links">
+        <img id="abrirModalSecc6" src="../multimedia/img/play-.svg" alt="video" />
+      </div>
+      <iframe id="youtube-player" width="560" height="315"
+        src="https://www.youtube.com/embed/8H64HNvXrqU?si=PYuC5-j3iMNpXDjQ" title="YouTube video player"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+      <!-- Botón flotante Calavera -->
+      <div class="flotante-calavera" id="btnCalavera">
+      </div>
+    </section>
+
+  </main>
+
+
+  <div id="miModalSecc6" class="modalSecc6">
+
+    <div class="modal-contenidoSecc6">
+
+      <span class="cerrarSecc6">&times;</span>
+
+      <h2 class="invitacion">
+        <a href="about:blank" target="_blank">
+          Disponible ahora, clic para descargar
+        </a>
+      </h2>
+
+      <!-- SVG  phone con video-->
+
+      <div id="phone">
+
+        <div class="screen">
+          <div class="empty">
+
+          </div>
+          <div class="content">
+            <!-- <div class="entries" style="height: 4000px;"> -->
+            <div class="entries">
+              <svg viewBox="0 0 375 767" width="100%" height="100%" preserveAspectRatio="none">
+                <foreignObject x="0" y="0" width="100%" height="100%">
+                  <video id="video-game-player" xmlns="http://www.w3.org/1999/xhtml" autoplay loop muted playsinline
+                    controls>
+                    <source src="../multimedia/video/game.mp4" type="video/mp4" />
+                    Tu navegador no soporta el video.
+                  </video>
+                </foreignObject>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="time" id="current-time">11:30</div>
+        <svg class="battery" viewBox="0 0 25 12">
+          <rect opacity="0.35" x="0.5" y="0.833374" width="21" height="10.3333" rx="2.16667" fill="none"
+            stroke="currentColor" />
+          <path opacity="0.4" d="M23 4V8C23.8047 7.66122 24.328 6.87313 24.328 6C24.328 5.12687 23.8047 4.33878 23 4"
+            fill="currentColor" />
+          <rect x="2" y="2.33337" width="18" height="7.33333" rx="1.33333" fill="currentColor" />
+        </svg>
+        <svg class="wifi" viewBox="0 0 16 12">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M8.33045 2.60802C10.5463 2.60811 12.6775 3.45955 14.2835 4.98635C14.4044 5.10422 14.5977 5.10274 14.7168 4.98302L15.8728 3.81635C15.9331 3.75563 15.9667 3.67338 15.9662 3.58779C15.9657 3.50221 15.9311 3.42036 15.8701 3.36035C11.655 -0.679198 5.00522 -0.679198 0.79012 3.36035C0.729062 3.42032 0.694418 3.50215 0.693855 3.58773C0.693292 3.67331 0.726856 3.75558 0.78712 3.81635L1.94345 4.98302C2.06248 5.10292 2.25593 5.10441 2.37679 4.98635C3.98294 3.45945 6.11434 2.60801 8.33045 2.60802ZM8.33045 6.40368C9.54794 6.40361 10.722 6.85614 11.6245 7.67335C11.7465 7.78933 11.9388 7.78682 12.0578 7.66768L13.2125 6.50102C13.2733 6.43982 13.307 6.3568 13.3061 6.27054C13.3052 6.18427 13.2698 6.10196 13.2078 6.04202C10.4596 3.48563 6.20365 3.48563 3.45545 6.04202C3.39338 6.10196 3.35796 6.18432 3.35714 6.27061C3.35633 6.3569 3.39019 6.43991 3.45112 6.50102L4.60545 7.66768C4.72444 7.78682 4.91672 7.78933 5.03879 7.67335C5.94066 6.85668 7.11377 6.40419 8.33045 6.40368ZM10.6434 8.9575C10.6452 9.04401 10.6112 9.12741 10.5495 9.18802L8.55212 11.2037C8.49357 11.2629 8.41374 11.2963 8.33045 11.2963C8.24716 11.2963 8.16734 11.2629 8.10879 11.2037L6.11112 9.18802C6.04941 9.12736 6.01546 9.04394 6.01729 8.95743C6.01912 8.87092 6.05657 8.789 6.12079 8.73102C7.39636 7.65213 9.26455 7.65213 10.5401 8.73102C10.6043 8.78905 10.6417 8.87099 10.6434 8.9575Z"
+            fill="currentColor" />
+        </svg>
+      </div>
+
+      <div class="abstracto">
+        <h3> <a href="about:blank" target="_blank">Descarga aquí</a></h3>
+      </div>
+
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="primer-contenedor">
+      <div class="redes-logos">
+        <div class="redes-sociales">
+          <a href="https://www.facebook.com/umbrio/" target="_blank"><img
+              src="../multimedia/icons/social-media/face.svg" alt="facebook" /></a>
+          <a href="https://www.instagram.com/umbrio/" target="_blank"><img
+              src="../multimedia/icons/social-media/instagram.svg" alt="instagram" /></a>
+          <a href="https://twitter.com/umbrio" target="_blank">
+            <img src="../multimedia/icons/social-media/x.svg" alt="twitter" /></a>
+          <a href="https://youtube.com/umbrio" target="_blank"><img src="../multimedia/icons/social-media/youtube.svg"
+              alt="youtube" /></a>
+          <a href="https://www.whatsapp.com/umbrio" target="_blank"><img src="../multimedia/icons/social-media/whas.svg"
+              alt="whatsapp" /></a>
+          <a href="https://tiktok.com/@umbrio" target="_blank"><img src="../multimedia/icons/social-media/tictok.svg"
+              alt="tiktok" /></a>
+        </div>
+        <div class="logos">
+          <img src="../multimedia/img/logo-sena.webp" alt="sena" />
+          <img src="../multimedia/img/logo.png" alt="logo" />
+        </div>
+      </div>
+
+      <div class="enlaces">
+        <a href="https://comunicaciongraficasena.blogspot.com/" target="_blank">
+          CENIGRAF
+        </a>
+        <a href="https://actividadfisicaycultura.blogspot.com/" target="_blank">
+          CEFAFC
+        </a>
+      </div>
+    </div>
+
+    <div class="copy">
+      <p>
+        Copyright &copy; 2025 Equipo Web-Umbrio | Todos los derechos
+        reservados .
+      </p>
+    </div>
+  </footer>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!--script-->
+
+  <script src="../js/header.js"></script>
+  <script src="../js/seccion4.js"></script>
+  <script src="../js/seccion5.js"></script>
+  <script src="../js/seccion6.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
