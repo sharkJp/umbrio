@@ -317,7 +317,7 @@ body.modal-open {
 .swiper-button-prev {
   position: absolute;
   top: 60% !important;
-  color: #e8431a !important;
+  color: var(--segundo-color)!important;
   transition: 0.3s !important;
   font-size: 1.5rem !important;
   font-weight: bold !important;
@@ -440,7 +440,7 @@ iframe {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #f10a0a;
+  color: var(--tercer-color);
   float: right;
   font-size: 3rem;
   font-weight: bold;

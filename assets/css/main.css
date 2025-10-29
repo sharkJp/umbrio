@@ -1088,7 +1088,7 @@ visibility: hidden;
   font-size: 48px;
   font-weight: bold;
   cursor: pointer;
-  color: red;
+  color: var(--tercer-color);
   z-index: 10;
   transition: color 0.3s ease;
 
