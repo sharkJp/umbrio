@@ -182,7 +182,7 @@ body.modal-open {
 /* --- Efecto blanco y negro / color --- */
 .team-photo {
   width: 300px !important;
-  height: 370px !important;
+  height: 410px !important;
   border-radius: 50%;
   object-fit: cover;
   margin-top: 0%;
@@ -379,7 +379,7 @@ iframe {
 
 .store-links {
   position: fixed;
-  top: 45%;
+  top: 65%;
   right: 3%;
   width: 60px;
   height: 60px;

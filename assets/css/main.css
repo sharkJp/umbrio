@@ -112,7 +112,7 @@ z-index: 0;
 .fuego {
  position: absolute;
  width: 52%;
- height: 65%;
+ height: auto;
  z-index: 1111;
  display: block;
  right: 45px;
@@ -120,9 +120,9 @@ z-index: 0;
 }
 
 .vela-menu {
- width: 14.5vw;
+ width: 13vw;
  height: 16vw;
- top: 13%;
+ top: 18% !important;
  z-index: 1;
  display: block;
  position: absolute;
@@ -133,10 +133,10 @@ transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 
 .menu {
 position: absolute;
-top: 3.5vw;
+top: 5vw;
 right: 0%;
 width: 14.5vw;
-height: 18vw;
+height: 20vw;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -179,7 +179,10 @@ transition: opacity 0.3s ease-out, transform 0.3s ease;
 
 
 #mainMenu {
+  position: relative;
 opacity: 1; 
+top: 5%;
+right: 2%;
 }
 
 #mainMenu.hidden {
@@ -199,13 +202,13 @@ font-family: 'Amarante';
 font-size: 1rem;
 font-weight: 700;
 text-decoration: none;
-color: var(--quinto-color);
+color: var(--primer-color);
 transition: color 0.3s ease-out;
 cursor: none;
 }
 
 li a:hover {
-color: var(--noveno-color);
+color: var(--tercer-color);
 text-decoration: underline;
 }
 
@@ -313,7 +316,7 @@ visibility: hidden;
 }
 
 .flotante-calavera img {
-  width: 90px;
+  width: 70px;
   height: auto;
   transition: transform 0.2s ease;
   cursor: none !important;
