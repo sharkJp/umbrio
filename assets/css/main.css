@@ -494,16 +494,22 @@ visibility: hidden;
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  background-color: var(--segundo-color);
+  background-color: var(--quinto-color);
 }
 
 .btn-cerrar span {
   margin-top: -20%;
   font-size: 3rem;
   font-weight: bold;
-  color: var(--noveno-color);
+  color: var(--segundo-color);
   z-index: 100;
   pointer-events: none;
+}
+.btn-cerrar:hover, .btn-cerrar span:hover {
+  transform: scale(1.1);
+}
+.btn-cerrar span:hover {
+color: red !important;
 }
 
 /*fin de modal*/
