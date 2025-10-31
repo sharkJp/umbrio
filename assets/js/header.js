@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
  const llamaMenu = document.querySelector('.llama-menu');
@@ -90,6 +92,7 @@ menuContainer.classList.add('hidden');
  llamaMenu.addEventListener('click', (e) => {
  e.stopPropagation();
  toggleMenu();
+ menuAbierto = !menuAbierto; // forzamos actualización
  });
 
 

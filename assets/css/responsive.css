@@ -35,7 +35,7 @@
 
   .fuego {
     width: 14vw;
-    height:auto;
+    height: 25vw;
     right: 0%;
     top: 0%;
     right: 3%;
@@ -57,7 +57,7 @@
     box-shadow: 0 0 25px rgba(238, 108, 221, 0.15);
   }
 
-  .seccion4 .menu-open-mobile {
+ /* .seccion4 .menu-open-mobile {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -71,7 +71,7 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 0 25px rgba(238, 108, 221, 0.15);
-  }
+  }*/
 
   .menu ul {
     margin-top: 0;
@@ -751,9 +751,6 @@ li{
     width: 100% !important;
   }
 }
-
-
-
 
 /* Se aplica a 1920px Y cualquier ancho superior. */
 @media screen and (min-width: 1920px) {

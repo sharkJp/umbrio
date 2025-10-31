@@ -1,6 +1,6 @@
 :root {
   --primer-color: #011740;
-  --segundo-color: #f4a209;
+  --segundo-color: #f4a009;
   --tercer-color: #07f3f3;
   --cuarto-color: #0697a8;
   --quinto-color: #9431c0;
@@ -68,10 +68,28 @@ body {
   height: auto;
   pointer-events: none;
   transform: translate(-80%, -15%);
-  z-index: 1000;
+  z-index: 10000;
   cursor: none !important;
 }
-/*navbar*/
+.llama-menu {
+ position: absolute;
+ right: 0;
+ width: 15%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ z-index: 10;
+}
+.fuego {
+ position: absolute;
+ width: 52%;
+ height: 65%;
+ z-index: 1111;
+ display: block;
+ right: 45px;
+ top: 20px;
+}
 header {
 position: absolute;
 width: 100%;
@@ -112,7 +130,7 @@ z-index: 0;
 .fuego {
  position: absolute;
  width: 52%;
- height: auto;
+ height: 65%;
  z-index: 1111;
  display: block;
  right: 45px;
@@ -120,23 +138,23 @@ z-index: 0;
 }
 
 .vela-menu {
- width: 13vw;
+ width: 14.5vw;
  height: 16vw;
- top: 18% !important;
+ top: 13%;
  z-index: 1;
  display: block;
  position: absolute;
-opacity: 0; 
-    transform: translateY(-20px);
-transition: opacity 0.3s ease-out, transform 0.3s ease-out; 
+ opacity: 0; 
+ transform: translateY(-20px);
+ transition: opacity 0.3s ease-out, transform 0.3s ease-out; 
 }
 
 .menu {
 position: absolute;
-top: 5vw;
+top: 3.5vw;
 right: 0%;
 width: 14.5vw;
-height: 20vw;
+height: 18vw;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -179,10 +197,7 @@ transition: opacity 0.3s ease-out, transform 0.3s ease;
 
 
 #mainMenu {
-  position: relative;
 opacity: 1; 
-top: 5%;
-right: 2%;
 }
 
 #mainMenu.hidden {
@@ -202,13 +217,13 @@ font-family: 'Amarante';
 font-size: 1rem;
 font-weight: 700;
 text-decoration: none;
-color: var(--primer-color);
+color: var(--quinto-color);
 transition: color 0.3s ease-out;
 cursor: none;
 }
 
 li a:hover {
-color: var(--tercer-color);
+color: var(--noveno-color);
 text-decoration: underline;
 }
 
@@ -218,7 +233,6 @@ pointer-events: none;
 visibility: hidden;
  transform: scale(0.9);
 }
-
 /*fin del navbar*/
 
 /* Contenedor del intérprete */
@@ -264,12 +278,18 @@ visibility: hidden;
   height: 20px;
   border-radius: 50%;
   z-index: 11;
-  background-color: #f6e9c7;
+  background-color:var(--noveno-color);
+  color:var(--quinto-color);
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: none !important;
+}
+
+.cerrar-boton:hover {
+  color:var(--octavo-color);
+  transform: scale(1.1);
 }
 
 .close-icon {
@@ -287,7 +307,7 @@ visibility: hidden;
   height: 60px;
   font-size: 1.0rem;
   background-color: var(--quinto-color);
-  color: white;
+  color:var(--noveno-color);
   border: none;
   border-radius: 6px;
   display: none;
@@ -316,13 +336,13 @@ visibility: hidden;
 }
 
 .flotante-calavera img {
-  width: 70px;
+  width: 50px;
   height: auto;
   transition: transform 0.2s ease;
   cursor: none !important;
 }
 
-/* animacio-Vibración */
+/* animación-Vibración */
 @keyframes vibrar {
   0% {
     transform: translate(0);
@@ -357,7 +377,7 @@ visibility: hidden;
   animation: vibrar 0.8s;
 }
 
-/*seccion 1....................................................................*/
+/*Sección 1....................................................................*/
 
 .seccion1 {
   flex-direction: column;
@@ -420,7 +440,7 @@ visibility: hidden;
   cursor: none;
 }
 
-/*modal bienvenida lsc*/
+/* Modal bienvenida lsc*/
 .modal.fullscreen-modal {
   margin: 0 !important;
   background-color: var(--primer-color) !important;
@@ -431,6 +451,7 @@ visibility: hidden;
   align-items: center;
   justify-content: center;
   cursor: none;
+  z-index: 10000;
 }
 
 .modal-dialog {
@@ -504,9 +525,9 @@ visibility: hidden;
 }
 
 /*fin de modal*/
-/*fin de seccion 1*/
+/*fin de sección 1*/
 
-/*inicio de seccion 2.................................................................*/
+/*Inicio de sección 2.................................................................*/
 
 .seccion2 {
   position: relative;
@@ -929,8 +950,9 @@ visibility: hidden;
   scrollbar-width: none;
 }
 
-/** Modal **/
-.btn-brujula {
+/** Boton brujula**/
+
+/*.btn-brujula {
   position: relative;
   width: 100%;
   height: 40%;
@@ -941,15 +963,58 @@ visibility: hidden;
   cursor: none;
 }
 
+/* Botón brújula */
+.btn-brujula {
+  position: absolute;
+  bottom: 5%;
+  right: 92%;
+  z-index: 9999;
+}
+
 .brujula {
+  width: 60px;
+  height: 60px;
+  cursor: none;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+.brujula:hover {
+  transform: rotate(25deg) scale(1.1);
+}
+
+/*.brujula {
   width: 20%;
   height: auto;
   margin-left: 3%;
   cursor: none;
   margin-top: -3%;
+}*/
+
+/*.btn-brujula {
+  position: absolute;
+  bottom: 2%;
+  right: 93%;
+  z-index: 50;
 }
 
-/* --- Modal --- */
+.brujula {
+  width: 60px;
+  height: 60px;
+  cursor: none;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.3));
+}
+
+.brujula:hover {
+  transform: rotate(25deg) scale(1.1);
+}
+*/
+
+
+
+
+/* Boton Modal --- */
 #btn-modal {
   display: none;
 }
@@ -981,14 +1046,6 @@ visibility: hidden;
   position: relative;
 }
 
-/* .marco {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 5;
-  pointer-events: none;
-} */
 
 .tunja {
   position: absolute;
@@ -1087,7 +1144,7 @@ visibility: hidden;
 .cerrar-secc3 {
   position: absolute;
   top: -2% !important;
-  right: -40px;
+  right: -5px;
   font-size: 48px;
   font-weight: bold;
   cursor: pointer;
@@ -1201,7 +1258,7 @@ visibility: hidden;
 .enlaces a {
   text-align: center;
   text-decoration: none;
-  color: white;
+  color: var(--noveno-color);
   font-size: 1.6rem;
   font-family: "amarante";
   letter-spacing: 3px;
@@ -1225,7 +1282,7 @@ visibility: hidden;
 
 .copy p {
   font-size: 0.9rem;
-  color: white;
+  color: var(--noveno-color);
   opacity: 0.8;
   text-align: center;
   font-family: "amarante";

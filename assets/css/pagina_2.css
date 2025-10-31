@@ -78,6 +78,13 @@ body.modal-open {
   font-size: 2vw;
   top: 2%;
   right: 2%;
+  background:#f6e9c7 ;
+  color: #9431c0;
+}
+
+#cerrarModal:hover{
+  color:#8b6cb8;
+  transform: scale(1.1);
 }
 
 /** seccion 5 **/
@@ -182,7 +189,7 @@ body.modal-open {
 /* --- Efecto blanco y negro / color --- */
 .team-photo {
   width: 300px !important;
-  height: 410px !important;
+  height: 370px !important;
   border-radius: 50%;
   object-fit: cover;
   margin-top: 0%;
@@ -379,7 +386,7 @@ iframe {
 
 .store-links {
   position: fixed;
-  top: 65%;
+  top: 45%;
   right: 3%;
   width: 60px;
   height: 60px;
