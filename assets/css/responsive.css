@@ -2,7 +2,12 @@
 
 /** para la seccion 4 **/
 @media (max-width: 768px) {
-
+  .seccion2{
+    background-color: aqua;
+  }
+.seccion3{
+  background-color: lightcoral;
+}
   /* navbar móvil ajustes */
   header {
     position: absolute;
@@ -781,11 +786,13 @@
     width: 280px;
     height: 520px;
     position: relative;
+    top: -2%;
+    z-index: 1000;
     perspective: 1000px;
   }
 
   .segunda-img-secc3 {
-    top: 22%;
+    top: 15%;
   }
 
   /* Opcional: Asegurar que el contenedor ocupe el 100% */
