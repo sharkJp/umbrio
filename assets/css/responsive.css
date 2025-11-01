@@ -2,12 +2,7 @@
 
 /** para la seccion 4 **/
 @media (max-width: 768px) {
-  .seccion2{
-    background-color: aqua;
-  }
-.seccion3{
-  background-color: lightcoral;
-}
+ 
   /* navbar móvil ajustes */
   header {
     position: absolute;
@@ -311,7 +306,7 @@
 
   .contenedor-carrusel-secc3 {
     position: relative;
-    top: 10%;
+    top: 0%;
   }
 
   /* fin delslider 3d*/
@@ -439,9 +434,19 @@
     z-index: 99999;
   }
 
+  .btn-brujula{
+position: absolute;
+top: 85%;
+left: 0;
+width: 30%;
+height: 15%;
+  }
   .brujula {
-    position: absolute;
-    top: 55% !important;
+    position: absolute !important;
+    width: 60% !important;
+    height: auto !important;
+    top: 20% !important;
+    left: 5% !important;
   }
 
   .modal-contenido-secc3 {
