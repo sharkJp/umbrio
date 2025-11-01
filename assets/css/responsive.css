@@ -7,8 +7,10 @@
   header {
     position: absolute;
     top: 0%;
-    height: 10vh;
+    height: 8vh;
     inset: 0;
+    z-index: 0;
+
   }
 
   .vela-menu {
@@ -21,7 +23,7 @@
     width: 100vw;
     height: 0;
     overflow: hidden;
-    z-index: 99;
+    z-index: 100;
     background-color: transparent;
     display: block;
   }
@@ -35,10 +37,12 @@
 
   .fuego {
     width: 14vw;
-    height:auto;
+    height: auto;
     right: 0%;
     top: 0%;
     right: 3%;
+    cursor: pointer;
+    z-index: 0;
   }
 
   .menu-open-mobile {
@@ -51,36 +55,36 @@
     justify-content: center;
     flex-direction: column;
     height: 25vh;
+    width: 100%;
     background: rgba(209, 16, 193, 0.08);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 0 25px rgba(238, 108, 221, 0.15);
+    z-index: 100 !important;
   }
 
-  .seccion4 .menu-open-mobile {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: scale(1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 25vh;
-    background: rgba(27, 101, 239, 0.08);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 0 25px rgba(238, 108, 221, 0.15);
+  .seccion4 #cursor-img {
+    display: none;
   }
 
   .menu ul {
-    margin-top: 0;
+    position: relative;
+    top: -10% !important;
     align-items: center;
     padding-left: 0;
     padding-top: 10px;
     list-style: none;
     display: flex;
     flex-direction: column;
+    width: 50% !important;
+    height: 100%;
+    z-index: 20;
+  }
+
+  .seccion4 .menu ul {
+    position: relative;
+    top: -15% !important;
+    height: 100%;
   }
 
   .close-btn {
@@ -88,6 +92,15 @@
     position: absolute;
     top: 10%;
     right: 5%;
+  }
+
+  .seccion4 .close-btn {
+    color: var(--segundo-color);
+    font-size: 2rem;
+    font-family: 'Amarante';
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 101;
   }
 
   .menu-open-mobile .close-btn {
@@ -98,6 +111,8 @@
   .close-btn h2 {
     position: absolute;
     font-size: 2rem;
+    font-family: 'Amarante';
+    font-weight: bold;
     color: var(--segundo-color);
     cursor: pointer;
     z-index: 101;
@@ -109,23 +124,28 @@
   ul.mainmenu {
     margin-top: 10% !important;
   }
-li{
+
+  li {
     position: relative;
     top: 5% !important;
-}
+  }
+
   ul.mainmenu li a {
     font-size: 1.2rem;
-    font-family: 'Amarante';
-    text-decoration: none;
-    color: var(--noveno-color);
-  }
-.seccion4   ul.mainmenu li a {
-    font-size: 1rem;
     font-weight: 500;
     font-family: 'Amarante';
     text-decoration: none;
     color: var(--noveno-color);
   }
+
+  .seccion4 ul.mainmenu li a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Amarante';
+    text-decoration: none;
+    color: var(--noveno-color);
+  }
+
   ul.mainmenu li a:hover {
     text-decoration: underline;
   }
@@ -150,9 +170,21 @@ li{
     flex-direction: column;
     width: 45px;
     height: 60px;
-    z-index: 1;
+    z-index: 2;
     margin-left: 15%;
     margin-top: 10%;
+    color: var(--segundo-color);
+    font-family: 'Amarante';
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .seccion1 .mostrar-boton,
+  .seccion4 .mostrar-boton {
+    position: absolute;
+   left: 15%;
+  top: 40%;
+  z-index: 10;
+
   }
 
   .modal.fullscreen-modal {
@@ -205,13 +237,16 @@ li{
     width: 20px;
     height: 20px;
     cursor: pointer;
-    z-index: 100;
+    z-index: 1000;
   }
 
   .close-icon {
-    font-size: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Amarante';
+    font-weight: 900;
+    color: var(--segundo-color);
     cursor: pointer;
-    z-index: 100;
+    z-index: 1000;
   }
 
   /*slider secc2*/
@@ -277,10 +312,10 @@ li{
   /* fin delslider 3d*/
   /*interprete*/
   .seccion3 .mostrar-boton {
-    top: -65% !important;
+    top: 19% !important;
     left: 3%;
-    width: 54px;
-    height: 48px;
+    width: 45px;
+    height: 60px;
     flex-direction: column !important;
     gap: 10px;
   }
@@ -294,17 +329,20 @@ li{
   }
 
   .seccion3 .bloque-interprete {
-    top: 0% !important;
+    top: -10% !important;
     z-index: 10;
   }
-   .seccion5 .bloque-interprete {
+
+  .seccion5 .bloque-interprete {
     top: 7% !important;
     z-index: 10;
   }
-   .seccion6 .bloque-interprete {
+
+  .seccion6 .bloque-interprete {
     top: 13% !important;
     z-index: 10;
   }
+
   .seccion3 .interprete {
     position: absolute !important;
     background: none !important;
@@ -427,7 +465,7 @@ li{
     top: 25%;
     left: -40%;
     width: auto;
-    height: 55%;
+    height: 50%;
     z-index: 1;
     transform: rotate(90deg) !important;
   }
@@ -552,10 +590,11 @@ li{
   .about-title {
     font-size: 4rem !important;
   }
-/** equipo **/
+
+  /** equipo **/
   .swiper {
-     width: 80%;
-     max-width: 350px;
+    width: 80%;
+    max-width: 350px;
     height: 620px;
     top: 10%;
     padding-left: auto;
@@ -563,7 +602,7 @@ li{
     padding: 0%;
     overflow: visible;
   }
- 
+
   .swiper-wrapper {
     width: 100% !important;
   }
@@ -607,17 +646,20 @@ li{
     width: 100%;
     height: 100%;
   }
-   /* .swiper-button-next,
+
+  /* .swiper-button-next,
   .swiper-button-prev {
     display: none !important; 
   } */
-  .swiper-button-next{
+  .swiper-button-next {
     right: 10px !important;
   }
-  .swiper-button-prev{
+
+  .swiper-button-prev {
     left: 10px !important;
   }
-/* fin seccion 6 */
+
+  /* fin seccion 6 */
   iframe {
     position: absolute;
     left: 10%;
@@ -830,6 +872,7 @@ li{
     display: flex;
     top: 110% !important;
   }
+
   /* Botón flotante Calavera */
 
 

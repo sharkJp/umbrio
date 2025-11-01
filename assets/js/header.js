@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
  const menuContainer = document.querySelector('.menu'); 
  const closeBtn = document.querySelector('.close-btn');
  const velaMenu = document.querySelector('.vela-menu'); 
+ const btn=document.querySelector('.mostrar-boton');
 
  if (!llamaMenu || !mainMenu || !menuContainer) {
  console.warn('Header: faltan elementos del DOM clave.');
@@ -27,6 +28,7 @@ menuContainer.classList.add('menu-open-mobile');
 mainMenu.classList.remove('hidden'); 
 if (closeBtn) closeBtn.style.opacity = '1';
 if (fuegoImg) fuegoImg.style.display = 'none'; 
+if(btn) btn.style.display = 'none';
 document.body.style.overflow = 'hidden';
 menuAbierto = true;
 }
@@ -36,6 +38,7 @@ menuContainer.classList.remove('menu-open-mobile');
 mainMenu.classList.add('hidden'); 
 if (closeBtn) closeBtn.style.opacity = '0';
 if (fuegoImg) fuegoImg.style.display = '';
+if(btn) btn.style.display = '';
 document.body.style.overflow = 'auto';
 menuAbierto = false;
 }

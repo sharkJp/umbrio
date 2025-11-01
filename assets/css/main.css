@@ -71,152 +71,153 @@ body {
   z-index: 1000;
   cursor: none !important;
 }
+
 /*navbar*/
 header {
-position: absolute;
-width: 100%;
-height: 20vh;
-display: flex;
-justify-content: center;
-top: 0;
-cursor: none !important;
-flex-direction: row;
-z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  cursor: none !important;
+  flex-direction: row;
+  z-index: 0;
 }
 
 .navbar {
- width: 100%;
- height: 20vh;
- background-color: none;
- display: flex;
- justify-content: flex-end;
- align-items: center;
- padding: 1rem 2rem;
- left: 0;
- right: 0;
- position: absolute;
- z-index: 1;
+  width: 100%;
+  height: 20vh;
+  background-color: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
 }
 
 .llama-menu {
- position: absolute;
- right: 0;
- width: 15%;
- height: 100%;
- display: flex;
- justify-content: center;
- align-items: center;
- z-index: 10;
+  position: absolute;
+  right: 0;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 
 .fuego {
- position: absolute;
- width: 52%;
- height: auto;
- z-index: 1111;
- display: block;
- right: 45px;
- top: 20px;
+  position: absolute;
+  width: 52%;
+  height: auto;
+  z-index: 1111;
+  display: block;
+  right: 45px;
+  top: 20px;
 }
 
 .vela-menu {
- width: 13vw;
- height: 16vw;
- top: 18% !important;
- z-index: 1;
- display: block;
- position: absolute;
-opacity: 0; 
-    transform: translateY(-20px);
-transition: opacity 0.3s ease-out, transform 0.3s ease-out; 
+  width: 13vw;
+  height: 16vw;
+  top: 18% !important;
+  z-index: 1;
+  display: block;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .menu {
-position: absolute;
-top: 5vw;
-right: 0%;
-width: 14.5vw;
-height: 20vw;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-overflow: hidden;
-z-index: 1;
-display: block;
-background-color: transparent;
-opacity: 0;
-visibility: hidden;
-pointer-events: none;
-transform: scale(0.9);
-transition: opacity 0.4s ease-out, visibility 0.4s ease-out, transform 0.4s ease-out;
+  position: absolute;
+  top: 5vw;
+  right: 0%;
+  width: 14.5vw;
+  height: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1;
+  display: block;
+  background-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: opacity 0.4s ease-out, visibility 0.4s ease-out, transform 0.4s ease-out;
 }
 
 .menu:not(.hidden) {
-opacity: 1;
-visibility: visible;
-pointer-events: auto;
-transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
 }
 
 .close-btn {
-display: none !important;
+  display: none !important;
 }
 
 .menu ul#mainMenu {
-width: 100%;
-height: 100%;
-list-style: none;
-padding: 0;
-margin-top: 45%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-z-index: 10;
-transition: opacity 0.3s ease-out, transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin-top: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity 0.3s ease-out, transform 0.3s ease;
 }
 
 
 #mainMenu {
   position: relative;
-opacity: 1; 
-top: 5%;
-right: 2%;
+  opacity: 1;
+  top: 5%;
+  right: 2%;
 }
 
 #mainMenu.hidden {
-opacity: 0; 
-transform: translateY(-10px);
+  opacity: 0;
+  transform: translateY(-10px);
 }
 
 li {
-top: -20%;
-position: relative;
-z-index: 10;
-transition: top 0.4s ease-out;
+  top: -20%;
+  position: relative;
+  z-index: 10;
+  transition: top 0.4s ease-out;
 }
 
 li a {
-font-family: 'Amarante';
-font-size: 1rem;
-font-weight: 700;
-text-decoration: none;
-color: var(--primer-color);
-transition: color 0.3s ease-out;
-cursor: none;
+  font-family: 'Amarante';
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--primer-color);
+  transition: color 0.3s ease-out;
+  cursor: none;
 }
 
 li a:hover {
-color: var(--tercer-color);
-text-decoration: underline;
+  color: var(--tercer-color);
+  text-decoration: underline;
 }
 
 .hidden {
-opacity: 0;
-pointer-events: none;
-visibility: hidden;
- transform: scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: scale(0.9);
 }
 
 /*fin del navbar*/
@@ -384,20 +385,6 @@ visibility: hidden;
   z-index: 99999;
   cursor: none !important;
 }
-
-/* Video de niebla */
-/* .niebla {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-  pointer-events: none;
-  cursor: none;
-  mix-blend-mode: screen;
-  transition: opacity 2s ease;
-  z-index: 99999;
-} */
 
 /* Capa que hará el efecto linterna */
 .linterna {
@@ -942,11 +929,15 @@ visibility: hidden;
 }
 
 .brujula {
-  width: 20%;
+  width: 18%;
   height: auto;
   margin-left: 3%;
   cursor: none;
-  margin-top: -3%;
+  margin-top: 1%;
+}
+
+.brujula:hover {
+  transform: scale(1.1);
 }
 
 /* --- Modal --- */
@@ -1201,7 +1192,7 @@ visibility: hidden;
 .enlaces a {
   text-align: center;
   text-decoration: none;
-  color: white;
+  color: var(--noveno-color);
   font-size: 1.6rem;
   font-family: "amarante";
   letter-spacing: 3px;
@@ -1210,7 +1201,7 @@ visibility: hidden;
 }
 
 .enlaces a:hover {
-  color: var(--segundo-color);
+  color: var(--segundo-color) !important;
 }
 
 .copy {
@@ -1225,7 +1216,7 @@ visibility: hidden;
 
 .copy p {
   font-size: 0.9rem;
-  color: white;
+  color: var(--noveno-color);
   opacity: 0.8;
   text-align: center;
   font-family: "amarante";
