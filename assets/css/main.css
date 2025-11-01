@@ -67,7 +67,7 @@ body {
   width: 90px;
   height: auto;
   pointer-events: none;
-  transform: translate(-80%, -15%);
+  transform: translate(-80%, -5%);
   z-index: 1000;
   cursor: none !important;
 }
@@ -317,7 +317,7 @@ li a:hover {
 }
 
 .flotante-calavera img {
-  width: 70px;
+  width: 50px;
   height: auto;
   transition: transform 0.2s ease;
   cursor: none !important;
