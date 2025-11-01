@@ -272,14 +272,16 @@ visibility: hidden;
 /* Botón de cerrar ❌ */
 .cerrar-boton {
   position: absolute;
-  top: 5%;
-  right: 5%;
-  width: 20px;
-  height: 20px;
+  top: 0%;
+  right: 3%;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   z-index: 11;
+
   background-color:var(--noveno-color);
   color:var(--quinto-color);
+
   border: none;
   display: flex;
   justify-content: center;
@@ -293,9 +295,11 @@ visibility: hidden;
 }
 
 .close-icon {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-weight: 900;
   cursor: none !important;
   z-index: 99999;
+  color: var(--primer-color);
 }
 
 /* Botón mostrar video 👁️ */
@@ -305,9 +309,13 @@ visibility: hidden;
   left: 3%;
   width: 90px;
   height: 60px;
-  font-size: 1.0rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: 'Amarante';
   background-color: var(--quinto-color);
+
   color:var(--noveno-color);
+
   border: none;
   border-radius: 6px;
   display: none;
@@ -512,16 +520,22 @@ visibility: hidden;
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  background-color: var(--segundo-color);
+  background-color: var(--quinto-color);
 }
 
 .btn-cerrar span {
   margin-top: -20%;
   font-size: 3rem;
   font-weight: bold;
-  color: var(--noveno-color);
+  color: var(--segundo-color);
   z-index: 100;
   pointer-events: none;
+}
+.btn-cerrar:hover, .btn-cerrar span:hover {
+  transform: scale(1.1);
+}
+.btn-cerrar span:hover {
+color: red !important;
 }
 
 /*fin de modal*/
@@ -1048,16 +1062,18 @@ visibility: hidden;
 
 
 .tunja {
+  display: block;
   position: absolute;
-  width: auto;
-  height: 85%;
+  width: 100%;
   object-fit: cover;
   z-index: 1;
   left: 0;
   top: 5%;
   z-index: 3;
 }
-
+.marco{
+  display: none;
+}
 
 .cerrar-secc3:hover {
   color: var(--segundo-color);
