@@ -57,24 +57,7 @@
     box-shadow: 0 0 25px rgba(238, 108, 221, 0.15);
   }
 
-  .seccion4 .menu-open-mobile {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: scale(1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 25vh;
-    background: rgba(27, 101, 239, 0.08);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 0 25px rgba(238, 108, 221, 0.15);
-  }
-
   .menu ul {
-    margin-top: 0;
     align-items: center;
     padding-left: 0;
     padding-top: 10px;
@@ -83,7 +66,15 @@
     flex-direction: column;
   }
 
-  .close-btn {
+    ul.mainmenu {
+    margin-top: 1% !important;
+  }
+
+  .seccion4 ul.mainmenu {
+    margin-top: -2% !important;
+  }
+
+  .menu .close-btn {
     display: none;
     position: absolute;
     top: 10%;
@@ -93,33 +84,33 @@
   .menu-open-mobile .close-btn {
     display: block !important;
     position: absolute;
+
   }
 
   .close-btn h2 {
     position: absolute;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
     color: var(--segundo-color);
     cursor: pointer;
     z-index: 101;
     line-height: 1;
     right: 5%;
     top: 20%;
+    background-color: aqua;
+  }
+  .seccion4.close-btn h2 {
+    position:relative;
   }
 
-  ul.mainmenu {
-    margin-top: 10% !important;
-  }
-li{
-    position: relative;
-    top: 5% !important;
-}
   ul.mainmenu li a {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-family: 'Amarante';
     text-decoration: none;
     color: var(--noveno-color);
   }
-.seccion4   ul.mainmenu li a {
+
+.seccion4ul.mainmenu li a {
     font-size: 1rem;
     font-weight: 500;
     font-family: 'Amarante';
@@ -139,9 +130,15 @@ li{
     top: auto !important;
     left: auto !important;
     width: auto;
-    margin: 3px;
+    margin: 2.5px;
   }
-
+.seccion4 ul#mainMenu li{
+   position: static !important;
+    top: auto !important;
+    left: auto !important;
+    width: auto;
+    margin: 5px;
+}
   /*fin menu*/
 
   .mostrar-boton {
@@ -281,10 +278,10 @@ li{
   /* fin delslider 3d*/
   /*interprete*/
   .seccion3 .mostrar-boton {
-    top: -65% !important;
+    top: -10% !important;
     left: 3%;
-    width: 54px;
-    height: 48px;
+    width: 45px;
+    height: 60px;
     flex-direction: column !important;
     gap: 10px;
   }
@@ -296,11 +293,24 @@ li{
   .seccion3 .mostrar-boton p {
     font-size: 0.7rem !important;
   }
-
+.seccion2{
+  z-index: 0 !important;
+}
   .seccion3 .bloque-interprete {
-    top: 0% !important;
-    z-index: 10;
+    top: -5% !important;
+    z-index: 10 !important;
   }
+
+    .seccion3 .interprete {
+    position: absolute !important;
+    background: none !important;
+    z-index: 10;
+    top: 5% !important; 
+  }
+  .seccion3 .fullscreen-modal .modal-header button .close-icon {
+ z-index: 20;
+  }
+
    .seccion5 .bloque-interprete {
     top: 7% !important;
     z-index: 10;
@@ -309,11 +319,7 @@ li{
     top: 13% !important;
     z-index: 10;
   }
-  .seccion3 .interprete {
-    position: absolute !important;
-    background: none !important;
-    z-index: 10;
-  }
+
 
   /** btn calavera **/
 
@@ -418,6 +424,14 @@ li{
     z-index: 90;
   }
 
+  .marco {
+    background-image: url("../../multimedia/img/mask2.png");
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    z-index: 9; 
+}
+
   /* .marco {
     background-image: url("../../multimedia/img/mask2.png");
     position: absolute; 
@@ -429,9 +443,9 @@ li{
   .tunja {
     position: relative;
     top: 25%;
-    left: -40%;
-    width: auto;
-    height: 55%;
+    left: -30%;
+    width: 550px;
+    height: auto;
     z-index: 1;
     transform: rotate(90deg) !important;
   }

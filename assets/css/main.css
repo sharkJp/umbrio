@@ -289,6 +289,7 @@ visibility: hidden;
   height: 60px;
   font-size: 1.2rem;
   font-weight: 800;
+  font-family: 'Amarante';
   background-color: var(--quinto-color);
   color: var(--segundo-color);
   border: none;
@@ -1000,16 +1001,18 @@ color: red !important;
 } */
 
 .tunja {
+  display: block;
   position: absolute;
-  width: auto;
-  height: 85%;
+  width: 100%;
   object-fit: cover;
   z-index: 1;
   left: 0;
   top: 5%;
   z-index: 3;
 }
-
+.marco{
+  display: none;
+}
 
 .cerrar-secc3:hover {
   color: var(--segundo-color);

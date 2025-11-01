@@ -153,4 +153,10 @@ const fuegoSrc = basePath + "cráneo2.png";
       cursor.style.top = touch.clientY + "px";
     });
  
-  
+  if (cursor && window.innerWidth > 768) { 
+cursor.src = "./assets/multimedia/img/mano.webp";
+cursor.style.width = "80px";
+}
+else{
+  cursor.style.display = "none";
+}

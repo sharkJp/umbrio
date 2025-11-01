@@ -25,11 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       niebla.style.display = 'none';
       
-      if (cursor) {
-        cursor.src = "./assets/multimedia/img/mano.webp";
-        cursor.style.width = "80px";
-      }
-
+      // if (cursor) {
+      //   cursor.src = "./assets/multimedia/img/mano.webp";
+      //   cursor.style.width = "80px";
+      // }
+if (cursor && window.innerWidth > 768) { 
+cursor.src = "./assets/multimedia/img/mano.webp";
+cursor.style.width = "80px";
+}
+else{
+  cursor.style.display = "none";
+}
       document.body.style.overflow = "auto";
 
       // Mostrar el modal despúes de la animación
