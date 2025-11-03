@@ -68,7 +68,7 @@ body {
   height: auto;
   pointer-events: none;
   transform: translate(-80%, -5%);
-  z-index: 1000;
+  z-index: 1100;
   cursor: none !important;
 }
 
@@ -112,19 +112,20 @@ header {
 
 .fuego {
   position: absolute;
-  width: auto;
-  height: 80%;
+
+  width: 52%;
+  height: auto;
   z-index: 1111;
   display: block;
-  right: 60px;
-  top: 30px;
+  right: 45px;
+  top: 20px;
 }
 
 .vela-menu {
   width: 13vw;
   height: 16vw;
   top: 18% !important;
-  z-index: 1;
+ z-index: 1;
   display: block;
   position: absolute;
   opacity: 0;
@@ -201,7 +202,7 @@ li {
 li a {
   font-family: 'Amarante';
   font-size: 1rem;
-  font-weight: 700;
+font-weight: 700;
   text-decoration: none;
   color: var(--primer-color);
   transition: color 0.3s ease-out;
@@ -256,7 +257,7 @@ li a:hover {
   cursor: none !important;
 }
 
-/* Botón de cerrar ❌ */
+/* Botón de cerrar  */
 .cerrar-boton {
   position: absolute;
   top: 2%;
@@ -265,8 +266,8 @@ li a:hover {
   height:35px;
   border-radius: 50%;
   z-index: 11;
-  background-color: #f6e9c7;
-  border: none;
+  background-color: var(--noveno-color);
+ border: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -281,7 +282,7 @@ li a:hover {
   color: var(--quinto-color);
 }
 
-/* Botón mostrar video 👁️ */
+/* Botón mostrar video */
 .mostrar-boton {
   position: absolute;
   top: 6%;
@@ -290,7 +291,7 @@ li a:hover {
   height: 60px;
   font-size: 1.0rem;
   background-color: var(--quinto-color);
-  color: white;
+  color: var(--noveno-color);
   border: none;
   border-radius: 6px;
   display: none;
@@ -419,7 +420,7 @@ li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: none;
+  cursor: none !important;
 }
 
 .modal-dialog {
@@ -430,7 +431,7 @@ li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: none;
 }
 
 .modal.fullscreen-modal .modal-content {
@@ -438,7 +439,7 @@ li a:hover {
   height: 100%;
   width: 100%;
   background-color: rgba(18, 18, 17, 0.263);
-  cursor: pointer;
+  cursor: none;
 
 }
 
@@ -455,7 +456,7 @@ li a:hover {
   max-height: 90vh;
   display: block;
   border-radius: 10px !important;
-  cursor: pointer;
+  cursor: none;
 }
 
 .modal-header {
@@ -465,7 +466,7 @@ li a:hover {
   justify-content: flex-end;
   top: 0;
   width: 100%;
-  cursor: pointer;
+  cursor: none;
 }
 
 .btn-cerrar {
@@ -479,7 +480,7 @@ li a:hover {
   right: 5%;
   border-radius: 50%;
   border: none;
-  cursor: pointer;
+  cursor: none !important;
   background-color: var(--segundo-color);
 }
 
@@ -490,6 +491,7 @@ li a:hover {
   color: var(--noveno-color);
   z-index: 100;
   pointer-events: none;
+  
 }
 
 /*fin de modal*/
@@ -557,10 +559,10 @@ li a:hover {
     filter: blur(0);
   }
 }
-
+/* aquí controlas la velocidad */
 .fade-in {
   animation: fadeInSlide 2s ease-in-out forwards;
-  /* ← aquí controlas la velocidad */
+  
 }
 
 /* Animación de salida tipo "wipe" */
@@ -606,7 +608,7 @@ li a:hover {
 
 .prev-secc2:hover,
 .next-secc2:hover {
-  color: white !important;
+  color: var(--noveno-color) !important;
 }
 
 .prev-secc2 {
@@ -728,9 +730,9 @@ li a:hover {
   transition: transform 0.6s ease-in-out;
 }
 
-/*fin seccion 2*/
+/*fin sección 2*/
 
-/*inicio seccion 3*/
+/*inicio sección 3................................................*/
 .seccion3 {
   flex-direction: column;
   position: relative;
@@ -775,8 +777,9 @@ li a:hover {
 
 .prev-secc3:hover,
 .next-secc3:hover {
-  color: var(--tercer-color);
-  transform: perspective(500px) translateZ(50px);
+
+  color: var(--noveno-color);
+ transform: perspective(500px) translateZ(50px);
 }
 
 .prev-secc3 {
@@ -809,7 +812,7 @@ li a:hover {
   margin-top: 22%;
 }
 
-/* CARD (efecto 3D ya integrado) */
+/* Card (efecto 3D ya integrado) */
 .cards-secc3 {
   width: 280px;
   height: 500px;
@@ -919,9 +922,10 @@ li a:hover {
   scrollbar-width: none;
 }
 
-/** Modal **/
-.btn-brujula {
-  position: relative;
+
+/** Boton brujula **/
+/*.btn-brujula {
+ position: relative;
   width: 100%;
   height: 40%;
   top: 0;
@@ -930,6 +934,7 @@ li a:hover {
   align-items: center;
   cursor: none;
 }
+
 
 .brujula {
   width: 18%;
@@ -944,6 +949,40 @@ li a:hover {
 }
 
 /* --- Modal --- */
+
+.brujula {
+  width: 18%;
+  height: auto;
+  margin-left: 3%;
+  cursor: none;
+  margin-top: 1%;
+}
+
+.brujula:hover {
+  transform: scale(1.1);
+}*/
+
+/* Botón brújula */
+.btn-brujula {
+  position: absolute;
+  bottom: 5%;
+  right: 92%;
+  z-index: 1000;
+}
+
+.brujula {
+  width: 60px;
+  height: 60px;
+  cursor: none;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+.brujula:hover {
+  transform: rotate(25deg) scale(1.1);
+}
+
+/* ---Boton modal --- */
 #btn-modal {
   display: none;
 }
@@ -959,7 +998,7 @@ li a:hover {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  cursor: pointer;
+  cursor: none;
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 99999;
@@ -989,10 +1028,10 @@ li a:hover {
   width: auto;
   height: 85%;
   object-fit: cover;
-  z-index: 1;
   left: 0;
   top: 5%;
   z-index: 3;
+  cursor: none;
 }
 
 
@@ -1097,15 +1136,15 @@ li a:hover {
   right: -40px;
   font-size: 48px;
   font-weight: bold;
-  cursor: pointer;
+  cursor: none;
   color: var(--tercer-color);
   z-index: 10;
   transition: color 0.3s ease;
 
 }
-
 /*fin seccion 3*/
-/*footer*/
+
+/*footer............................................*/
 
 .footer {
   display: flex;

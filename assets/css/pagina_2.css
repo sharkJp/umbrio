@@ -38,8 +38,6 @@ body {
     margin: 1px;
 }
 
-
-
 /* Estilos del modal cortometraje umbrío*/
 #miModal {
   width: 100vw;
@@ -67,7 +65,7 @@ body.modal-open {
   border-radius: 10px;
   position: absolute;
   top: 5%;
-  /* border: #25052b solid 25px; */
+ 
 }
 
 #cerrarModal {
@@ -78,9 +76,17 @@ body.modal-open {
   font-size: 2vw;
   top: 2%;
   right: 2%;
+
+  background: var(--noveno-color) ;
+  color:  var(--segundo-color);
 }
 
-/** seccion 5 **/
+#cerrarModal:hover{
+  color: var(--octavo-color);
+  transform: scale(1.1);
+}
+
+/** seccion 5..................................................... **/
 
 .seccion5 {
   width: 100%;
@@ -178,7 +184,6 @@ body.modal-open {
   opacity: 0;
 }
 
-
 /* --- Efecto blanco y negro / color --- */
 .team-photo {
   width: 300px !important;
@@ -212,19 +217,19 @@ body.modal-open {
   font-size: 2.5rem;
   font-family: "Amarante", serif;
   margin-bottom: 5px;
-  color: #fff;
+  color: var(--noveno-color);
   transition: color 0.3s ease;
 }
 
 .member-role {
   font-size: 1.3rem;
-  color: #fff;
+  color: var(--noveno-color);;
   transition: color 0.3s ease;
 }
 
 /* Enlace con brillo */
 .member-portafolio a {
-  color: #fff;
+  color: var(--noveno-color);;
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;
@@ -247,7 +252,7 @@ body.modal-open {
 }
 
 .member-portafolio a:hover {
-  color: #ffffff;
+  color: var(--noveno-color);;
   text-shadow: 0 0 8px #5acaec;
 }
 
@@ -331,11 +336,11 @@ body.modal-open {
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: #f4f1f5 !important;
+   color:  var(--noveno-color) !important;
 }
 
+/** seccion 6................................................... **/
 
-/** seccion 6 **/
 .seccion6 {
   position: relative;
   display: flex;
@@ -414,7 +419,7 @@ iframe {
   width: 100%;
   height: 100%;
   background-color: #30163df5;
-  cursor: pointer;
+  cursor: none;
   justify-content: center;
   align-items: center;
 }
@@ -445,11 +450,11 @@ iframe {
   font-size: 3rem;
   font-weight: bold;
   font-weight: bold;
-  cursor: pointer;
+  cursor: none;
   position: absolute;
   top: -5%;
   right: -5%;
-  background-color: white;
+  background-color: var(--noveno-color);
   border-radius: 50%;
 }
 
@@ -515,7 +520,7 @@ iframe {
   font-family: "Amarante", serif;
   text-align: center;
   font-size: 1rem;
-  color: white;
+  color:  var(--noveno-color);
   z-index: 15;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -529,7 +534,7 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color:  var(--noveno-color);
 }
 
 .invitacion a {
@@ -596,8 +601,6 @@ iframe {
   overflow: hidden;
 }
 
-
-
 #phone .time,
 #phone .battery,
 #phone .cellular,
@@ -605,7 +608,6 @@ iframe {
   position: absolute;
   top: 17px;
 }
-
 
 #phone .time {
   left: 21px;

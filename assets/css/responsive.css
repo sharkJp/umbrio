@@ -329,6 +329,7 @@
   }
 
   .seccion3 .bloque-interprete {
+
     top: -3% !important;
     z-index: 1000;
   }
@@ -336,7 +337,8 @@
   .seccion3 .close-icon{
     z-index: 1000;
   }
-  .seccion5 .bloque-interprete {
+
+ .seccion5 .bloque-interprete {
     top: 7% !important;
     z-index: 10;
   }
