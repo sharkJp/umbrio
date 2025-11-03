@@ -1,4 +1,4 @@
-@media (max-width: 600px) {}
+
 
 /** para la seccion 4 **/
 @media (max-width: 768px) {
@@ -329,10 +329,13 @@
   }
 
   .seccion3 .bloque-interprete {
-    top: -10% !important;
-    z-index: 10;
+    top: -3% !important;
+    z-index: 1000;
   }
 
+  .seccion3 .close-icon{
+    z-index: 1000;
+  }
   .seccion5 .bloque-interprete {
     top: 7% !important;
     z-index: 10;
@@ -812,9 +815,12 @@ height: 15%;
 /* Se aplica a 1920px Y cualquier ancho superior. */
 @media screen and (min-width: 1920px) {
   .papiro-centro {
-    width: 76% !important;
+    width: 10% !important;
+    height: 1% !important;
   }
-
+  .seccion3{
+    background-color: aqua !important;
+  }
   .seccion5 {
     width: 100%;
     height: 100vh;

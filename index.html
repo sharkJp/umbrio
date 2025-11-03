@@ -71,26 +71,28 @@
         </div>
       </div>
 
-<header>
- <nav class="navbar">
- <div class="llama-menu">
-  <img src="./assets/multimedia/img/flamamenú.gif" alt="Menu Toggle" class="fuego" />
- </div>
+      <header>
+        <nav class="navbar">
+          <div class="llama-menu">
+            <img src="./assets/multimedia/img/flamamenú.gif" alt="Menu Toggle" class="fuego" />
+          </div>
 
- <div class="menu">
-  <span class="close-btn"><h2>X</h2></span>
+          <div class="menu">
+            <span class="close-btn">
+              <h2>X</h2>
+            </span>
 
-      <img src="./assets/multimedia/img/vela.webp" class="vela-menu" alt="Vela" />
-  
-    <ul id="mainMenu" class="mainmenu hidden">
-    <li><a href="#secc1">Inicio</a></li>
-    <li><a href="#secc2">Locaciones</a></li>
-    <li><a href="#secc3">Personajes</a></li>
-    <li><a href="./assets/paginas/page2.html">Más</a></li>
-  </ul>
- </div>
-</nav>
-</header>
+            <img src="./assets/multimedia/img/vela.webp" class="vela-menu" alt="Vela" />
+
+            <ul id="mainMenu" class="mainmenu hidden">
+              <li><a href="#secc1">Inicio</a></li>
+              <li><a href="#secc2">Locaciones</a></li>
+              <li><a href="#secc3">Personajes</a></li>
+              <li><a href="./assets/paginas/page2.html">Más</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
 
       <div class="contenedor-principal">
 
@@ -292,11 +294,11 @@
           <button class="next-secc3">&#10095;</button>
         </div>
       </div>
-  <!-- Botón flotante Calavera -->
-  <div class="flotante-calavera" id="btnCalavera">
+      <!-- Botón flotante Calavera -->
+      <div class="flotante-calavera" id="btnCalavera">
 
-  </div>
-  
+      </div>
+
 
       <!-- Botón que abre modal -->
       <div class="btn-brujula">
@@ -312,19 +314,18 @@
             <div class="mapa-wrapper">
               <!-- <img class="marco" src="./assets/multimedia/img/mask.png" alt="marco"> -->
 
-              <img class="tunja" src="./assets/multimedia/img/MapaTunja_1.webp" alt="Mapa de Tunja" class="mapa-base">
+              <img class="tunja" src="./assets/multimedia/img/mapaTunja.png" alt="Mapa de Tunja" class="mapa-base">
 
               <!-- Contenedor de pines interactivos -->
-              <!-- <div class="mapa-interactivo">
-                <div class="pin" style="top: 35%; left: 45%;">
-                
-                  <div class="tooltip">
-                    <img src="./assets/multimedia/img/img-tunja/Catedral ahora.webp" alt="Catedral de Tunja">
+              <div class="mapa-interactivo">
+                <div class="pin" style="top: 19%; left: 41.5%;">
+                  <div id="tooltip-catedral" class="tooltip">
+                    <img class="catedral" src="./assets/multimedia/img/img-tunja/Catedral ahora.webp" alt="Catedral de Tunja">
                     <h4>Catedral de Tunja</h4>
                   </div>
                 </div>
 
-                <div class="pin" style="top: 52%; left: 60%;">
+                <div class="pin" style="top: 54.5%; left: 67.5%;">
                   <div id="tooltip-cojines" class="tooltip ">
                     <img class="cojines" src="./assets/multimedia/img/img-tunja/Cojines del Zaque ahora.webp"
                       alt="Cojines del Zaque">
@@ -332,26 +333,34 @@
                   </div>
                 </div>
 
-                <div class="pin" style="top: 70%; left: 40%;">
-                  <div class="tooltip">
+                <div class="pin" style="top: 35%; left: 39%;">
+                  <div id="tooltip-agustin" class="tooltip">
                     <img src="./assets/multimedia/img/img-tunja/San Agustìn antes.webp" alt="San Agustín">
                     <h4>San Agustín</h4>
                   </div>
                 </div>
 
-                <div class="pin" style="top: 42%; left: 56%;">
-                  <div class="tooltip">
+                <div class="pin" style="top: 33%; left: 42.2%;">
+                  <div id="tooltip-biblioteca1" class="tooltip">
                     <img src="./assets/multimedia/img/img-tunja/Biblioteca ahora.webp" alt="Biblioteca">
                     <h4>Biblioteca</h4>
                   </div>
                 </div>
-              </div> -->
+
+                <div class="pin" style="top: 39%; left: 44%;">
+                  <div id="tooltip-biblioteca2" class="tooltip">
+                    <img src="./assets/multimedia/img/img-tunja/Biblioteca ahora.webp" alt="Biblioteca">
+                    <h4>Biblioteca</h4>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+
   </main>
 
 
@@ -390,7 +399,7 @@
     </div>
 
     <div class="copy">
-     <p>
+      <p>
         Copyright &copy; 2025 Equipo Web-Umbrio | Todos los derechos
         reservados .
       </p>

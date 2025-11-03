@@ -112,12 +112,12 @@ header {
 
 .fuego {
   position: absolute;
-  width: 52%;
-  height: auto;
+  width: auto;
+  height: 80%;
   z-index: 1111;
   display: block;
-  right: 45px;
-  top: 20px;
+  right: 60px;
+  top: 30px;
 }
 
 .vela-menu {
@@ -244,7 +244,7 @@ li a:hover {
 }
 
 .seccion3 .interprete {
-  top: 0% !important;
+  top: -7% !important;
 }
 
 /* Video */
@@ -259,10 +259,10 @@ li a:hover {
 /* Botón de cerrar ❌ */
 .cerrar-boton {
   position: absolute;
-  top: 5%;
-  right: 5%;
-  width: 20px;
-  height: 20px;
+  top: 2%;
+  right: 2%;
+  width: 35px;
+  height:35px;
   border-radius: 50%;
   z-index: 11;
   background-color: #f6e9c7;
@@ -274,9 +274,11 @@ li a:hover {
 }
 
 .close-icon {
-  font-size: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   cursor: none !important;
   z-index: 99999;
+  color: var(--quinto-color);
 }
 
 /* Botón mostrar video 👁️ */
@@ -630,9 +632,10 @@ li a:hover {
 .papiro-centro {
   flex: 0 1 auto;
   width: 80%;
-  height: 75%;
-  background: url("../multimedia/img/pergamino1.webp") repeat-x center center;
-  background-size: auto 100%;
+  height:70%;
+  background: url("../multimedia/img/pergamino1.webp");
+  background-size: cover;
+  /* background-size: auto 100%; */
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.9s ease-in-out;
@@ -772,16 +775,16 @@ li a:hover {
 
 .prev-secc3:hover,
 .next-secc3:hover {
-  color: white;
+  color: var(--tercer-color);
   transform: perspective(500px) translateZ(50px);
 }
 
 .prev-secc3 {
-  left: 8px;
+  left: 9px !important;
 }
 
 .next-secc3 {
-  right: 8px;
+  right: 9px !important;
 }
 
 /* Track (flex) */
@@ -1006,12 +1009,12 @@ li a:hover {
   border-radius: 3px;
 }
 
-/* 
+
 .pin {
   position: absolute;
   width: 36px;
   height: 36px;
-  background-image: url('../multimedia/img/calavera.webp');
+  background-image: url('../multimedia/img/pin.webp');
   background-size: contain;
   background-repeat: no-repeat;
   transform: translate(-50%, -100%);
@@ -1052,12 +1055,25 @@ li a:hover {
   z-index: 999;
 
 }
-
+#tooltip-catedral {
+  position: relative;
+  left: 300%;
+}
 #tooltip-cojines {
   position: relative;
   left: 310%;
 }
 
+#tooltip-agustin {
+  position: relative;
+  left: -210%;
+}
+
+#tooltip-biblioteca2 {
+  position: relative;
+  top: 115%;
+  left: 70%;
+}
 .tooltip h4 {
   text-align: center;
   margin: 0;
@@ -1068,7 +1084,7 @@ li a:hover {
 .pin:hover .tooltip {
   opacity: 1;
   transform: translateX(-50%) scale(1);
-} */
+} 
 
 #btn-modal:checked~.modal-secc3 {
   opacity: 1;
@@ -1192,7 +1208,7 @@ li a:hover {
 .enlaces a {
   text-align: center;
   text-decoration: none;
-  color: var(--noveno-color);
+  color: var(--septimo-color);
   font-size: 1.6rem;
   font-family: "amarante";
   letter-spacing: 3px;
