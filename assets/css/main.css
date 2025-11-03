@@ -67,172 +67,161 @@ body {
   width: 90px;
   height: auto;
   pointer-events: none;
-  transform: translate(-80%, -15%);
-  z-index: 10000;
+  transform: translate(-80%, -5%);
+  z-index: 1100;
   cursor: none !important;
+
 }
-.llama-menu {
- position: absolute;
- right: 0;
- width: 15%;
- height: 100%;
- display: flex;
- justify-content: center;
- align-items: center;
- z-index: 10;
-}
-.fuego {
- position: absolute;
- width: 52%;
- height: 65%;
- z-index: 1111;
- display: block;
- right: 45px;
- top: 20px;
-}
+
+/*navbar*/
 header {
-position: absolute;
-width: 100%;
-height: 20vh;
-display: flex;
-justify-content: center;
-top: 0;
-cursor: none !important;
-flex-direction: row;
-z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  cursor: none !important;
+  flex-direction: row;
+  z-index: 0;
+ 
 }
 
 .navbar {
- width: 100%;
- height: 20vh;
- background-color: none;
- display: flex;
- justify-content: flex-end;
- align-items: center;
- padding: 1rem 2rem;
- left: 0;
- right: 0;
- position: absolute;
- z-index: 1;
+  width: 100%;
+  height: 20vh;
+  background-color: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
 }
 
 .llama-menu {
- position: absolute;
- right: 0;
- width: 15%;
- height: 100%;
- display: flex;
- justify-content: center;
- align-items: center;
- z-index: 10;
+  position: absolute;
+  right: 0;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 
 .fuego {
- position: absolute;
- width: 52%;
- height: 65%;
- z-index: 1111;
- display: block;
- right: 45px;
- top: 20px;
+  position: absolute;
+  width: 52%;
+  height: auto;
+  z-index: 1111;
+  display: block;
+  right: 45px;
+  top: 20px;
 }
 
 .vela-menu {
- width: 14.5vw;
- height: 16vw;
- top: 13%;
- z-index: 1;
- display: block;
- position: absolute;
- opacity: 0; 
- transform: translateY(-20px);
- transition: opacity 0.3s ease-out, transform 0.3s ease-out; 
+  width: 13vw;
+  height: 16vw;
+  top: 20% !important;
+  z-index: 1;
+  display: block;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .menu {
-position: absolute;
-top: 3.5vw;
-right: 0%;
-width: 14.5vw;
-height: 18vw;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-overflow: hidden;
-z-index: 1;
-display: block;
-background-color: transparent;
-opacity: 0;
-visibility: hidden;
-pointer-events: none;
-transform: scale(0.9);
-transition: opacity 0.4s ease-out, visibility 0.4s ease-out, transform 0.4s ease-out;
+  position: absolute;
+  top: 5vw;
+  right: 0%;
+  width: 14.5vw;
+  height: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1;
+  display: block;
+  background-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: opacity 0.4s ease-out, visibility 0.4s ease-out, transform 0.4s ease-out;
 }
 
 .menu:not(.hidden) {
-opacity: 1;
-visibility: visible;
-pointer-events: auto;
-transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
 }
 
 .close-btn {
-display: none !important;
+  display: none !important;
 }
 
 .menu ul#mainMenu {
-width: 100%;
-height: 100%;
-list-style: none;
-padding: 0;
-margin-top: 45%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-z-index: 10;
-transition: opacity 0.3s ease-out, transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin-top: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity 0.3s ease-out, transform 0.3s ease;
 }
 
 
 #mainMenu {
-opacity: 1; 
+  position: relative;
+  opacity: 1;
+  top: 5%;
+  right: 2%;
 }
 
 #mainMenu.hidden {
-opacity: 0; 
-transform: translateY(-10px);
+  opacity: 0;
+  transform: translateY(-10px);
 }
 
 li {
-top: -20%;
-position: relative;
-z-index: 10;
-transition: top 0.4s ease-out;
+  top: -20%;
+  position: relative;
+  z-index: 10;
+  transition: top 0.4s ease-out;
 }
 
 li a {
-font-family: 'Amarante';
-font-size: 1rem;
-font-weight: 700;
-text-decoration: none;
-color: var(--quinto-color);
-transition: color 0.3s ease-out;
-cursor: none;
+  font-family: 'Amarante';
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--primer-color);
+  transition: color 0.3s ease-out;
+  cursor: none;
 }
 
 li a:hover {
-color: var(--noveno-color);
-text-decoration: underline;
+  color: var(--tercer-color);
+  text-decoration: underline;
 }
 
 .hidden {
-opacity: 0;
-pointer-events: none;
-visibility: hidden;
- transform: scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: scale(0.9);
 }
+
 /*fin del navbar*/
 
 /* Contenedor del intérprete */
@@ -269,7 +258,7 @@ visibility: hidden;
   cursor: none !important;
 }
 
-/* Botón de cerrar ❌ */
+/* Botón de cerrar  */
 .cerrar-boton {
   position: absolute;
   top: 5%;
@@ -278,18 +267,12 @@ visibility: hidden;
   height: 20px;
   border-radius: 50%;
   z-index: 11;
-  background-color:var(--noveno-color);
-  color:var(--quinto-color);
+  background-color: var(--noveno-color);
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: none !important;
-}
-
-.cerrar-boton:hover {
-  color:var(--octavo-color);
-  transform: scale(1.1);
 }
 
 .close-icon {
@@ -298,7 +281,7 @@ visibility: hidden;
   z-index: 99999;
 }
 
-/* Botón mostrar video 👁️ */
+/* Botón mostrar video */
 .mostrar-boton {
   position: absolute;
   top: 6%;
@@ -307,7 +290,7 @@ visibility: hidden;
   height: 60px;
   font-size: 1.0rem;
   background-color: var(--quinto-color);
-  color:var(--noveno-color);
+  color: var(--noveno-color);
   border: none;
   border-radius: 6px;
   display: none;
@@ -377,7 +360,7 @@ visibility: hidden;
   animation: vibrar 0.8s;
 }
 
-/*Sección 1....................................................................*/
+/*seccion 1....................................................................*/
 
 .seccion1 {
   flex-direction: column;
@@ -405,20 +388,6 @@ visibility: hidden;
   cursor: none !important;
 }
 
-/* Video de niebla */
-/* .niebla {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-  pointer-events: none;
-  cursor: none;
-  mix-blend-mode: screen;
-  transition: opacity 2s ease;
-  z-index: 99999;
-} */
-
 /* Capa que hará el efecto linterna */
 .linterna {
   position: absolute;
@@ -440,7 +409,7 @@ visibility: hidden;
   cursor: none;
 }
 
-/* Modal bienvenida lsc*/
+/*modal bienvenida lsc*/
 .modal.fullscreen-modal {
   margin: 0 !important;
   background-color: var(--primer-color) !important;
@@ -450,8 +419,7 @@ visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: none;
-  z-index: 10000;
+  cursor: none !important;
 }
 
 .modal-dialog {
@@ -462,7 +430,7 @@ visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: none;
 }
 
 .modal.fullscreen-modal .modal-content {
@@ -470,7 +438,7 @@ visibility: hidden;
   height: 100%;
   width: 100%;
   background-color: rgba(18, 18, 17, 0.263);
-  cursor: pointer;
+  cursor: none;
 
 }
 
@@ -487,7 +455,7 @@ visibility: hidden;
   max-height: 90vh;
   display: block;
   border-radius: 10px !important;
-  cursor: pointer;
+  cursor: none;
 }
 
 .modal-header {
@@ -497,7 +465,7 @@ visibility: hidden;
   justify-content: flex-end;
   top: 0;
   width: 100%;
-  cursor: pointer;
+  cursor: none;
 }
 
 .btn-cerrar {
@@ -511,7 +479,7 @@ visibility: hidden;
   right: 5%;
   border-radius: 50%;
   border: none;
-  cursor: pointer;
+  cursor: none !important;
   background-color: var(--segundo-color);
 }
 
@@ -522,12 +490,13 @@ visibility: hidden;
   color: var(--noveno-color);
   z-index: 100;
   pointer-events: none;
+  
 }
 
 /*fin de modal*/
-/*fin de sección 1*/
+/*fin de seccion 1*/
 
-/*Inicio de sección 2.................................................................*/
+/*inicio de seccion 2.................................................................*/
 
 .seccion2 {
   position: relative;
@@ -589,10 +558,10 @@ visibility: hidden;
     filter: blur(0);
   }
 }
-
+/* aquí controlas la velocidad */
 .fade-in {
   animation: fadeInSlide 2s ease-in-out forwards;
-  /* ← aquí controlas la velocidad */
+  
 }
 
 /* Animación de salida tipo "wipe" */
@@ -638,7 +607,7 @@ visibility: hidden;
 
 .prev-secc2:hover,
 .next-secc2:hover {
-  color: white !important;
+  color: var(--noveno-color) !important;
 }
 
 .prev-secc2 {
@@ -759,9 +728,9 @@ visibility: hidden;
   transition: transform 0.6s ease-in-out;
 }
 
-/*fin seccion 2*/
+/*fin sección 2*/
 
-/*inicio seccion 3*/
+/*inicio sección 3................................................*/
 .seccion3 {
   flex-direction: column;
   position: relative;
@@ -806,7 +775,7 @@ visibility: hidden;
 
 .prev-secc3:hover,
 .next-secc3:hover {
-  color: white;
+  color: var(--noveno-color);
   transform: perspective(500px) translateZ(50px);
 }
 
@@ -840,7 +809,7 @@ visibility: hidden;
   margin-top: 22%;
 }
 
-/* CARD (efecto 3D ya integrado) */
+/* Card (efecto 3D ya integrado) */
 .cards-secc3 {
   width: 280px;
   height: 500px;
@@ -950,8 +919,7 @@ visibility: hidden;
   scrollbar-width: none;
 }
 
-/** Boton brujula**/
-
+/** Boton brujula **/
 /*.btn-brujula {
   position: relative;
   width: 100%;
@@ -963,12 +931,24 @@ visibility: hidden;
   cursor: none;
 }
 
+.brujula {
+  width: 18%;
+  height: auto;
+  margin-left: 3%;
+  cursor: none;
+  margin-top: 1%;
+}
+
+.brujula:hover {
+  transform: scale(1.1);
+}*/
+
 /* Botón brújula */
 .btn-brujula {
   position: absolute;
   bottom: 5%;
   right: 92%;
-  z-index: 9999;
+  z-index: 1000;
 }
 
 .brujula {
@@ -983,38 +963,7 @@ visibility: hidden;
   transform: rotate(25deg) scale(1.1);
 }
 
-/*.brujula {
-  width: 20%;
-  height: auto;
-  margin-left: 3%;
-  cursor: none;
-  margin-top: -3%;
-}*/
-
-/*.btn-brujula {
-  position: absolute;
-  bottom: 2%;
-  right: 93%;
-  z-index: 50;
-}
-
-.brujula {
-  width: 60px;
-  height: 60px;
-  cursor: none;
-  transition: transform 0.4s ease;
-  filter: drop-shadow(0 0 10px rgba(0,0,0,0.3));
-}
-
-.brujula:hover {
-  transform: rotate(25deg) scale(1.1);
-}
-*/
-
-
-
-
-/* Boton Modal --- */
+/* ---Boton modal --- */
 #btn-modal {
   display: none;
 }
@@ -1030,7 +979,7 @@ visibility: hidden;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  cursor: pointer;
+  cursor: none;
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 99999;
@@ -1046,16 +995,24 @@ visibility: hidden;
   position: relative;
 }
 
+/* .marco {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+  pointer-events: none;
+} */
 
 .tunja {
   position: absolute;
   width: auto;
   height: 85%;
   object-fit: cover;
-  z-index: 1;
   left: 0;
   top: 5%;
   z-index: 3;
+  cursor: none;
 }
 
 
@@ -1147,15 +1104,15 @@ visibility: hidden;
   right: -5px;
   font-size: 48px;
   font-weight: bold;
-  cursor: pointer;
+  cursor: none;
   color: var(--tercer-color);
   z-index: 10;
   transition: color 0.3s ease;
 
 }
-
 /*fin seccion 3*/
-/*footer*/
+
+/*footer............................................*/
 
 .footer {
   display: flex;
@@ -1267,7 +1224,7 @@ visibility: hidden;
 }
 
 .enlaces a:hover {
-  color: var(--segundo-color);
+  color: var(--segundo-color) !important;
 }
 
 .copy {
