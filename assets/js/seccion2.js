@@ -12,7 +12,9 @@ const textos = [
   `<h1>Catedral</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
  Deserunt minus debitis molestiae consequatur earum aliquid, 
  odit totam in natus.</p>`,
-  `<h1>Catedral</h1> <p>La Catedral Basílica Metropolitana Santiago de Tunja, ubicada en la Plaza de Bolívar, es una de las catedrales más antiguas de Latinoamérica y de Colombia. Su construcción inició en 1562 y finalizó en 1607.</p>`,
+  `<h1>Catedral</h1> <p>
+  La Catedral Basílica Metropolitana Santiago de Tunja, ubicada en la Plaza de Bolívar, 
+  es una de las catedrales más antiguas de Latinoamérica y de Colombia. .</p>`,
 
   `<h1>Plaza San Francisco</h1> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
  Deserunt minus debitis molestiae consequatur earum aliquid, 

@@ -21,6 +21,7 @@
   --phone3-color: #65b1c2;
   --phone4-color: #382854;
   --phone5-color: #00CCFF;
+
 }
 
 * {
@@ -125,7 +126,7 @@ header {
   width: 13vw;
   height: 16vw;
   top: 18% !important;
- z-index: 1;
+  z-index: 1;
   display: block;
   position: absolute;
   opacity: 0;
@@ -202,7 +203,7 @@ li {
 li a {
   font-family: 'Amarante';
   font-size: 1rem;
-font-weight: 700;
+  font-weight: 700;
   text-decoration: none;
   color: var(--primer-color);
   transition: color 0.3s ease-out;
@@ -263,14 +264,13 @@ li a:hover {
   top: 2%;
   right: 2%;
   width: 35px;
-  height:35px;
+  height: 35px;
   border-radius: 50%;
   z-index: 11;
   background-color: var(--noveno-color);
- border: none;
+  border: none;
   display: flex;
   justify-content: center;
-  align-items: center;
   cursor: none !important;
 }
 
@@ -491,7 +491,7 @@ li a:hover {
   color: var(--noveno-color);
   z-index: 100;
   pointer-events: none;
-  
+
 }
 
 /*fin de modal*/
@@ -559,10 +559,11 @@ li a:hover {
     filter: blur(0);
   }
 }
+
 /* aquí controlas la velocidad */
 .fade-in {
   animation: fadeInSlide 2s ease-in-out forwards;
-  
+
 }
 
 /* Animación de salida tipo "wipe" */
@@ -612,11 +613,11 @@ li a:hover {
 }
 
 .prev-secc2 {
-  left: -1% !important;
+  left: -2% !important;
 }
 
 .next-secc2 {
-  right: -1% !important;
+  right: -2% !important;
 }
 
 /* pergamino con texto */
@@ -634,7 +635,7 @@ li a:hover {
 .papiro-centro {
   flex: 0 1 auto;
   width: 80%;
-  height:70%;
+  height: 70%;
   background: url("../multimedia/img/pergamino1.webp");
   background-size: cover;
   /* background-size: auto 100%; */
@@ -778,16 +779,16 @@ li a:hover {
 .prev-secc3:hover,
 .next-secc3:hover {
 
-  color: var(--noveno-color);
- transform: perspective(500px) translateZ(50px);
+  color: var(--septimo-color);
+  transform: perspective(500px) translateZ(50px);
 }
 
 .prev-secc3 {
-  left: 9px !important;
+  left: 10% !important;
 }
 
 .next-secc3 {
-  right: 9px !important;
+  right: 10% !important;
 }
 
 /* Track (flex) */
@@ -811,6 +812,7 @@ li a:hover {
   height: 380px;
   margin-top: 22%;
 }
+
 
 /* Card (efecto 3D ya integrado) */
 .cards-secc3 {
@@ -922,57 +924,22 @@ li a:hover {
   scrollbar-width: none;
 }
 
-
 /** Boton brujula **/
-/*.btn-brujula {
- position: relative;
-  width: 100%;
-  height: 40%;
-  top: 0;
+.btn-brujula {
+  position: relative;
+  width: 10%;
+  height: 20%;
+  top: 0%;
+  right: 45%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   cursor: none;
 }
 
-
 .brujula {
-  width: 18%;
+  width: 72px;
   height: auto;
-  margin-left: 3%;
-  cursor: none;
-  margin-top: 1%;
-}
-
-.brujula:hover {
-  transform: scale(1.1);
-}
-
-/* --- Modal --- */
-
-.brujula {
-  width: 18%;
-  height: auto;
-  margin-left: 3%;
-  cursor: none;
-  margin-top: 1%;
-}
-
-.brujula:hover {
-  transform: scale(1.1);
-}*/
-
-/* Botón brújula */
-.btn-brujula {
-  position: absolute;
-  bottom: 5%;
-  right: 92%;
-  z-index: 1000;
-}
-
-.brujula {
-  width: 60px;
-  height: 60px;
   cursor: none;
   transition: transform 0.4s ease;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
@@ -985,6 +952,38 @@ li a:hover {
 /* ---Boton modal --- */
 #btn-modal {
   display: none;
+}
+
+
+.cerrar-secc3 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #30163d;
+  top: 2% !important;
+  right: 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease;
+
+}
+
+.cerrar-secc3 h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--segundo-color);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.cerrar-secc3 h2:hover {
+  transform: scale(1.2);
+  color: var(--tercer-color);
+
 }
 
 .modal-secc3 {
@@ -1001,43 +1000,30 @@ li a:hover {
   cursor: none;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 99999;
+  z-index: 999;
 }
 
 .modal-contenido-secc3 {
-  padding: 20px;
-  border-radius: 10px;
-  width: 97%;
+  width: 95%;
   height: 97%;
-  max-width: 1200px;
-  text-align: center;
+  max-width: 1600px;
   position: relative;
+  cursor: none;
 }
-
-/* .marco {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 5;
-  pointer-events: none;
-} */
 
 .tunja {
   position: absolute;
-  width: auto;
+  width: 90%;
   height: 85%;
   object-fit: cover;
-  left: 0;
-  top: 5%;
+  left: 5%;
+  top: 7%;
   z-index: 3;
   cursor: none;
 }
 
 
-.cerrar-secc3:hover {
-  color: var(--segundo-color);
-}
+
 
 /* Contenedor principal que une imagen y pines */
 .mapa-wrapper {
@@ -1046,6 +1032,7 @@ li a:hover {
   height: 100%;
   overflow: hidden;
   border-radius: 3px;
+  cursor: none;
 }
 
 
@@ -1057,7 +1044,7 @@ li a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   transform: translate(-50%, -100%);
-  cursor: pointer;
+  cursor: none;
   transition: transform 0.3s ease, filter 0.3s ease;
   z-index: 20;
 }
@@ -1094,10 +1081,12 @@ li a:hover {
   z-index: 999;
 
 }
+
 #tooltip-catedral {
   position: relative;
   left: 300%;
 }
+
 #tooltip-cojines {
   position: relative;
   left: 310%;
@@ -1113,6 +1102,7 @@ li a:hover {
   top: 115%;
   left: 70%;
 }
+
 .tooltip h4 {
   text-align: center;
   margin: 0;
@@ -1123,25 +1113,14 @@ li a:hover {
 .pin:hover .tooltip {
   opacity: 1;
   transform: translateX(-50%) scale(1);
-} 
+}
 
 #btn-modal:checked~.modal-secc3 {
   opacity: 1;
   pointer-events: auto;
 }
 
-.cerrar-secc3 {
-  position: absolute;
-  top: -2% !important;
-  right: -40px;
-  font-size: 48px;
-  font-weight: bold;
-  cursor: none;
-  color: var(--tercer-color);
-  z-index: 10;
-  transition: color 0.3s ease;
 
-}
 /*fin seccion 3*/
 
 /*footer............................................*/
@@ -1195,19 +1174,14 @@ li a:hover {
 .redes-sociales img {
   width: 3vw;
   height: 3vw;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  box-shadow: 0 60px 60px -60px rgba(165, 171, 233, 0.5);
-  border-radius: 10px;
   cursor: none;
-  opacity: 0.8;
-  cursor: none !important;
+  opacity: 0.7;
 }
 
-.redes-sociales img:hover {
+.redes-sociales a img:hover {
   transform: scale(1.1);
+  opacity: 1;
 }
-
 .logos {
   display: flex;
   flex-direction: row;
@@ -1222,7 +1196,6 @@ li a:hover {
   width: 4vw;
   height: auto;
   margin: 1vw;
-  cursor: none;
   cursor: none !important;
 }
 
@@ -1247,16 +1220,18 @@ li a:hover {
 .enlaces a {
   text-align: center;
   text-decoration: none;
-  color: var(--septimo-color);
+  color: var(--segundo-color);
   font-size: 1.6rem;
   font-family: "amarante";
   letter-spacing: 3px;
   margin: 1vw;
   cursor: none !important;
+  opacity: 0.7;
 }
 
 .enlaces a:hover {
-  color: var(--segundo-color) !important;
+  color: var(--cuarto-color);
+  opacity: 1;
 }
 
 .copy {
@@ -1271,8 +1246,8 @@ li a:hover {
 
 .copy p {
   font-size: 0.9rem;
-  color: var(--noveno-color);
-  opacity: 0.8;
+  color: var(--segundo-color);
+  opacity: 0.6;
   text-align: center;
   font-family: "amarante";
   cursor: none !important;

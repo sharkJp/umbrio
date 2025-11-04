@@ -33,9 +33,10 @@ body {
   background-clip: text;
   color: transparent;
 }
+
 .seccion4 li {
-    top: -22%;
-    margin: 1px;
+  top: -22%;
+  margin: 1px;
 }
 
 /* Estilos del modal cortometraje umbrío*/
@@ -65,25 +66,37 @@ body.modal-open {
   border-radius: 10px;
   position: absolute;
   top: 5%;
- 
+
 }
 
 #cerrarModal {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
   border: none;
-  background: none;
   cursor: pointer;
-  font-size: 2vw;
-  top: 2%;
-  right: 2%;
+  border-radius: 50%;
+  top: 5%;
+  right: 5%;
+  background: var(--noveno-color);
 
-  background: var(--noveno-color) ;
-  color:  var(--segundo-color);
 }
 
-#cerrarModal:hover{
+#cerrarModal:hover {
+  background-color: #edaad6;
   color: var(--octavo-color);
   transform: scale(1.1);
+}
+
+#cerrarModal h2 {
+  margin-top: -2px;
+  text-align: center;
+  color: var(--segundo-color);
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 /** seccion 5..................................................... **/
@@ -94,6 +107,15 @@ body.modal-open {
   flex-direction: column !important;
   position: relative;
   display: flex;
+}
+
+.seccion5 .bloque-interprete {
+position: relative;
+}
+.seccion5 .mostrar-boton {
+position: absolute;
+top: 40px;
+
 }
 
 .about-title {
@@ -223,13 +245,15 @@ body.modal-open {
 
 .member-role {
   font-size: 1.3rem;
-  color: var(--noveno-color);;
+  color: var(--noveno-color);
+  ;
   transition: color 0.3s ease;
 }
 
 /* Enlace con brillo */
 .member-portafolio a {
-  color: var(--noveno-color);;
+  color: var(--noveno-color);
+  ;
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;
@@ -252,7 +276,8 @@ body.modal-open {
 }
 
 .member-portafolio a:hover {
-  color: var(--noveno-color);;
+  color: var(--noveno-color);
+  ;
   text-shadow: 0 0 8px #5acaec;
 }
 
@@ -322,21 +347,24 @@ body.modal-open {
 .swiper-button-prev {
   position: absolute;
   top: 60% !important;
-  color: var(--segundo-color)!important;
+  color: var(--segundo-color) !important;
   transition: 0.3s !important;
   font-size: 1.5rem !important;
   font-weight: bold !important;
   cursor: none !important;
 }
-.swiper-button-next{
+
+.swiper-button-next {
   right: 8% !important;
 }
-.swiper-button-prev{
+
+.swiper-button-prev {
   left: 8% !important;
 }
+
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-   color:  var(--noveno-color) !important;
+  color: var(--noveno-color) !important;
 }
 
 /** seccion 6................................................... **/
@@ -351,7 +379,6 @@ body.modal-open {
   height: 100vh;
   overflow: hidden;
 }
-
 
 .seccion6 h2 {
   font-size: 7.5rem;
@@ -445,10 +472,9 @@ iframe {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--tercer-color);
+  color: var(--quinto-color);
   float: right;
   font-size: 3rem;
-  font-weight: bold;
   font-weight: bold;
   cursor: none;
   position: absolute;
@@ -460,7 +486,7 @@ iframe {
 
 .cerrarSecc6:hover,
 .cerrarSecc6:focus {
-  color: #da8f8f;
+  color: var(--segundo-color);
   text-decoration: none;
 }
 
@@ -520,7 +546,7 @@ iframe {
   font-family: "Amarante", serif;
   text-align: center;
   font-size: 1rem;
-  color:  var(--noveno-color);
+  color: var(--noveno-color);
   z-index: 15;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -534,7 +560,7 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:  var(--noveno-color);
+  color: var(--noveno-color);
 }
 
 .invitacion a {
