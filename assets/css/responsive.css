@@ -944,6 +944,7 @@
     top: -10%;
   }
 
+  
   .carrusel-item-secc3 {
     flex: 0 0 calc((100% - 25px) / 4);
     display: flex;
