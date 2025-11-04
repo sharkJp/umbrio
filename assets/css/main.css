@@ -1069,14 +1069,14 @@ li a:hover {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-  z-index: 9999;
+  z-index: 1;
 }
 
 .tooltip img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  z-index: 999;
+  z-index: 1;
 
 }
 

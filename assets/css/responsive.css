@@ -479,50 +479,96 @@
     z-index: 90;
   }
 
-  /* .marco {
-    background-image: url("../../multimedia/img/mask2.png");
-    position: absolute; 
-    width: 100%;
-    height: 100%;
-    z-index: 9; 
-} */
+.cerrar-secc3{
+  position: absolute;
+  z-index: 99999;
+}
 
   .tunja {
     position: relative;
-    top: 25%;
-    left: -40%;
+    top: 30%;
+    left: -25%;
     width: auto;
     height: 50%;
     z-index: 1;
     transform: rotate(90deg) !important;
   }
 
-  /* 
+  .pin {
+    width: 15px;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 20;
+  }
+
+  .pin:hover {
+    transform: rotate(90deg) scale(1.1);
+    opacity: 0.8;
+  }
+
+  .pin-catedral {
+    top: 45% !important;
+    left: 80% !important;
+    z-index: 1 !important;
+  }
+
+  #tooltip-catedral {
+    transform: rotate(-90deg);
+    top: -30% !important;
+    left: -600% !important;
+    z-index: 9999 !important;
+  }
+
+  .pin-cojines{
+  top: 50% !important;
+    left: 60% !important;
+    z-index: 1 !important;
+  }
   #tooltip-cojines {
-    left: -10% !important;
-    z-index: 99999 !important;
+     transform: rotate(-90deg);
+    left: 310%;
   }
 
-  .tooltip img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: 999999 !important;
-
-  } */
-
-
-
-  /* #tooltip-sanagustin {
-    left: -5% !important;
-    z-index: 99999 !important;
-  } */
-
-
-  .cerrar-secc3 {
-    right: 5px !important;
-    z-index: 100;
+  .pin-agustin {
+    top: 46% !important;
+    left: 65% !important;
+    z-index: 1 !important;
   }
+
+  #tooltip-agustin {
+    transform: rotate(-90deg);
+    left: -210%;
+    z-index: 9999 !important;
+  }
+
+  .pin-biblioteca1 {
+    top: 43% !important;
+    left: 63% !important;
+     z-index: 1 !important;
+  }
+
+  #tooltip-biblioteca1 {
+    transform: rotate(-90deg);
+    top: -30% !important;
+    left: -600% !important;
+    z-index: 100 !important;
+    width: 140px;
+    height: 120px;
+  }
+
+  .pin-biblioteca2 {
+    top: 68% !important;
+    left: 45% !important;
+    z-index: 1 !important;
+  }
+
+  #tooltip-biblioteca2 {
+    transform: rotate(-90deg);
+    top: 5%;
+    left: -120%;
+    z-index: 100 !important;
+  }
+
 
   /** footer **/
 
