@@ -1,8 +1,6 @@
-
-
 /** para la seccion 4 **/
 @media (max-width: 768px) {
- 
+
   /* navbar móvil ajustes */
   header {
     position: absolute;
@@ -179,20 +177,21 @@
     font-size: 1.2rem;
     font-weight: bold;
   }
-  .seccion1 .mostrar-boton
- {
+
+  .seccion1 .mostrar-boton {
     position: absolute;
-   left: 15%;
-  top: 40%;
-  z-index: 10;
+    left: 15%;
+    top: 40%;
+    z-index: 10;
 
   }
-    .seccion4 .mostrar-boton{
-         position: absolute;
-   left: -1%;
-  top: 40%;
-  z-index: 10;
-    }
+
+  .seccion4 .mostrar-boton {
+    position: absolute;
+    left: -1%;
+    top: 40%;
+    z-index: 10;
+  }
 
   .modal.fullscreen-modal {
     position: absolute;
@@ -224,9 +223,11 @@
     height: 15%;
     z-index: 100;
   }
-.seccion1 .bloque-interprete{
-  left: -7%;
-}
+
+  .seccion1 .bloque-interprete {
+    left: -7%;
+  }
+
   .video-interprete {
     width: 65%;
     height: 55%;
@@ -344,11 +345,11 @@
     z-index: 1000;
   }
 
-  .seccion3 .close-icon{
+  .seccion3 .close-icon {
     z-index: 1000;
   }
 
- .seccion5 .bloque-interprete {
+  .seccion5 .bloque-interprete {
     top: 7% !important;
     z-index: 10;
   }
@@ -449,13 +450,14 @@
     z-index: 99999;
   }
 
-  .btn-brujula{
-position: absolute;
-top: 85%;
-left: 0;
-width: 30%;
-height: 15%;
+  .btn-brujula {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 30%;
+    height: 15%;
   }
+
   .brujula {
     position: absolute !important;
     width: 60% !important;
@@ -611,6 +613,7 @@ height: 15%;
     width: 100%;
     height: 100vh !important;
   }
+
   .seccion5 .bloque-interprete {
     position: absolute;
     width: 40%;
@@ -813,10 +816,11 @@ height: 15%;
     top: 45%;
   }
 
-  .prev-secc3{
+  .prev-secc3 {
     left: 2% !important;
   }
-  .next-secc3{
+
+  .next-secc3 {
     right: 2% !important;
   }
 
@@ -839,11 +843,84 @@ height: 15%;
   }
 }
 
+@media (min-width: 1600px) {
+  .fuego {
+    right: 22% !important;
+  }
 
+  li a {
+    font-size: 1.3rem;
+  }
+
+  .seccion2 .bloque-interprete {
+    position: relative;
+    top: -42% !important;
+    left: 3%;
+
+  }
+
+  .contenedor-slider .slider {
+    top: -13% !important;
+  }
+
+  .papiro-centro {
+    margin-top: -15%;
+    width: 80% !important;
+    height: 80% !important;
+    top: 3%;
+  }
+
+  .prev-secc2 {
+    left: 3% !important;
+  }
+
+  .next-secc2 {
+    right: 3% !important;
+  }
+
+  .contenedor-carrusel-secc3 {
+    width: 100% !important;
+    max-width: 1600px;
+  }
+
+  .carrusel-track-secc3 {
+    gap: 30px;
+    width: 100% !important;
+  }
+
+  .carrusel-secc3 {
+    width: 88% !important;
+  }
+
+  .cards-secc3 {
+    width: 340px;
+    height: 620px;
+    top: -10%;
+  }
+
+  .carrusel-item-secc3 {
+    flex: 0 0 calc((100% - 25px) / 4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 380px;
+    margin-top: 22%;
+  }
+
+  .brujula {
+    width: 120px !important;
+  }
+
+  .flotante-calavera img {
+    width: 80px;
+  }
+
+
+}
 
 
 /* Se aplica a 1920px Y cualquier ancho superior. */
-@media screen and (min-width: 1920px) {
+/* @media screen and (min-width: 1920px) {
   .papiro-centro {
     width: 10% !important;
     height: 1% !important;
@@ -919,9 +996,9 @@ height: 15%;
     position: absolute;
     display: flex;
     top: 110% !important;
-  }
-
-  /* Botón flotante Calavera */
+  } 
 
 
-}
+
+
+}*/
