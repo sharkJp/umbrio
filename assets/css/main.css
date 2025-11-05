@@ -223,6 +223,7 @@ li a:hover {
 }
 
 /*fin del navbar*/
+/*modal*/
 
 /* Contenedor del intérprete */
 .interprete {
@@ -501,6 +502,7 @@ li a:hover {
 
 .seccion2 {
   position: relative;
+  background-color: var(--fondo-body);
 }
 
 /* Caja del slider */
@@ -514,7 +516,7 @@ li a:hover {
   gap: 40px;
   width: 100%;
   height: 100vh;
-  margin-top: 10%;
+  top: 0%;
 }
 
 /* Slider de imágenes */
@@ -526,7 +528,8 @@ li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5%;
+  top: 5%;
+
 }
 
 .slide {
@@ -613,11 +616,11 @@ li a:hover {
 }
 
 .prev-secc2 {
-  left: -2% !important;
+  left: 2% !important;
 }
 
 .next-secc2 {
-  right: -2% !important;
+  right: 2% !important;
 }
 
 /* pergamino con texto */
@@ -936,8 +939,9 @@ li a:hover {
 }
 
 .brujula {
-  width: 72px;
+  width: 5vw;
   height: auto;
+  margin-left: 10% !important;
   cursor: none;
   transition: transform 0.4s ease;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));

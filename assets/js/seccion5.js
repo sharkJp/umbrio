@@ -33,7 +33,7 @@ const swiper = new Swiper(".mySwiper", {
     },
     // Monitores grandes: 3 tarjetas
     1440: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 30,
     },
   },

@@ -65,8 +65,9 @@ body.modal-open {
 .contenedor-video video {
   border-radius: 10px;
   position: absolute;
-  top: 5%;
-
+  top: 5% !important;
+  width: 80% !important;
+  height:auto!important;
 }
 
 #cerrarModal {
@@ -160,7 +161,7 @@ top: 40px;
 .swiper-slide {
   top: -2%;
   position: relative;
-  /* width: 340px !important; */
+  width: 340px !important;
   height: 600px !important;
   background-color: var(--footer-color);
   box-shadow: 0 3px 7px rgba(255, 192, 203, 0.637);
@@ -208,8 +209,8 @@ top: 40px;
 
 /* --- Efecto blanco y negro / color --- */
 .team-photo {
-  width: 300px !important;
-  height: 410px !important;
+  width: 280px !important;
+  height: 360px !important;
   border-radius: 50%;
   object-fit: cover;
   margin-top: 0%;

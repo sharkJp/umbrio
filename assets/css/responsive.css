@@ -61,6 +61,21 @@
     z-index: 100 !important;
   }
 
+  .contenedor-video {
+    position: relative;
+    top: 15% !important;
+    width: 100% !important;
+    height: 80% !important;
+    display: flex;
+  }
+
+  .contenedor-video video {
+    width: 85% !important;
+    height: auto !important;
+    top: 25% !important;
+
+  }
+
   .seccion4 #cursor-img {
     display: none;
   }
@@ -479,10 +494,10 @@
     z-index: 90;
   }
 
-.cerrar-secc3{
-  position: absolute;
-  z-index: 99999;
-}
+  .cerrar-secc3 {
+    position: absolute;
+    z-index: 99999;
+  }
 
   .tunja {
     position: relative;
@@ -519,13 +534,14 @@
     z-index: 9999 !important;
   }
 
-  .pin-cojines{
-  top: 50% !important;
+  .pin-cojines {
+    top: 50% !important;
     left: 60% !important;
     z-index: 1 !important;
   }
+
   #tooltip-cojines {
-     transform: rotate(-90deg);
+    transform: rotate(-90deg);
     left: 310%;
   }
 
@@ -544,7 +560,7 @@
   .pin-biblioteca1 {
     top: 43% !important;
     left: 63% !important;
-     z-index: 1 !important;
+    z-index: 1 !important;
   }
 
   #tooltip-biblioteca1 {
@@ -889,6 +905,91 @@
   }
 }
 
+
+/* pantallas 24" & 17" 1920* */
+@media (min-width: 1920px) and (max-height: 1080px) {
+  .slider {}
+}
+
+@media (min-width: 2000px) {}
+
+/* pantallas 32" */
+@media (min-width: 1921px) and (max-width: 3840px) {}
+
+/* pantallas 20" 1600*900 */
+@media (min-width: 1600px) and (max-width: 1600px) {
+  /* seccion 2 */
+
+  .seccion2 {}
+
+  .seccion2 #bloque-interprete {
+    position: absolute;
+    top: 20px !important;
+  }
+
+  .slider {
+    position: relative;
+    margin-top: 8% !important;
+  }
+
+  .slide img {
+    margin-top: -5%;
+  }
+
+  .papiro-centro {
+    position: absolute;
+    top: 10% !important;
+  }
+
+ 
+.contenedor-carrusel-secc3{
+  width: 80% !important;
+   max-width: 1300px !important;
+     height: 80% !important;
+    margin-top: 10%;
+}
+.cards-secc3 {
+  top: -15% !important;
+  width: 260px !important;
+  height: 490px !important;
+  position: relative;
+  perspective: 1000px;
+}
+
+#btnBrujula {
+  position: relative;
+  top: -60px !important;
+  margin-left: -50% !important;
+  width: 60px !important;
+}
+
+.tunja {
+  width: 78%;
+  height: 85%;
+  left: 10%;
+}
+
+.flotante-calavera img {
+  width: 60px !important;
+}
+
+.swiper {
+  position: relative;
+    height: 600px !important;
+}
+#swiper-slide {
+  width: 320px !important;
+  height: 540px !important;
+
+}
+#team-photo {
+  width: 220px !important;
+  height: 320px !important;
+}
+
+
+}
+
 @media (min-width: 1600px) {
   .fuego {
     right: 22% !important;
@@ -898,19 +999,19 @@
     font-size: 1.3rem;
   }
 
-  .seccion2 .bloque-interprete {
-    position: relative;
-    top: -42% !important;
-    left: 3%;
 
+  .seccion2 #bloque-interprete {
+    position: relative;
+    top: -47% !important;
+    left: 2% !important;
   }
 
   .contenedor-slider .slider {
-    top: -13% !important;
+    top: 0% !important;
   }
 
   .papiro-centro {
-    margin-top: -15%;
+    margin-top: 7%;
     width: 80% !important;
     height: 80% !important;
     top: 3%;
@@ -923,7 +1024,9 @@
   .next-secc2 {
     right: 3% !important;
   }
-
+.seccion3 .mostrar-boton{
+  top:0%;
+}
   .contenedor-carrusel-secc3 {
     width: 100% !important;
     max-width: 1600px;
@@ -944,7 +1047,6 @@
     top: -10%;
   }
 
-  
   .carrusel-item-secc3 {
     flex: 0 0 calc((100% - 25px) / 4);
     display: flex;
@@ -955,97 +1057,25 @@
   }
 
   .brujula {
-    width: 120px !important;
+    width: 5vw !important;
   }
 
   .flotante-calavera img {
     width: 80px;
   }
 
-
-}
-
-
-/* Se aplica a 1920px Y cualquier ancho superior. */
-/* @media screen and (min-width: 1920px) {
-  .papiro-centro {
-    width: 10% !important;
-    height: 1% !important;
-  }
-  .seccion3{
-    background-color: aqua !important;
-  }
-  .seccion5 {
-    width: 100%;
-    height: 100vh;
-    margin-top: 3%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .seccion5 .about-title {
-    top: 2% !important;
-    display: block;
-  }
-
-  .seccion5 .swiper {
-    width: 80% !important;
-    height: 80%;
-    top: 3%;
-    cursor: none;
+  .swiper {
+    width: 80%;
+    height: 800px;
   }
 
   .swiper-slide {
-    top: 5%;
+    width: 440px !important;
+    height: 720px !important;
   }
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    margin-top: 0% !important;
-    background-color: var(--sexto-color);
-    width: 60px !important;
-    height: 60px !important;
-    border-radius: 50%;
-    cursor: none !important;
+  .team-photo {
+    width: 360px !important;
+    height: 520px !important;
   }
-
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    background-color: var(--octavo-color);
-    cursor: none !important;
-  }
-
-  .seccion6 {
-    width: 100%;
-    height: 100vh;
-  }
-
-  svg {
-    top: -5%;
-    right: 18%;
-  }
-
-  .abstracto {
-    margin: top 35%;
-  }
-
-  .llama-menu img {
-    right: 48%;
-    top: 15%;
-  }
-
-  .seccion5 .interprete {
-    position: absolute;
-    top: 110%;
-  }
-
-  .seccion5 .mostrar-boton {
-    position: absolute;
-    display: flex;
-    top: 110% !important;
-  } 
-
-
-
-
-}*/
+}
