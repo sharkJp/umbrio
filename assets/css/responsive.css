@@ -8,7 +8,6 @@
     height: 8vh;
     inset: 0;
     z-index: 0;
-
   }
 
   .vela-menu {
@@ -319,33 +318,27 @@
   .next-secc2 {
     top: 40%;
   }
-.prev-secc2 {
-  left: -3% !important;
-}
 
-.next-secc2 {
-  right: -3% !important;
-}
+  .prev-secc2 {
+    left: -3% !important;
+  }
 
-.papiro-izquierdo {
-   left: 0%;
-  height: 85%;
-   
-    background-size:contain;
+  .next-secc2 {
+    right: -3% !important;
+  }
 
+  .papiro-izquierdo {
+    left: 0%;
+    height: 85%;
+    background-size: contain;
+  }
 
-   
-}
-
-
-.papiro-derecho {
+  .papiro-derecho {
     right: 1%;
-   height: 85%;
+    height: 85%;
+    background-size: contain;
+  }
 
-    background-size:contain;
-  
-  
-}
   /*fin slider secc2*/
 
   /*slider 3d*/
@@ -967,51 +960,54 @@
     top: 10% !important;
   }
 
- 
-.contenedor-carrusel-secc3{
-  width: 80% !important;
-   max-width: 1300px !important;
-     height: 80% !important;
+
+  .contenedor-carrusel-secc3 {
+    width: 80% !important;
+    max-width: 1300px !important;
+    height: 80% !important;
     margin-top: 10%;
-}
-.cards-secc3 {
-  top: -15% !important;
-  width: 260px !important;
-  height: 490px !important;
-  position: relative;
-  perspective: 1000px;
-}
+  }
 
-#btnBrujula {
-  position: relative;
-  top: -60px !important;
-  margin-left: -50% !important;
-  width: 60px !important;
-}
+  .cards-secc3 {
+    top: -15% !important;
+    width: 260px !important;
+    height: 490px !important;
+    position: relative;
+    perspective: 1000px;
+  }
 
-.tunja {
-  width: 78%;
-  height: 85%;
-  left: 10%;
-}
+  #btnBrujula {
+    position: relative;
+    top: -60px !important;
+    margin-left: -50% !important;
+    width: 60px !important;
+  }
 
-.flotante-calavera img {
-  width: 60px !important;
-}
+  .tunja {
+    width: 78%;
+    height: 85%;
+    left: 10%;
+  }
 
-.swiper {
-  position: relative;
+  .flotante-calavera img {
+    width: 60px !important;
+  }
+
+  .swiper {
+    position: relative;
     height: 600px !important;
-}
-#swiper-slide {
-  width: 320px !important;
-  height: 540px !important;
+  }
 
-}
-#team-photo {
-  width: 220px !important;
-  height: 320px !important;
-}
+  #swiper-slide {
+    width: 320px !important;
+    height: 540px !important;
+
+  }
+
+  #team-photo {
+    width: 220px !important;
+    height: 320px !important;
+  }
 
 
 }
@@ -1050,9 +1046,11 @@
   .next-secc2 {
     right: 3% !important;
   }
-.seccion3 .mostrar-boton{
-  top:0%;
-}
+
+  .seccion3 .mostrar-boton {
+    top: 0%;
+  }
+
   .contenedor-carrusel-secc3 {
     width: 100% !important;
     max-width: 1600px;
