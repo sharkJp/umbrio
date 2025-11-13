@@ -297,9 +297,9 @@
 
   .papiro-centro {
     position: absolute;
-    width: 75%;
-    height: 80%;
-    top: -10%;
+    width: 74.5%;
+    height: 85%;
+    top: -3%;
   }
 
   .papiro-contenido h1 {
@@ -325,6 +325,26 @@
 
 .next-secc2 {
   right: -3% !important;
+}
+
+.papiro-izquierdo {
+   left: 0%;
+  height: 85%;
+   
+    background-size:contain;
+
+
+   
+}
+
+
+.papiro-derecho {
+    right: 1%;
+   height: 85%;
+
+    background-size:contain;
+  
+  
 }
   /*fin slider secc2*/
 

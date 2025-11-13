@@ -632,13 +632,14 @@ li a:hover {
   width: 50%;
   height: 75%;
   overflow: visible;
+
 }
 
 /* Parte central */
 .papiro-centro {
   flex: 0 1 auto;
-  width: 80%;
-  height: 70%;
+  width: 75%;
+  height: 100%;
   background: url("../multimedia/img/pergamino1.webp");
   background-size: cover;
   /* background-size: auto 100%; */
@@ -651,7 +652,8 @@ li a:hover {
   padding: 20px 40px;
   box-sizing: border-box;
   margin-top: 13%;
-  z-index: 500;
+  margin-left: -5%;
+  z-index: 0;
 }
 
 /* Extremos */
@@ -672,7 +674,7 @@ li a:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 90%;
+  height: 100%;
 }
 
 /* Texto */
@@ -702,6 +704,27 @@ li a:hover {
   opacity: 0.7;
 }
 
+.papiro-izquierdo {
+   left: 1%;
+    background-image: url('../multimedia/img/papiro_der.png');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+   
+}
+
+
+.papiro-derecho {
+    right: 4%;
+ 
+ background-image: url('../multimedia/img/papiro_izq.png');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  
+}
 /* Estado cerrado: extremos casi tocándose al centro */
 .papiro-container:not(.abierto) .papiro-izquierdo {
   transform: translateX(70px);
