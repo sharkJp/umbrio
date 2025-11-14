@@ -72,7 +72,6 @@
     width: 85% !important;
     height: auto !important;
     top: 25% !important;
-
   }
 
   .seccion4 #cursor-img {
@@ -176,7 +175,6 @@
   }
 
   /*fin menu*/
-
   .mostrar-boton {
     display: flex;
     text-decoration: none;
@@ -197,7 +195,6 @@
     left: 15%;
     top: 40%;
     z-index: 10;
-
   }
 
   .seccion4 .mostrar-boton {
@@ -274,7 +271,6 @@
   }
 
   /*slider secc2*/
-
   .contenedor-slider {
     position: relative;
     top: 0;
@@ -338,11 +334,9 @@
     height: 85%;
     background-size: contain;
   }
-
   /*fin slider secc2*/
 
   /*slider 3d*/
-
   .seccion3 {
     flex-direction: column !important;
     z-index: 0;
@@ -400,7 +394,6 @@
   }
 
   /** btn calavera **/
-
   .flotante-calavera {
     position: absolute;
     display: flex;
@@ -532,12 +525,13 @@
     width: 15px;
     transform: rotate(90deg);
     transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 20;
+    z-index: 20 !important;
   }
 
   .pin:hover {
     transform: rotate(90deg) scale(1.1);
     opacity: 0.8;
+     z-index: 25 !important;
   }
 
   .pin-catedral {
@@ -604,9 +598,7 @@
     z-index: 100 !important;
   }
 
-
   /** footer **/
-
   .footer {
     display: flex;
     flex-direction: column;
@@ -648,7 +640,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
   }
 
   .logos img:nth-child(1) {
@@ -872,7 +863,6 @@
 
 }
 
-
 @media (max-width: 600px) {
   .carrusel-item-secc3 {
     flex: 0 0 100% !important;
@@ -881,7 +871,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
   .carrusel-track-secc3 {
@@ -889,7 +878,6 @@
     gap: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-
   }
 
   .prev-secc3,
@@ -924,10 +912,9 @@
   }
 }
 
-
 /* pantallas 24" & 17" 1920* */
 @media (min-width: 1920px) and (max-height: 1080px) {
-  .slider {}
+
 }
 
 @media (min-width: 2000px) {}
@@ -938,9 +925,6 @@
 /* pantallas 20" 1600*900 */
 @media (min-width: 1600px) and (max-width: 1600px) {
   /* seccion 2 */
-
-  .seccion2 {}
-
   .seccion2 #bloque-interprete {
     position: absolute;
     top: 20px !important;
@@ -959,7 +943,6 @@
     position: absolute;
     top: 10% !important;
   }
-
 
   .contenedor-carrusel-secc3 {
     width: 80% !important;
@@ -1008,8 +991,6 @@
     width: 220px !important;
     height: 320px !important;
   }
-
-
 }
 
 @media (min-width: 1600px) {
@@ -1020,7 +1001,6 @@
   li a {
     font-size: 1.3rem;
   }
-
 
   .seccion2 #bloque-interprete {
     position: relative;

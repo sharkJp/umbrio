@@ -39,10 +39,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-
   cursor: none !important;
   background-color: var(--fondo-body);
-
   /* background-size: cover, cover; 
     background-repeat: no-repeat, no-repeat;
     background-position: center center;
@@ -179,7 +177,6 @@ header {
   z-index: 10;
   transition: opacity 0.3s ease-out, transform 0.3s ease;
 }
-
 
 #mainMenu {
   position: relative;
@@ -492,7 +489,6 @@ li a:hover {
   color: var(--noveno-color);
   z-index: 100;
   pointer-events: none;
-
 }
 
 /*fin de modal*/
@@ -529,7 +525,6 @@ li a:hover {
   align-items: center;
   justify-content: center;
   top: 5%;
-
 }
 
 .slide {
@@ -555,7 +550,6 @@ li a:hover {
     transform: scale(0.95);
     filter: blur(10px);
   }
-
   100% {
     opacity: 1;
     transform: scale(1);
@@ -632,17 +626,15 @@ li a:hover {
   width: 50%;
   height: 75%;
   overflow: visible;
-
 }
 
 /* Parte central */
 .papiro-centro {
   flex: 0 1 auto;
-  width: 75%;
+  width: 77%;
   height: 100%;
   background: url("../multimedia/img/pergamino1.webp");
   background-size: cover;
-  /* background-size: auto 100%; */
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.9s ease-in-out;
@@ -674,7 +666,8 @@ li a:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 80%;
+  background-color: #00ccff3e;
 }
 
 /* Texto */
@@ -690,6 +683,7 @@ li a:hover {
   max-width: 90%;
   font-size: 2.0rem;
   opacity: 0.6;
+  background-color: #30163d;
 }
 
 .papiro-contenido p {
@@ -702,29 +696,27 @@ li a:hover {
   font-family: "Amarante", serif !important;
   color: var(--footer-color);
   opacity: 0.7;
+  background-color: #0697a8;
 }
 
 .papiro-izquierdo {
-   left: 1%;
-    background-image: url('../multimedia/img/papiro_der.png');
-    background-position: center;
-    background-size:cover;
-    background-repeat: no-repeat;
-    object-fit: cover;
-   
+  left: 1%;
+  background-image: url('../multimedia/img/papiro_der.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
-
 
 .papiro-derecho {
-    right: 4%;
- 
- background-image: url('../multimedia/img/papiro_izq.png');
-    background-position: center;
-    background-size:cover;
-    background-repeat: no-repeat;
-    object-fit: cover;
-  
+  right: 4%;
+  background-image: url('../multimedia/img/papiro_izq.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
+
 /* Estado cerrado: extremos casi tocándose al centro */
 .papiro-container:not(.abierto) .papiro-izquierdo {
   transform: translateX(70px);
@@ -934,8 +926,6 @@ li a:hover {
   opacity: 1;
   transform: translateY(-5%) translateZ(80px) scale(1.15);
   pointer-events: auto;
-  /*aqui*/
-
 }
 
 /* ocultar scrollbar cuando se usa scroll en fallback */
@@ -979,7 +969,6 @@ li a:hover {
   display: none;
 }
 
-
 .cerrar-secc3 {
   position: absolute;
   display: flex;
@@ -994,7 +983,6 @@ li a:hover {
   cursor: pointer;
   z-index: 10;
   transition: color 0.3s ease;
-
 }
 
 .cerrar-secc3 h2 {
@@ -1008,7 +996,6 @@ li a:hover {
 .cerrar-secc3 h2:hover {
   transform: scale(1.2);
   color: var(--tercer-color);
-
 }
 
 .modal-secc3 {
@@ -1029,20 +1016,19 @@ li a:hover {
 }
 
 .modal-contenido-secc3 {
-  width: 95%;
-  height: 97%;
-  max-width: 1600px;
+  width: 100%;
+  height: 100%;
   position: relative;
   cursor: none;
 }
 
 .tunja {
   position: absolute;
-  width: 90%;
-  height: 85%;
+  width: auto;
+  height: 95%;
   object-fit: cover;
   left: 5%;
-  top: 7%;
+  top: 3%;
   z-index: 3;
   cursor: none;
 }
@@ -1072,6 +1058,32 @@ li a:hover {
   cursor: none;
   transition: transform 0.3s ease, filter 0.3s ease;
   z-index: 20;
+}
+
+/* POSICIONES DE PINES - PC */
+.pin-catedral {
+  top: 19%;
+  left: 41.5%;
+}
+
+.pin-cojines {
+  top: 54.5%;
+  left: 67.5%;
+}
+
+.pin-agustin {
+  top: 35%;
+  left: 39%;
+}
+
+.pin-biblioteca1 {
+  top: 33%;
+  left: 42.2%;
+}
+
+.pin-biblioteca2 {
+  top: 39%;
+  left: 44%;
 }
 
 .pin:hover {
@@ -1207,6 +1219,7 @@ li a:hover {
   transform: scale(1.1);
   opacity: 1;
 }
+
 .logos {
   display: flex;
   flex-direction: row;
