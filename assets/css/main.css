@@ -705,26 +705,27 @@ li a:hover {
 }
 
 .papiro-izquierdo {
-   left: 1%;
-    background-image: url('../multimedia/img/papiro_der.png');
-    background-position: center;
-    background-size:cover;
-    background-repeat: no-repeat;
-    object-fit: cover;
-   
+  left: 1%;
+  background-image: url('../multimedia/img/papiro_der.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+
 }
 
 
 .papiro-derecho {
-    right: 4%;
- 
- background-image: url('../multimedia/img/papiro_izq.png');
-    background-position: center;
-    background-size:cover;
-    background-repeat: no-repeat;
-    object-fit: cover;
-  
+  right: 4%;
+
+  background-image: url('../multimedia/img/papiro_izq.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+
 }
+
 /* Estado cerrado: extremos casi tocándose al centro */
 .papiro-container:not(.abierto) .papiro-izquierdo {
   transform: translateX(70px);
@@ -974,12 +975,12 @@ li a:hover {
   transform: rotate(25deg) scale(1.1);
 }
 
-/* ---Boton modal --- */
+/* --- Botón modal --- */
 #btn-modal {
   display: none;
 }
 
-
+/* --- Botón cerrar (SIEMPRE ARRIBA) --- */
 .cerrar-secc3 {
   position: absolute;
   display: flex;
@@ -992,40 +993,41 @@ li a:hover {
   top: 2% !important;
   right: 20px;
   cursor: pointer;
-  z-index: 10;
-  transition: color 0.3s ease;
-
+  z-index: 1001 !important;
+  transition: transform 0.3s ease;
 }
 
 .cerrar-secc3 h2 {
   font-size: 48px;
   font-weight: bold;
   color: var(--segundo-color);
-  cursor: pointer;
-  z-index: 10;
+  margin: 0;
+  line-height: 1;
 }
 
-.cerrar-secc3 h2:hover {
+.cerrar-secc3:hover h2 {
   transform: scale(1.2);
   color: var(--tercer-color);
-
 }
 
+/* --- Modal --- */
 .modal-secc3 {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: var(--primer-color);
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  cursor: none;
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 999;
+}
+
+#btn-modal:checked ~ .modal-secc3 {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-contenido-secc3 {
@@ -1033,34 +1035,42 @@ li a:hover {
   height: 97%;
   max-width: 1600px;
   position: relative;
-  cursor: none;
+  overflow: visible !important;
+  border-radius: 8px;
+  z-index: 1000;
 }
 
+/* --- Mapa base --- */
 .tunja {
   position: absolute;
   width: 90%;
-  height: 85%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   left: 5%;
-  top: 7%;
-  z-index: 3;
-  cursor: none;
+  top: 5%;
+  z-index: 1;
 }
 
-
-
-
-/* Contenedor principal que une imagen y pines */
+/* --- Contenedor mapa --- */
 .mapa-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: visible !important;
   border-radius: 3px;
-  cursor: none;
 }
 
+/* --- Contenedor interactivo --- */
+.mapa-interactivo {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
 
+/* --- PINES (SIEMPRE DEBAJO) --- */
 .pin {
   position: absolute;
   width: 36px;
@@ -1069,23 +1079,28 @@ li a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   transform: translate(-50%, -100%);
-  cursor: none;
+  cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
-  z-index: 20;
+  z-index: 20 !important; /* DEBAJO DEL TOOLTIP */
+  pointer-events: auto;
 }
 
 .pin:hover {
   transform: translate(-50%, -110%) scale(1.2);
-  filter: drop-shadow(0 0 5px var(--filtro-azul));
+  filter: drop-shadow(0 0 8px var(--filtro-azul));
+  z-index: 25 !important; /* AÚN DEBAJO DEL TOOLTIP */
 }
 
+/* POSICIONES DE PINES - PC */
+.pin-catedral    { top: 19%;   left: 41.5%; }
+.pin-cojines     { top: 54.5%; left: 67.5%; }
+.pin-agustin     { top: 35%;   left: 39%; }
+.pin-biblioteca1 { top: 33%;   left: 42.2%; }
+.pin-biblioteca2 { top: 39%;   left: 44%; }
 
+/* --- TOOLTIPS (SIEMPRE ENCIMA) --- */
 .tooltip {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 130%;
   left: 50%;
   transform: translateX(-50%) scale(0);
   background: var(--footer-color);
@@ -1096,56 +1111,164 @@ li a:hover {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-  z-index: 1;
+  z-index: 100 !important; /* ¡ENCIMA DE TODO! */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .tooltip img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  z-index: 1;
-
-}
-
-#tooltip-catedral {
-  position: relative;
-  left: 300%;
-}
-
-#tooltip-cojines {
-  position: relative;
-  left: 310%;
-}
-
-#tooltip-agustin {
-  position: relative;
-  left: -210%;
-}
-
-#tooltip-biblioteca2 {
-  position: relative;
-  top: 115%;
-  left: 70%;
+  border-radius: 4px;
+  margin-bottom: 6px;
 }
 
 .tooltip h4 {
-  text-align: center;
   margin: 0;
   font-size: 13px;
   font-weight: 600;
+  text-align: center;
 }
 
 .pin:hover .tooltip {
   opacity: 1;
   transform: translateX(-50%) scale(1);
+  z-index: 100 !important;
 }
 
-#btn-modal:checked~.modal-secc3 {
-  opacity: 1;
-  pointer-events: auto;
+/* Tooltip arriba */
+.tooltip:not(.tooltip-biblioteca2) {
+  bottom: 130%;
 }
 
+/* Tooltip abajo */
+.tooltip-biblioteca2 {
+  top: 130% !important;
+  bottom: auto !important;
+}
 
+/* === RESPONSIVE (TODOS LOS CAMBIOS APLICADOS CON !important) === */
+@media (max-width: 768px) {
+  .modal-contenido-secc3,
+  .mapa-wrapper {
+    overflow: visible !important;
+  }
+
+  .tunja {
+    width: 92%;
+    height: auto;
+    left: 4%;
+    top: 7%;
+  }
+
+  .cerrar-secc3 {
+    width: 44px;
+    height: 44px;
+    top: 3% !important;
+    right: 15px;
+    z-index: 1001 !important;
+  }
+
+  .cerrar-secc3 h2 {
+    font-size: 36px;
+  }
+
+  /* PINES EN MÓVIL */
+  .pin {
+    width: 30px;
+    height: 30px;
+    z-index: 20 !important;
+  }
+
+  .pin:hover {
+    z-index: 25 !important;
+  }
+
+  /* TOOLTIPS EN MÓVIL */
+  .tooltip {
+    width: 100px;
+    padding: 6px;
+    font-size: 11px;
+    border-radius: 6px;
+    z-index: 100 !important;
+  }
+
+  .tooltip img {
+    border-radius: 4px;
+    margin-bottom: 4px;
+  }
+
+  .tooltip h4 {
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  /* TODOS LOS TOOLTIPS ABAJO */
+  .pin-catedral .tooltip,
+  .pin-agustin .tooltip,
+  .pin-biblioteca1 .tooltip,
+  .pin-biblioteca2 .tooltip {
+    bottom: auto !important;
+    top: 110% !important;
+    z-index: 100 !important;
+  }
+
+  .pin-catedral .tooltip {
+    top: 115% !important;
+  }
+
+  .pin-catedral    { left: 36.5% !important; }
+  .pin-cojines     { left: 62.5% !important; }
+  .pin-agustin     { left: 34% !important; }
+  .pin-biblioteca1 { left: 37.2% !important; }
+  .pin-biblioteca2 { left: 39% !important; }
+}
+
+@media (max-width: 480px) {
+  .tunja {
+    width: 94%;
+    height: auto;
+    left: 3%;
+    top: 9%;
+  }
+
+  .pin {
+    width: 28px;
+    height: 28px;
+    z-index: 20 !important;
+  }
+
+  .pin:hover {
+    z-index: 25 !important;
+  }
+
+  .tooltip {
+    width: 85px;
+    padding: 5px;
+    z-index: 100 !important;
+  }
+
+  .tooltip h4 {
+    font-size: 9px;
+    text-align: center;
+  }
+
+  .pin-catedral .tooltip,
+  .pin-agustin .tooltip,
+  .pin-biblioteca1 .tooltip,
+  .pin-biblioteca2 .tooltip {
+    top: 105% !important;
+    z-index: 100 !important;
+  }
+
+  .pin-catedral    { left: 36.5% !important; }
+  .pin-cojines     { left: 60.5% !important; }
+  .pin-agustin     { left: 32% !important; }
+  .pin-biblioteca1 { left: 35.2% !important; }
+  .pin-biblioteca2 { left: 37% !important; }
+}
 /*fin seccion 3*/
 
 /*footer............................................*/
@@ -1207,6 +1330,7 @@ li a:hover {
   transform: scale(1.1);
   opacity: 1;
 }
+
 .logos {
   display: flex;
   flex-direction: row;
