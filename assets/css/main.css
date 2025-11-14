@@ -667,7 +667,7 @@ li a:hover {
   align-items: center;
   width: 100%;
   height: 80%;
-  background-color: #00ccff3e;
+  /* background-color: #00ccff3e; */
 }
 
 /* Texto */
@@ -683,7 +683,7 @@ li a:hover {
   max-width: 90%;
   font-size: 2.0rem;
   opacity: 0.6;
-  background-color: #30163d;
+  /* background-color: #30163d; */
 }
 
 .papiro-contenido p {
@@ -696,7 +696,7 @@ li a:hover {
   font-family: "Amarante", serif !important;
   color: var(--footer-color);
   opacity: 0.7;
-  background-color: #0697a8;
+  /* background-color: #0697a8; */
 }
 
 .papiro-izquierdo {
