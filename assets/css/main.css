@@ -623,16 +623,16 @@ li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 75%;
+  width: 40%;
+  height: 70%;
   overflow: visible;
 }
 
 /* Parte central */
 .papiro-centro {
   flex: 0 1 auto;
-  width: 77%;
-  height: 100%;
+  width: 88%;
+  height: 90%;
   background: url("../multimedia/img/pergamino1.webp");
   background-size: cover;
   transform: scaleX(0);
@@ -651,9 +651,9 @@ li a:hover {
 /* Extremos */
 .papiro-extremo {
   position: absolute;
-  top: 40px;
-  height: 100%;
-  width: 82px;
+  top: 80px;
+  height: 80%;
+  width: 45px;
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 2;
