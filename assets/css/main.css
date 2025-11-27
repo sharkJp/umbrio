@@ -309,8 +309,9 @@ li a:hover {
 /* Botón flotante Calavera */
 
 .flotante-calavera {
-  position: fixed;
-  bottom: 20px;
+  position: absolute;
+  text-align: center;
+  top: 87% !important;
   right: 20px;
   z-index: 900;
   display: none;
@@ -318,8 +319,9 @@ li a:hover {
 }
 
 .flotante-calavera img {
-  width: 50px;
+  width: 35%;
   height: auto;
+
   transition: transform 0.2s ease;
   cursor: none !important;
 }
@@ -550,6 +552,7 @@ li a:hover {
     transform: scale(0.95);
     filter: blur(10px);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -624,15 +627,15 @@ li a:hover {
   align-items: center;
   justify-content: center;
   width: 50%;
-  height: 75%;
+  height: 70%;
   overflow: visible;
 }
 
 /* Parte central */
 .papiro-centro {
   flex: 0 1 auto;
-  width: 77%;
-  height: 100%;
+  width: 80%;
+  height: 90%;
   background: url("../multimedia/img/pergamino1.webp");
   background-size: cover;
   transform: scaleX(0);
@@ -651,9 +654,9 @@ li a:hover {
 /* Extremos */
 .papiro-extremo {
   position: absolute;
-  top: 40px;
-  height: 100%;
-  width: 82px;
+  top: 80px;
+  height: 88%;
+  width: 65px;
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 2;
@@ -662,41 +665,43 @@ li a:hover {
 
 .papiro-contenido {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  left: 2%;
   width: 100%;
   height: 80%;
-  /* background-color: #00ccff3e; */
+
 }
 
 /* Texto */
 
 .papiro-contenido h1 {
   position: absolute;
-  top: 15%;
+  top: 7%;
   text-align: center;
   color: var(--footer-color);
   font-family: "Amarante" !important;
   font-weight: bold;
   text-align: center;
   max-width: 90%;
-  font-size: 2.0rem;
+  font-size: 2.5rem;
   opacity: 0.6;
-  /* background-color: #30163d; */
 }
 
 .papiro-contenido p {
   position: absolute;
   top: 25%;
-  width: 80%;
-  height: 50%;
-  font-size: 1rem;
+  width: 90%;
+  height: 70%;
+  font-size: 1.5rem;
   font-weight: 600;
+  padding: 10px;
   font-family: "Amarante", serif !important;
+  text-align: justify;
   color: var(--footer-color);
   opacity: 0.7;
-  /* background-color: #0697a8; */
 }
 
 .papiro-izquierdo {

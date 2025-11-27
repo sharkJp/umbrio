@@ -203,6 +203,16 @@
     top: 40%;
     z-index: 10;
   }
+  .seccion1 .video-interprete {
+    position: absolute;
+    left: 23%;  
+  }
+
+  .seccion1 .cerrar-boton {
+    position: absolute;
+    left: 80%;  
+    
+  }
 
   .modal.fullscreen-modal {
     position: absolute;
@@ -292,22 +302,27 @@
 
   .papiro-centro {
     position: absolute;
-    width: 74.5%;
-    height: 85%;
+    width: 85%;
+    height: 80%;
     top: -3%;
+
   }
 
   .papiro-contenido h1 {
-    top: 18%;
+    top: 5%;
     width: 100%;
     font-size: 1.2rem;
-    opacity: 0.6;
+    opacity: 0.8;
+  
   }
 
   .papiro-contenido p {
-    margin-top: 5%;
+    margin-top: 0%;
+    width: 100%;
+    height: 85%;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+
   }
 
   .prev-secc2,
@@ -325,13 +340,17 @@
 
   .papiro-izquierdo {
     left: 0%;
-    height: 85%;
+    top:18%;
+    height: 75%;
+    position: absolute;
     background-size: contain;
   }
 
   .papiro-derecho {
     right: 1%;
-    height: 85%;
+    top:18%;
+    height: 75%;
+    position: absolute;
     background-size: contain;
   }
   /*fin slider secc2*/
@@ -410,8 +429,11 @@
     display: flex;
     text-align: center;
     left: 20%;
-    top: 15%;
+    
     width: 65%;
+  }
+  #pagina2 .flotante-calavera img {
+   top: -15% ;
   }
 
   .about-title {
@@ -483,8 +505,8 @@
     left: 0;
     width: 30%;
     height: 15%;
+   
   }
-
   .brujula {
     position: absolute !important;
     width: 60% !important;
@@ -597,6 +619,7 @@
     left: -120%;
     z-index: 100 !important;
   }
+  
 
   /** footer **/
   .footer {
@@ -784,7 +807,7 @@
 
   .store-links {
     position: absolute;
-    top: 87%;
+    top: 85%;
     left: 5%;
     width: 60px;
     height: 60px;

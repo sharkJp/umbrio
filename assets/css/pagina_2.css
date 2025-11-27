@@ -412,7 +412,7 @@ iframe {
 
 .store-links {
   position: fixed;
-  top: 65%;
+  top: 48%;
   right: 3%;
   width: 60px;
   height: 60px;
@@ -432,6 +432,9 @@ iframe {
 .store-links:hover {
   background-color: var(--noveno-color);
   transform: scale(1.1);
+}
+.flotante-calavera {
+ top: 87% !important;
 }
 
 .modalSecc6 {
