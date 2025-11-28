@@ -1034,8 +1034,6 @@ li a:hover {
 }
 
 
-
-
 /* Contenedor principal que une imagen y pines */
 .mapa-wrapper {
   position: relative;
@@ -1067,8 +1065,8 @@ li a:hover {
 }
 
 .pin-cojines {
-  top: 54.5%;
-  left: 67.5%;
+  top: 56%;
+  left: 57.5%;
 }
 
 .pin-agustin {
@@ -1101,7 +1099,7 @@ li a:hover {
   left: 50%;
   transform: translateX(-50%) scale(0);
   background: var(--footer-color);
-  color: #fff;
+  color: var(--segundo-color);
   border-radius: 5px;
   padding: 8px;
   width: 140px;
