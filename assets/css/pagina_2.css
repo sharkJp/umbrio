@@ -412,8 +412,8 @@ iframe {
 
 .store-links {
   position: fixed;
-  top: 65%;
-  right: 3%;
+  top: 40%;
+  right: 2%;
   width: 60px;
   height: 60px;
   display: flex;

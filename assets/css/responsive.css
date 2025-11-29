@@ -193,14 +193,14 @@
   .seccion1 .mostrar-boton {
     position: absolute;
     left: 15%;
-    top: 40%;
+    top: 20%;
     z-index: 10;
   }
 
   .seccion4 .mostrar-boton {
     position: absolute;
     left: -1%;
-    top: 40%;
+    top: 20%;
     z-index: 10;
   }
 
@@ -407,7 +407,7 @@
     width: 25%;
     height: 15%;
     right: 0%;
-    top: 85%;
+    top: 86%;
   }
 
   .flotante-calavera img {
@@ -791,7 +791,7 @@
 
   .store-links {
     position: absolute;
-    top: 87%;
+    top: 89%;
     left: 5%;
     width: 60px;
     height: 60px;

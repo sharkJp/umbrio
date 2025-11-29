@@ -310,7 +310,7 @@ li a:hover {
 
 .flotante-calavera {
   position: fixed;
-  bottom: 20px;
+  bottom: 200px;
   right: 20px;
   z-index: 900;
   display: none;
@@ -318,7 +318,7 @@ li a:hover {
 }
 
 .flotante-calavera img {
-  width: 50px;
+  width: 55px;
   height: auto;
   transition: transform 0.2s ease;
   cursor: none !important;
@@ -943,7 +943,7 @@ li a:hover {
   position: relative;
   width: 10%;
   height: 20%;
-  top: 0%;
+  top: -5%;
   right: 45%;
   display: flex;
   justify-content: center;
