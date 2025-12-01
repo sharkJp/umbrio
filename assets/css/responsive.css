@@ -197,21 +197,24 @@
     z-index: 10;
   }
 
-    @media (max-width: 768px) {
-  .seccion1 .video-interprete {
+ .seccion1 .video-interprete {
     position: absolute;
-    left: 23%;  
-    
+    left: 23%;
   }
-}
 
-   @media (max-width: 768px) {
   .seccion1 .cerrar-boton {
     position: absolute;
-    left: 80%;  
-    
+    left: 80%;
   }
-}
+/*ocultar video interprete al abrir menu movil*/
+  body:has(.menu.menu-open-mobile) .seccion1 .video-interprete,
+  body:has(.menu.menu-open-mobile) .seccion1 .cerrar-boton,
+  body:has(.menu.menu-open-mobile) .seccion1 .mostrar-boton {
+    display: none !important;
+  }
+
+
+
 
   .seccion4 .mostrar-boton {
     position: absolute;
