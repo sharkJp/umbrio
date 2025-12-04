@@ -543,8 +543,8 @@
 }
 
 .pin-catedral {
-  top: 45% !important;
-  left: 80% !important;
+  top: 42% !important;
+  left: 82% !important; /* ajustado cogines*/
   z-index: 1 !important;
 }
 
@@ -556,8 +556,8 @@
 }
 
 .pin-cojines {
-  top: 50% !important;
-  left: 60% !important;
+  top: 63% !important;
+  left: 43% !important; /* ajustado pozo donato*/
   z-index: 1 !important;
 }
 
@@ -567,8 +567,8 @@
 }
 
 .pin-agustin {
-  top: 46% !important;
-  left: 65% !important;
+  top: 39% !important;
+  left: 64% !important;  /* ajustado san catedral*/
   z-index: 1 !important;
 }
 
@@ -579,8 +579,8 @@
 }
 
 .pin-biblioteca1 {
-  top: 43% !important;
-  left: 63% !important;
+  top: 44% !important;   /*ajustado san agustin*/
+  left: 67% !important;
   z-index: 1 !important;
 }
 
@@ -594,8 +594,8 @@
 }
 
 .pin-biblioteca2 {
-  top: 68% !important;
-  left: 45% !important;
+  top: 45% !important;
+  left: 59% !important; /* ajustado biblioteca*/
   z-index: 1 !important;
 }
 
