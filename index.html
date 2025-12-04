@@ -301,57 +301,107 @@
           <img src="./assets/multimedia/img/Brújula.webp" alt="Brujula" class="brujula " id="btnBrujula" />
         </label>
         <input type="checkbox" id="btn-modal">
+        
         <div class="modal-secc3">
           <div class="modal-contenido-secc3">
             <label for="btn-modal" class="cerrar-secc3"> <h2>&times;</h2></label>
 
-            <!-- Contenedor que envuelve mapa e indicadores -->
             <div class="mapa-wrapper">
-              <!-- <img class="marco" src="./assets/multimedia/img/mask.png" alt="marco"> -->
-
               <img class="tunja" src="./assets/multimedia/img/mapaTunja.png" alt="Mapa de Tunja" class="mapa-base">
 
-              <!-- Contenedor de pines interactivos -->
               <div class="mapa-interactivo">
+                
                 <div class="pin pin-catedral" >
                   <div id="tooltip-catedral" class="tooltip">
-                    <img class="catedral" src="./assets/multimedia/img/img-tunja/Cojines del Zaque ahora.webp"
-                      alt="Catedral de Tunja">
+                    <img class="catedral" src="./assets/multimedia/img/img-tunja/Cojines del Zaque ahora.webp" alt="Cojines del Zaque">
                     <h4>Cojines del Zaque</h4>
+                    <button
+                      class="btn-ver-mas"
+                      data-titulo="Cojines del Zaque"
+                      data-imagen="./assets/multimedia/img/img-tunja/Cojines del Zaque ahora.webp"
+                      data-descripcion="Los Cojines del Zaque son un sitio arqueológico y religioso de gran importancia, marcando un punto de encuentro y ceremonial para los muiscas. Se cree que el Zaque, líder supremo, se sentaba aquí para realizar ceremonias y administrar justicia."
+                    >
+                      Ver más
+                    </button>
                   </div>
                 </div>
 
                 <div class="pin pin-cojines" >
                   <div id="tooltip-cojines" class="tooltip ">
-                    <img class="cojines" src="./assets/multimedia/img/img-tunja/Pozo Donato ahora.webp"
-                      alt="Cojines del Zaque">
-                    <h4>Pozo donato</h4>
+                    <img class="cojines" src="./assets/multimedia/img/img-tunja/Pozo Donato ahora.webp" alt="Pozo donato">
+                    <h4>Pozo Donato</h4>
+                    <button
+                      class="btn-ver-mas"
+                      data-titulo="Pozo de Donato"
+                      data-imagen="./assets/multimedia/img/img-tunja/Pozo Donato ahora.webp"
+                      data-descripcion="El Pozo de Donato es una leyenda de Tunja. Se dice que sus aguas están encantadas. Su nombre proviene de un conquistador español que, según la leyenda, arrojó sus riquezas al pozo antes de morir. Es un lugar lleno de misterio y tradición."
+                    >
+                      Ver más
+                    </button>
                   </div>
                 </div>
 
                 <div class="pin pin-agustin" >
                   <div id="tooltip-agustin" class="tooltip">
-                    <img src="./assets/multimedia/img/img-tunja/Catedral ahora.webp" alt="San Agustín">
-                    <h4>Catedral</h4>
+                    <img src="./assets/multimedia/img/img-tunja/Catedral ahora.webp" alt="Catedral">
+                    <h4>Catedral de Tunja</h4>
+                    <button
+                      class="btn-ver-mas"
+                      data-titulo="Catedral Basílica Metropolitana Santiago de Tunja"
+                      data-imagen="./assets/multimedia/img/img-tunja/Catedral ahora.webp"
+                      data-descripcion="La Catedral de Tunja es una de las más antiguas de Colombia, con una impresionante arquitectura renacentista. Su construcción comenzó en el siglo XVI. En su interior alberga valiosas obras de arte colonial y un majestuoso retablo."
+                    >
+                      Ver más
+                    </button>
                   </div>
                 </div>
 
                 <div class="pin pin-biblioteca1" >
                   <div id="tooltip-biblioteca1" class="tooltip">
-                    <img src="./assets/multimedia/img/img-tunja/San Agustìn ahora.webp" alt="Biblioteca">
-                    <h4>San agustin</h4>
+                    <img src="./assets/multimedia/img/img-tunja/San Agustìn ahora.webp" alt="San Agustín">
+                    <h4>Iglesia de San Agustín</h4>
+                    <button
+                      class="btn-ver-mas"
+                      data-titulo="Iglesia de San Agustín"
+                      data-imagen="./assets/multimedia/img/img-tunja/San Agustìn ahora.webp"
+                      data-descripcion="La Iglesia de San Agustín es reconocida por su fachada barroca. Forma parte del complejo que antiguamente fue el convento agustino. Es un tesoro arquitectónico que refleja la riqueza cultural e histórica de la ciudad."
+                    >
+                      Ver más
+                    </button>
                   </div>
                 </div>
 
                 <div class="pin pin-biblioteca2" >
                   <div id="tooltip-biblioteca2" class="tooltip">
                     <img src="./assets/multimedia/img/img-tunja/Biblioteca ahora.webp" alt="Biblioteca">
-                    <h4>Biblioteca</h4>
+                    <h4>Biblioteca Central</h4>
+                    <button
+                      class="btn-ver-mas"
+                      data-titulo="Biblioteca Pública Central de Boyacá"
+                      data-imagen="./assets/multimedia/img/img-tunja/Biblioteca ahora.webp"
+                      data-descripcion="Este moderno edificio es un centro vital para la cultura y la educación. Alberga miles de volúmenes y ofrece diversos servicios a la comunidad. Su diseño es un contraste interesante con la arquitectura colonial circundante."
+                    >
+                      Ver más
+                    </button>
                   </div>
                 </div>
 
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-detalles" id="modalDetalles">
+        <div class="modal-contenido-detalles">
+          <button class="cerrar-detalles" id="cerrarDetalles">&times;</button>
+          
+          <div class="detalle-imagen">
+            <img id="detalleImagen" src="" alt="Imagen del Lugar">
+          </div>
+          
+          <div class="detalle-texto">
+            <h3 id="detalleTitulo">Título del Lugar</h3>
+            <p id="detalleDescripcion">Descripción completa del lugar.</p>
           </div>
         </div>
       </div>

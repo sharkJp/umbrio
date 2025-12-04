@@ -127,7 +127,7 @@ function initializeSlider3D() {
     // --- INICIALIZACIÓN ---
     cloneItems();
     updateWidth(); 
-    // Asegurarse de que el índice inicial esté en el primer elemento original.
+
     carruselIndex = ORIGINAL_ITEMS_COUNT; 
     updatePosition(false); 
 
@@ -136,8 +136,6 @@ function initializeSlider3D() {
         if (isAnimating) return; 
         isAnimating = true;
         
-        // AVANZA por el número de items a la vista (para simular el deslizamiento de un grupo).
-        // Si quieres que el carrusel avance un solo item a la vez (lo más común), usa carruselIndex++;
         carruselIndex++; // Avanza 1 item a la vez
         
         updatePosition();
@@ -147,8 +145,6 @@ function initializeSlider3D() {
     prevBtn.addEventListener("click", () => {
         if (isAnimating) return; 
         isAnimating = true;
-
-        // RETROCEDE 1 item a la vez
         carruselIndex--; 
 
         updatePosition();
@@ -160,16 +156,14 @@ function initializeSlider3D() {
     const SWIPE_THRESHOLD = 50; 
     const SCROLL_THRESHOLD = 5; 
 
-    // Aquí mantuve tu lógica táctil, que está bien para un carrusel 
-    // de un solo movimiento por swipe.
 
     track.addEventListener("touchstart", e => {
         if (e.touches.length !== 1 || isAnimating) return; 
         startX = e.touches[0].clientX;
         isDragging = true;
         isScrolling = false;
-        // e.preventDefault() eliminado de touchstart para mejor compatibilidad con scroll
-    }, { passive: true }); // Usar passive: true en touchstart
+
+    }, { passive: true }); 
 
     track.addEventListener("touchmove", e => {
         if (!isDragging) return;
@@ -178,7 +172,6 @@ function initializeSlider3D() {
         const diffX = startX - currentX;
         const diffY = Math.abs(e.touches[0].clientY - e.touches[0].clientY); 
         
-        // Lógica de detección de scroll vertical vs. arrastre horizontal
         if (!isScrolling) {
             if (Math.abs(diffY) > SCROLL_THRESHOLD && Math.abs(diffY) > Math.abs(diffX)) {
                 isScrolling = true;
@@ -187,9 +180,7 @@ function initializeSlider3D() {
             }
         }
         
-        if (!isScrolling && Math.abs(diffX) > 10) { // Si es un movimiento horizontal claro
-             // Detener el scroll vertical solo si es un arrastre horizontal
-            e.preventDefault(); 
+        if (!isScrolling && Math.abs(diffX) > 10) { 
         }
 
         // MOVER LA PISTA DURANTE EL ARRASTRE
@@ -214,10 +205,9 @@ function initializeSlider3D() {
         
         // Si la distancia es suficiente para un swipe
         if (Math.abs(diff) > SWIPE_THRESHOLD && !isAnimating) {
-            if (diff > 0) nextBtn.click(); // Swipe a la izquierda (siguiente)
-            else prevBtn.click(); // Swipe a la derecha (anterior)
+            if (diff > 0) nextBtn.click(); 
+            else prevBtn.click(); 
         } else {
-            // Si el swipe no fue suficiente, vuelve a la posición original
             updatePosition();
         }
         
@@ -227,7 +217,6 @@ function initializeSlider3D() {
     // --- RESPONSIVIDAD ---
     window.addEventListener("resize", () => {
         updateWidth(); 
-        // Reposicionar instantáneamente al índice actual con el nuevo ancho
         updatePosition(false); 
     });
 }
@@ -235,7 +224,7 @@ function initializeSlider3D() {
 
 document.addEventListener('DOMContentLoaded', function() {
     initializeSlider3D(); 
-    // ... tu código de modal ...
+
     const checkboxModal = document.getElementById('btn-modal');
     const body = document.body;
 
@@ -248,4 +237,65 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // === 1. ELEMENTOS DEL SEGUNDO MODAL ===
+    const modalDetalles = document.getElementById('modalDetalles');
+    const cerrarDetallesBtn = document.getElementById('cerrarDetalles');
+    const detalleTitulo = document.getElementById('detalleTitulo');
+    const detalleImagen = document.getElementById('detalleImagen');
+    const detalleDescripcion = document.getElementById('detalleDescripcion');
+
+    // === 2. BOTONES DEL PRIMER MODAL ===
+    const botonesVerMas = document.querySelectorAll('.btn-ver-mas');
+    
+    // Función para ABRIR el modal de detalles y cargar contenido
+    const abrirModalDetalles = (e) => {
+        e.preventDefault(); 
+        
+        const btn = e.currentTarget; 
+        const titulo = btn.getAttribute('data-titulo');
+        const imagen = btn.getAttribute('data-imagen');
+        const descripcion = btn.getAttribute('data-descripcion');
+        
+        detalleTitulo.textContent = titulo;
+        detalleImagen.src = imagen;
+        detalleImagen.alt = `Imagen de ${titulo}`;
+        detalleDescripcion.textContent = descripcion;
+
+        modalDetalles.classList.add('activo');
+
+        document.body.style.overflow = 'hidden'; 
+        
+    };
+
+    // Función para CERRAR el modal de detalles
+    const cerrarModalDetalles = () => {
+        modalDetalles.classList.remove('activo');
+        document.body.style.overflow = ''; // Habilita el scroll del body
+    };
+
+    // === 3. ASIGNACIÓN DE EVENTOS ===
+
+    // Asignar el evento click a todos los botones "Ver más"
+    botonesVerMas.forEach(btn => {
+        btn.addEventListener('click', abrirModalDetalles);
+    });
+
+    cerrarDetallesBtn.addEventListener('click', cerrarModalDetalles);
+
+    modalDetalles.addEventListener('click', (e) => {
+        if (e.target.id === 'modalDetalles') {
+            cerrarModalDetalles();
+        }
+    });
+
+    // Cerrar el modal al presionar la tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalDetalles.classList.contains('activo')) {
+            cerrarModalDetalles();
+        }
+    });
 });
