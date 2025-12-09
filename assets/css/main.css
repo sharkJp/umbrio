@@ -516,6 +516,7 @@ li a:hover {
   width: 100%;
   height: 100vh;
   top: 0%;
+
 }
 
 /* Slider de imágenes */
@@ -770,6 +771,8 @@ li a:hover {
   width: 75% !important;
   max-width: 1400px;
   height: 100%;
+  background-color: #220b2eea;/*borrar estas 2 ultimas lineas de codigo*/
+  border-radius: 10px;
 }
 
 .carrusel-secc3 {
@@ -836,7 +839,7 @@ li a:hover {
   align-items: center;
   justify-content: center;
   height: 380px;
-  margin-top: 22%;
+  margin-top: 10%;/*aca era 22*/
 }
 
 .cards-secc3 {
