@@ -59,8 +59,8 @@ if (window.location.pathname.includes("page2.html")) {
     basePath = "assets/multimedia/img/";
 }
 
-const normalSrc = basePath + "cráneo1.png";
-const fuegoSrc = basePath + "cráneo2.png";
+const normalSrc = basePath + "cráneo1.webp";
+const fuegoSrc = basePath + "cráneo2.webp";
 
 // Crear imagen dinámicamente
 const calavera = document.createElement("img");
