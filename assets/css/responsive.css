@@ -193,14 +193,14 @@
   .seccion1 .mostrar-boton {
     position: absolute;
     left: 15%;
-    top: 40%;
+    top: 20%;
     z-index: 10;
   }
 
   .seccion4 .mostrar-boton {
     position: absolute;
     left: -1%;
-    top: 40%;
+    top: 20%;
     z-index: 10;
   }
   .seccion1 .video-interprete {
@@ -429,13 +429,15 @@
     display: flex;
     text-align: center;
     left: 20%;
-    
-    width: 65%;
+    top: 27%;
+    width: 60px;
   }
   #pagina2 .flotante-calavera img {
-   top: -15% ;
+  top: 15% !important;
   }
-
+  #pagina2 .flotante-calavera {
+     top: 85% !important;
+  }
   .about-title {
     font-size: 4.5rem;
   }
@@ -557,8 +559,8 @@
   }
 
   .pin-catedral {
-    top: 45% !important;
-    left: 80% !important;
+    top: 42% !important;
+    left: 82% !important;
     z-index: 1 !important;
   }
 
@@ -570,8 +572,8 @@
   }
 
   .pin-cojines {
-    top: 50% !important;
-    left: 60% !important;
+    top: 63% !important;
+    left: 43% !important;
     z-index: 1 !important;
   }
 
@@ -581,8 +583,8 @@
   }
 
   .pin-agustin {
-    top: 46% !important;
-    left: 65% !important;
+    top: 39% !important;
+    left: 64% !important;
     z-index: 1 !important;
   }
 
@@ -593,8 +595,8 @@
   }
 
   .pin-biblioteca1 {
-    top: 43% !important;
-    left: 63% !important;
+    top: 44% !important;
+    left: 67% !important;
     z-index: 1 !important;
   }
 
@@ -608,8 +610,8 @@
   }
 
   .pin-biblioteca2 {
-    top: 68% !important;
-    left: 45% !important;
+    top: 45% !important;
+    left: 60% !important;
     z-index: 1 !important;
   }
 
@@ -807,10 +809,10 @@
 
   .store-links {
     position: absolute;
-    top: 85%;
+    top: 87%;
     left: 5%;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     display: flex;
     border-radius: 50%;
     background-color: var(--tercer-color);
@@ -996,7 +998,7 @@
   }
 
   .flotante-calavera img {
-    width: 60px !important;
+    width: 58px !important;
   }
 
   .swiper {

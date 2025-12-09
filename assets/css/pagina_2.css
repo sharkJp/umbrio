@@ -411,16 +411,15 @@ iframe {
 }
 
 .store-links {
-  position: fixed;
-  top: 48%;
-  right: 3%;
+  position: absolute;
+  top: 90%;
+  left: 3%;
   width: 60px;
   height: 60px;
   display: flex;
   border-radius: 50%;
   background-color: var(--tercer-color);
   z-index: 10;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -434,7 +433,7 @@ iframe {
   transform: scale(1.1);
 }
 .flotante-calavera {
- top: 87% !important;
+ top: 69% !important;
 }
 
 .modalSecc6 {
